@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lukas Wagner — KI-Keynote-Speaker & Gründer von ahead x</title>
+  <meta name="description" content="Lukas Wagner macht Europa fit für Künstliche Intelligenz: Keynotes, Workshops und Live-Erlebnisse, die KI verständlich, anwendbar und greifbar machen." />
+
+  <!-- DRAFT: solange noindex, bis die Texte final freigegeben sind. Zum Live-Schalten entfernen. -->
+  <meta name="robots" content="noindex, nofollow" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Lukas Wagner — KI-Keynote-Speaker & Gründer von ahead x" />
+  <meta property="og:description" content="Keynotes, Workshops und Live-Erlebnisse, die KI verständlich und anwendbar machen." />
+  <meta property="og:url" content="https://lukaswagner.at/" />
+  <meta name="theme-color" content="#0a0c11" />
+
+  <link rel="icon" href="data:image/svg+xml,&lt;svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'&gt;&lt;rect width='100' height='100' rx='22' fill='%230a0c11'/&gt;&lt;text x='50' y='68' font-size='52' font-family='Arial' font-weight='bold' text-anchor='middle' fill='%237c93ff'&gt;LW&lt;/text&gt;&lt;/svg&gt;" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg: #0a0c11;
+      --bg-soft: #0e111a;
+      --card: #12151f;
+      --line: rgba(255,255,255,.08);
+      --line-strong: rgba(255,255,255,.16);
+      --fg: #f5f6f8;
+      --muted: #99a2b2;
+      --muted-bright: #c9cfda;
+      --accent: #8aa0ff;
+      --accent-2: #5be0c0;
+      --grad: linear-gradient(120deg, #8aa0ff 0%, #5be0c0 100%);
+      --maxw: 1120px;
+      --display: "Space Grotesk", system-ui, sans-serif;
+      --body: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    body {
+      font-family: var(--body);
+      background: var(--bg);
+      color: var(--fg);
+      line-height: 1.65;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+    .wrap { width: 100%; max-width: var(--maxw); margin: 0 auto; padding: 0 1.5rem; }
+
+    /* soft background glow */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(900px 500px at 78% -8%, rgba(138,160,255,.16), transparent 60%),
+        radial-gradient(700px 500px at 5% 12%, rgba(91,224,192,.10), transparent 55%);
+      pointer-events: none;
+      z-index: 0;
+    }
+    main, header, footer { position: relative; z-index: 1; }
+
+    /* NAV */
+    header {
+      position: sticky; top: 0; z-index: 50;
+      backdrop-filter: blur(14px);
+      background: rgba(10,12,17,.72);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav { display: flex; align-items: center; justify-content: space-between; height: 68px; }
+    .brand { font-family: var(--display); font-weight: 700; font-size: 1.15rem; letter-spacing: -.01em; }
+    .brand b { color: var(--accent); font-weight: 700; }
+    .nav-links { display: flex; align-items: center; gap: 2rem; }
+    .nav-links a { color: var(--muted); font-size: .95rem; transition: color .2s; }
+    .nav-links a:hover { color: var(--fg); }
+    .btn {
+      display: inline-flex; align-items: center; gap: .5rem;
+      font-weight: 600; font-size: .95rem; border-radius: 999px;
+      padding: .7rem 1.3rem; cursor: pointer; transition: transform .2s, box-shadow .2s, background .2s, border-color .2s;
+      white-space: nowrap;
+    }
+    .btn-primary { background: var(--grad); color: #08231e; border: none; }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 30px -10px rgba(91,224,192,.5); }
+    .btn-ghost { border: 1px solid var(--line-strong); color: var(--fg); background: transparent; }
+    .btn-ghost:hover { background: rgba(255,255,255,.06); transform: translateY(-2px); }
+    .nav .btn { padding: .58rem 1.1rem; }
+
+    /* HERO */
+    .hero { padding: clamp(3.5rem, 9vw, 7rem) 0 clamp(3rem, 7vw, 5.5rem); }
+    .hero-grid { display: grid; grid-template-columns: 1.25fr .85fr; gap: clamp(2rem, 5vw, 4rem); align-items: center; }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: .55rem;
+      font-size: .82rem; letter-spacing: .04em; color: var(--muted-bright);
+      border: 1px solid var(--line); border-radius: 999px; padding: .4rem .9rem; margin-bottom: 1.5rem;
+    }
+    .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--accent-2); box-shadow: 0 0 10px var(--accent-2); }
+    h1 {
+      font-family: var(--display); font-weight: 700;
+      font-size: clamp(2.4rem, 6.2vw, 4.1rem); line-height: 1.04; letter-spacing: -.025em;
+    }
+    .grad-text { background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .hero p.lead { margin-top: 1.4rem; font-size: clamp(1.05rem, 2.4vw, 1.25rem); color: var(--muted-bright); max-width: 36rem; }
+    .hero-cta { display: flex; flex-wrap: wrap; gap: .9rem; margin-top: 2.2rem; }
+
+    /* portrait card */
+    .portrait {
+      aspect-ratio: 4/5; border-radius: 24px; border: 1px solid var(--line-strong);
+      background:
+        radial-gradient(120% 120% at 20% 10%, rgba(138,160,255,.35), transparent 55%),
+        radial-gradient(120% 120% at 90% 100%, rgba(91,224,192,.30), transparent 55%),
+        var(--card);
+      display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden;
+    }
+    .portrait .mono { font-family: var(--display); font-weight: 700; font-size: clamp(4rem, 12vw, 7rem); letter-spacing: .02em; opacity: .92; }
+    .portrait .tag {
+      position: absolute; bottom: 1rem; left: 1rem; right: 1rem;
+      background: rgba(8,10,15,.6); backdrop-filter: blur(8px);
+      border: 1px solid var(--line); border-radius: 14px; padding: .7rem .9rem;
+      font-size: .85rem; color: var(--muted-bright);
+    }
+
+    /* SECTIONS */
+    section { padding: clamp(3rem, 7vw, 5.5rem) 0; }
+    .sec-label { font-family: var(--display); font-size: .85rem; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); margin-bottom: .9rem; }
+    h2 { font-family: var(--display); font-weight: 600; font-size: clamp(1.8rem, 4.2vw, 2.7rem); line-height: 1.1; letter-spacing: -.02em; }
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(1.5rem, 4vw, 3.5rem); align-items: start; }
+    .about-grid p { color: var(--muted-bright); font-size: 1.08rem; }
+    .about-grid p + p { margin-top: 1rem; }
+
+    /* STATS */
+    .stats {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem;
+      border: 1px solid var(--line); border-radius: 20px; padding: clamp(1.4rem, 3vw, 2.2rem);
+      background: linear-gradient(180deg, rgba(255,255,255,.03), transparent);
+    }
+    .stat .num { font-family: var(--display); font-weight: 700; font-size: clamp(1.8rem, 4.5vw, 2.6rem); letter-spacing: -.02em; }
+    .stat .lbl { color: var(--muted); font-size: .92rem; margin-top: .25rem; }
+    .stats-note { color: var(--muted); font-size: .85rem; margin-top: 1rem; text-align: right; }
+
+    /* CARD GRIDS */
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.1rem; margin-top: 2.2rem; }
+    .grid-2 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.1rem; margin-top: 2.2rem; }
+    .card {
+      border: 1px solid var(--line); border-radius: 18px; padding: 1.6rem;
+      background: var(--card); transition: transform .25s, border-color .25s;
+    }
+    .card:hover { transform: translateY(-4px); border-color: var(--line-strong); }
+    .card .ic { font-family: var(--display); font-weight: 700; font-size: 1.1rem; color: var(--accent-2); margin-bottom: .9rem; }
+    .card h3 { font-family: var(--display); font-weight: 600; font-size: 1.2rem; margin-bottom: .5rem; }
+    .card p { color: var(--muted); font-size: .98rem; }
+
+    /* ahead x callout */
+    .callout {
+      border: 1px solid var(--line-strong); border-radius: 24px; padding: clamp(2rem, 5vw, 3.2rem);
+      background:
+        radial-gradient(120% 160% at 100% 0%, rgba(138,160,255,.16), transparent 55%),
+        var(--bg-soft);
+      display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1.5rem;
+    }
+    .callout h2 { font-size: clamp(1.6rem, 3.6vw, 2.2rem); }
+    .callout p { color: var(--muted-bright); margin-top: .6rem; max-width: 34rem; }
+
+    /* CONTACT */
+    .contact { text-align: center; }
+    .contact h2 { max-width: 22ch; margin: 0 auto; }
+    .contact p { color: var(--muted-bright); margin-top: 1rem; font-size: 1.1rem; }
+    .contact-cta { display: flex; flex-wrap: wrap; gap: .9rem; justify-content: center; margin-top: 2rem; }
+
+    /* FOOTER */
+    footer { border-top: 1px solid var(--line); padding: 2.5rem 0; margin-top: 2rem; }
+    .foot { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem; color: var(--muted); font-size: .9rem; }
+    .foot a { color: var(--muted); transition: color .2s; }
+    .foot a:hover { color: var(--fg); }
+    #impressum { color: var(--muted); font-size: .86rem; line-height: 1.7; padding-top: 2.5rem; }
+    #impressum h3 { font-family: var(--display); color: var(--muted-bright); font-size: 1rem; margin-bottom: .5rem; }
+
+    /* reveal */
+    .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
+    .reveal.in { opacity: 1; transform: none; }
+    @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } html { scroll-behavior: auto; } }
+
+    @media (max-width: 860px) {
+      .nav-links a:not(.btn) { display: none; }
+      .hero-grid { grid-template-columns: 1fr; }
+      .portrait { max-width: 360px; }
+      .about-grid { grid-template-columns: 1fr; }
+      .stats { grid-template-columns: repeat(2, 1fr); }
+      .grid-3, .grid-2 { grid-template-columns: 1fr; }
+      .stats-note { text-align: left; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#top">Lukas <b>Wagner</b></a>
+      <nav class="nav-links">
+        <a href="#ueber">Über</a>
+        <a href="#themen">Themen</a>
+        <a href="#aheadx">ahead x</a>
+        <a class="btn btn-primary" href="mailto:kontakt@lukaswagner.at">Anfragen</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <span class="eyebrow"><span class="dot"></span> KI-Keynote-Speaker · Gründer von ahead x</span>
+          <h1>Ich mache Europa fit für <span class="grad-text">Künstliche Intelligenz</span>.</h1>
+          <p class="lead">Keynotes, Workshops und Live-Erlebnisse, die KI verständlich, anwendbar und greifbar machen — vor Ort, in echt, für Menschen und Unternehmen im DACH-Raum.</p>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="mailto:kontakt@lukaswagner.at">Keynote anfragen</a>
+            <a class="btn btn-ghost" href="https://aheadx.at" target="_blank" rel="noopener">ahead x entdecken →</a>
+          </div>
+        </div>
+        <div class="portrait reveal">
+          <span class="mono grad-text">LW</span>
+          <span class="tag">Lukas Wagner · KI verständlich gemacht</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ÜBER -->
+    <section id="ueber">
+      <div class="wrap">
+        <div class="about-grid reveal">
+          <div>
+            <div class="sec-label">Über mich</div>
+            <h2>KI gehört nicht in den Elfenbeinturm — sondern zu den Menschen.</h2>
+          </div>
+          <div>
+            <p>Ich bin Lukas Wagner, Gründer von ahead x. Mit ahead x bringe ich Künstliche Intelligenz dorthin, wo sie wirkt: in Vorträge, Workshops und Live-Events quer durch den DACH-Raum.</p>
+            <p>Mein Anspruch ist einfach: weg von abstrakter Theorie, hin zu echtem Verstehen und sofort Anwendbarem. Ob auf der Bühne, im Workshop oder bei einem ahead x Event vor Ort — ich übersetze KI in eine Sprache, die alle verstehen, und zeige, wie sie heute schon konkret hilft.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STATS -->
+    <section style="padding-top:0;">
+      <div class="wrap">
+        <div class="stats reveal">
+          <div class="stat"><div class="num grad-text">1.700+</div><div class="lbl">Teilnehmer:innen</div></div>
+          <div class="stat"><div class="num grad-text">8</div><div class="lbl">Städte</div></div>
+          <div class="stat"><div class="num grad-text">9</div><div class="lbl">Events</div></div>
+          <div class="stat"><div class="num grad-text">92%</div><div class="lbl">Zufriedenheit</div></div>
+        </div>
+        <div class="stats-note">Wirkung gemeinsam mit ahead x.</div>
+      </div>
+    </section>
+
+    <!-- THEMEN -->
+    <section id="themen">
+      <div class="wrap">
+        <div class="sec-label reveal">Themen</div>
+        <h2 class="reveal">Worüber ich spreche.</h2>
+        <div class="grid-3">
+          <div class="card reveal"><div class="ic">01</div><h3>KI verstehen</h3><p>Grundlagen klar und alltagstauglich erklärt — ohne Buzzwords, ohne Hype.</p></div>
+          <div class="card reveal"><div class="ic">02</div><h3>KI anwenden</h3><p>Konkrete Use-Cases für Unternehmen, Teams und den Arbeitsalltag.</p></div>
+          <div class="card reveal"><div class="ic">03</div><h3>KI &amp; Europa</h3><p>Warum wir den Wandel selbst gestalten müssen — und wie das gelingt.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FORMATE -->
+    <section id="formate" style="padding-top:0;">
+      <div class="wrap">
+        <div class="sec-label reveal">Formate</div>
+        <h2 class="reveal">Wie wir zusammenarbeiten.</h2>
+        <div class="grid-2">
+          <div class="card reveal"><div class="ic">Keynote</div><h3>Inspirierend &amp; konkret</h3><p>Für Bühnen, Konferenzen und Firmenevents — mitreißend und sofort anschlussfähig.</p></div>
+          <div class="card reveal"><div class="ic">Workshop</div><h3>Hands-on</h3><p>Für Teams und Organisationen, die KI nicht nur verstehen, sondern nutzen wollen.</p></div>
+          <div class="card reveal"><div class="ic">ahead x</div><h3>Live vor Ort</h3><p>Das Erlebnisformat: KI zum Anfassen, mit Demos statt Folien. <a href="https://aheadx.at" target="_blank" rel="noopener" style="color:var(--accent-2)">aheadx.at →</a></p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ahead x CALLOUT -->
+    <section id="aheadx">
+      <div class="wrap">
+        <div class="callout reveal">
+          <div>
+            <div class="sec-label">Mein Herzensprojekt</div>
+            <h2>ahead x</h2>
+            <p>KI verstehen. KI anwenden. Vor Ort erleben. Entdecke die Events und Formate, mit denen ahead x Europa fit für Künstliche Intelligenz macht.</p>
+          </div>
+          <a class="btn btn-primary" href="https://aheadx.at" target="_blank" rel="noopener">Zu ahead x</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- KONTAKT -->
+    <section id="kontakt">
+      <div class="wrap contact">
+        <div class="sec-label reveal" style="color:var(--accent)">Kontakt</div>
+        <h2 class="reveal">Lust auf eine Keynote oder Zusammenarbeit?</h2>
+        <p class="reveal">Schreib mir — ich freue mich auf deine Nachricht.</p>
+        <div class="contact-cta reveal">
+          <a class="btn btn-primary" href="mailto:kontakt@lukaswagner.at">kontakt@lukaswagner.at</a>
+          <a class="btn btn-ghost" href="https://www.youtube.com/@lukaswagnerai" target="_blank" rel="noopener">YouTube ansehen</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="foot">
+        <span>© <span id="year">2026</span> Lukas Wagner</span>
+        <span><a href="#kontakt">Kontakt</a> · <a href="#impressum">Impressum</a></span>
+      </div>
+      <div id="impressum">
+        <h3>Impressum</h3>
+        <p>[Bitte vor dem öffentlichen Launch ergänzen: Name, Anschrift, E-Mail, ggf. UID/Firmenbuch — gesetzlich verpflichtend in Österreich.]<br>
+        E-Mail: kontakt@lukaswagner.at</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches && 'IntersectionObserver' in window) {
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+      }, { threshold: 0.12 });
+      document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+    } else {
+      document.querySelectorAll('.reveal').forEach(el => el.classList.add('in'));
+    }
+  </script>
+</body>
+</html>
