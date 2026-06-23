@@ -99,6 +99,10 @@
     .collage .big{grid-row:1 / span 2;aspect-ratio:3/4}.collage .sm{aspect-ratio:4/3}
     .badge{position:absolute;left:12px;bottom:12px;right:12px;background:rgba(8,10,15,.72);backdrop-filter:blur(8px);border:1px solid var(--line);border-radius:11px;padding:.55rem .75rem;font-size:.78rem;color:var(--fg);display:flex;align-items:center;gap:.45rem}
     .play{width:48px;height:48px;border-radius:50%;background:var(--grad);color:#08231e;display:flex;align-items:center;justify-content:center;font-size:1.1rem}
+    .tile{border-radius:16px;overflow:hidden;position:relative;display:block}
+    .tile img{width:100%;height:100%;object-fit:cover;display:block}
+    .reel .play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:2}
+    .reel::after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 55%,rgba(8,10,15,.45));z-index:1}
 
     .grid{display:grid;gap:1rem}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}
     .card{border:1px solid var(--line);border-radius:var(--r);background:var(--card);transition:transform .25s,border-color .25s;overflow:hidden}
@@ -224,15 +228,14 @@
         </div>
         <div class="reveal">
           <div class="collage">
-            <!-- ASSET: assets/lukas-stage.jpg -->
-            <div class="ph big" role="img" aria-label="Platzhalter Bühnenfoto Lukas Wagner">Bühnenfoto<small>assets/lukas-stage.jpg</small>
+            <figure class="tile big">
+              <img src="assets/lukas-stage.jpg" alt="Lukas Wagner im Theatersaal" width="1067" height="1600" />
               <span class="badge"><span class="dot" aria-hidden="true"></span> KI-Keynote · ahead x · Europa/SO-Asien</span>
-            </div>
-            <!-- ASSET: assets/aheadx-audience.jpg -->
-            <div class="ph sm" role="img" aria-label="Platzhalter Publikum">Publikum<small>aheadx-audience.jpg</small></div>
-            <!-- ASSET: assets/speaker-reel-thumb.jpg -->
-            <a class="ph sm cta-reel" data-cta="speaker-reel" href="https://www.youtube.com/@lukaswagnerai" target="_blank" rel="noopener" aria-label="Speaker-Reel ansehen">
-              <span class="play" aria-hidden="true">▶</span>Speaker-Reel<small>speaker-reel-thumb.jpg</small>
+            </figure>
+            <img class="tile sm" src="assets/aheadx-audience.jpg" alt="Publikum bei einem ahead x Format" loading="lazy" />
+            <a class="tile sm reel cta-reel" data-cta="speaker-reel" href="https://www.youtube.com/@lukaswagnerai" target="_blank" rel="noopener" aria-label="Speaker-Reel auf YouTube ansehen">
+              <img src="assets/speaker-reel-thumb.jpg" alt="Lukas Wagner präsentiert bei einem ahead x Format" loading="lazy" />
+              <span class="play" aria-hidden="true">▶</span>
             </a>
           </div>
         </div>
@@ -342,10 +345,9 @@
             </div>
           </div>
           <div class="ax-mosaic">
-            <!-- ASSETS: aheadx-audience.jpg, aheadx-demo.jpg -->
-            <div class="ph" style="aspect-ratio:4/3">Publikum<small>aheadx-audience.jpg</small></div>
-            <div class="ph" style="aspect-ratio:4/3">Demo / Workshop<small>aheadx-demo.jpg</small></div>
-            <div class="ph" style="aspect-ratio:4/3;grid-column:1 / -1">Tour · Städte<small>aheadx-tour.jpg</small></div>
+            <img class="tile" style="aspect-ratio:4/3" src="assets/aheadx-audience.jpg" alt="Publikum bei einem ahead x Format" loading="lazy" />
+            <img class="tile" style="aspect-ratio:4/3" src="assets/aheadx-demo.jpg" alt="Hands-on KI-Workshop bei ahead x" loading="lazy" />
+            <img class="tile" style="aspect-ratio:4/3;grid-column:1 / -1" src="assets/aheadx-tour.jpg" alt="Vortrag vor Publikum bei einem ahead x Format" loading="lazy" />
           </div>
         </div>
       </div>
@@ -461,7 +463,7 @@
       </div>
       <div id="impressum">
         <h3>Impressum</h3>
-        <p>[Platzhalter — vor Livegang ergänzen: Name, Anschrift, E-Mail, ggf. UID/Firmenbuch. In Österreich Pflicht.]<br>E-Mail: kontakt@lukaswagner.at · © <span id="year">2026</span> Lukas Wagner</p>
+        <p>[Platzhalter — vor Livegang ergänzen: Name, Anschrift, E-Mail, ggf. UID/Firmenbuch. In Österreich Pflicht.]<br>E-Mail: kontakt@lukaswagner.at · © <span id="year">2026</span> Lukas Wagner<br>Eventfotos: © Nussbaumer Photography · Hero-/Porträtfoto: Fotograf:in-Credit ergänzen</p>
       </div>
     </div>
   </footer>
