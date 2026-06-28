@@ -153,8 +153,10 @@
     .map .mini{color:var(--muted);font-size:.72rem;margin-bottom:.4rem}
     .map svg{width:100%;height:auto;flex:1;min-height:0;display:block}
 
-    .wall{display:grid;grid-template-columns:repeat(3,1fr);gap:.7rem;margin-top:1.4rem}
-    .pw{border:1px solid var(--line);border-radius:12px;background:linear-gradient(160deg,rgba(255,255,255,.045),rgba(255,255,255,.012));aspect-ratio:16/6.5;display:flex;align-items:center;justify-content:center;color:var(--muted-bright);font-size:.86rem;font-weight:500}
+    .wall{display:grid;grid-template-columns:repeat(3,1fr);gap:.7rem;margin-top:1rem}
+    .pw{border:1px solid var(--line);border-radius:12px;background:#f4f6fa;min-height:94px;display:flex;align-items:center;justify-content:center;padding:1.1rem 1.5rem;transition:transform .2s}
+    .pw:hover{transform:translateY(-3px)}
+    .pw img{max-height:44px;max-width:100%;width:auto;object-fit:contain}
     .quote{border:1px solid var(--line);border-left:2px solid var(--accent-2);border-radius:14px;background:var(--card);padding:1.5rem 1.7rem;max-width:42rem;margin-top:1.4rem}
     .quote p{font-size:1.12rem;color:var(--fg);line-height:1.4}
     .quote .by{margin-top:.7rem;color:var(--muted);font-size:.74rem;text-transform:uppercase;letter-spacing:.09em}
@@ -341,14 +343,15 @@
           </div>
         </div>
 
-        <!-- Mockup: neutrale Partner-Wall (keine echten Logos) -->
+        <!-- Partner-Logos von aheadx.at, selbst gehostet unter assets/logos/ -->
+        <div class="sec-label reveal" style="margin-top:2.4rem;margin-bottom:0">Medien- &amp; Netzwerkpartner</div>
         <div class="wall reveal">
-          <div class="pw">Medienpartner</div>
-          <div class="pw">Bildungspartner</div>
-          <div class="pw">Stadt / Region</div>
-          <div class="pw">Wirtschaftspartner</div>
-          <div class="pw">Eventpartner</div>
-          <div class="pw">Knowledge Partner</div>
+          <div class="pw"><img src="/assets/logos/dcv.png" alt="Digital Campus Vorarlberg" loading="lazy" /></div>
+          <div class="pw"><img src="/assets/logos/vn.png" alt="Vorarlberger Nachrichten" loading="lazy" /></div>
+          <div class="pw"><img src="/assets/logos/vol.png" alt="VOL.at" loading="lazy" /></div>
+          <div class="pw"><img src="/assets/logos/neue.png" alt="NEUE am Sonntag" loading="lazy" /></div>
+          <div class="pw"><img src="/assets/logos/tt.png" alt="Tiroler Tageszeitung" loading="lazy" /></div>
+          <div class="pw"><img src="/assets/logos/kleine-zeitung.svg" alt="Kleine Zeitung" loading="lazy" /></div>
         </div>
 
         <!-- Mockup: illustrative Veranstalterstimme (kein echtes Zitat) -->
