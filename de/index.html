@@ -131,6 +131,9 @@
     .proof .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1.2rem;padding-top:1.4rem;padding-bottom:1.4rem}
     .proof-stats{display:flex;flex-wrap:wrap;gap:1.8rem}
     .pstat .n{font-family:var(--display);font-weight:700;font-size:clamp(1.4rem,3vw,1.9rem)}.pstat .l{color:var(--muted);font-size:.82rem}
+    .prooflist{display:flex;flex-wrap:wrap;gap:.9rem 2.2rem}
+    .prooflist span{display:inline-flex;align-items:center;gap:.55rem;color:var(--muted-bright);font-size:.96rem}
+    .band{position:relative;background:#07080d;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background-image:radial-gradient(120% 150% at 100% 0,rgba(138,160,255,.12),transparent 55%),radial-gradient(120% 150% at 0% 100%,rgba(91,224,192,.08),transparent 55%)}
     .plat{display:flex;gap:.5rem;flex-wrap:wrap}
     .plat a,.plat span{border:1px solid var(--line-strong);border-radius:999px;padding:.35rem .8rem;font-size:.8rem;color:var(--muted-bright)}.plat a:hover{color:var(--fg);border-color:var(--accent)}
     .note{color:var(--muted);font-size:.78rem;font-style:italic}
@@ -237,7 +240,15 @@
       .sticky-cta{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:80;justify-content:center;padding:.7rem 1rem calc(.7rem + env(safe-area-inset-bottom));background:rgba(10,12,17,.92);backdrop-filter:blur(12px);border-top:1px solid var(--line)}
       .sticky-cta .btn{width:100%;max-width:420px;justify-content:center}
     }
-    @media (max-width:540px){ .proof-stats{gap:1.1rem} .press-strip,.contact-cards{grid-template-columns:1fr} }
+    @media (max-width:540px){
+      .press-strip,.contact-cards{grid-template-columns:1fr}
+      .hero{padding-top:1.4rem}
+      .hero h1{font-size:2.05rem;line-height:1.12;margin:.7rem 0}
+      .hero .sub{font-size:1rem}
+      .hero .micro{gap:.35rem .9rem;margin:.9rem 0}
+      .hero-grid{gap:1.2rem}
+      .collage .big{aspect-ratio:16/11}
+    }
   </style>
 </head>
 <body>
@@ -253,7 +264,6 @@
         <a href="#aheadx">ahead x</a>
         <a href="#tour">Tour</a>
         <a href="#partner">Partner</a>
-        <a href="#projekte">Projekte</a>
         <a href="#presse">Presse</a>
         <a href="#kontakt">Kontakt</a>
         <a class="btn btn-primary cta-keynote" data-cta="keynote" href="#kontakt">Keynote anfragen</a>
@@ -282,6 +292,7 @@
           </div>
         </div>
         <div class="reveal">
+          <!-- TODO Hero-Video: optional stummen 10-15s-Loop (autoplay muted loop playsinline, poster=lukas-stage.jpg) statt/ueber der Collage einbauen, sobald Video vorhanden. -->
           <div class="collage">
             <figure class="tile big">
               <img src="/assets/lukas-stage.jpg" alt="Lukas Wagner im Theatersaal" width="1067" height="1600" />
@@ -367,7 +378,7 @@
           <div class="step"><h3>Publikum statt Blase</h3><p>Verständlich und nahbar, für Menschen, die KI nicht studieren, aber damit arbeiten.</p></div>
           <div class="step"><h3>Nächste Schritte statt Staunen</h3><p>Am Ende bleibt nicht nur Wow. Es bleibt Orientierung.</p></div>
         </div>
-        <div style="margin-top:1.4rem"><a class="btn btn-primary btn-sm cta-keynote" data-cta="keynote" href="#kontakt">Keynote anfragen</a></div>
+        <div style="margin-top:1.4rem"><a class="btn btn-primary btn-sm cta-keynote" data-cta="keynote" href="#kontakt">Keynote / Format anfragen</a></div>
       </div>
     </section>
 
@@ -379,17 +390,17 @@
           <div class="card reveal"><div class="cardtop">Keynote</div><div class="body">
             <h3>Eine Keynote, nach der KI nicht mehr abstrakt bleibt.</h3>
             <p>Für Konferenzen, Unternehmen, Städte und Medienformate, die einen KI-Programmpunkt mit klarer Einordnung, Live-Demos und echtem Transfer wollen.</p>
-            <div class="cardcta"><a class="btn btn-primary btn-sm cta-keynote" data-cta="keynote" href="mailto:kontakt@lukaswagner.at?subject=Keynote-Anfrage%20Lukas%20Wagner">Keynote anfragen</a></div>
+            <div class="cardcta"><a class="btn btn-primary btn-sm cta-keynote" data-cta="keynote" href="mailto:kontakt@lukaswagner.at?subject=Keynote-Anfrage%20Lukas%20Wagner">Keynote / Format anfragen</a></div>
           </div></div>
           <div class="card reveal"><div class="cardtop">Workshop</div><div class="body">
             <h3>Ein Workshop, der aus Interesse Anwendung macht.</h3>
             <p>Für Teams, KMU und Organisationen, die KI verstehen, ausprobieren und konkrete Use Cases mitnehmen wollen.</p>
-            <div class="cardcta"><a class="btn btn-primary btn-sm cta-workshop" data-cta="workshop" href="mailto:kontakt@lukaswagner.at?subject=Workshop-Anfrage%20Lukas%20Wagner">Workshop anfragen</a></div>
+            <div class="cardcta"><a class="btn btn-primary btn-sm cta-workshop" data-cta="workshop" href="mailto:kontakt@lukaswagner.at?subject=Workshop-Anfrage%20Lukas%20Wagner">Keynote / Format anfragen</a></div>
           </div></div>
           <div class="card reveal"><div class="cardtop">ahead x · Region</div><div class="body">
             <h3>Ein Regionalformat, das KI aus der Expert:innenblase holt.</h3>
             <p>Für Städte, Medienpartner und Standortinitiativen, die KI öffentlich sichtbar und als Live-Erlebnis vor Ort machen wollen.</p>
-            <div class="cardcta"><a class="btn btn-primary btn-sm cta-aheadx" data-cta="aheadx" href="mailto:kontakt@lukaswagner.at?subject=ahead%20x%20%2F%20Regionalformat%20anfragen">Regionalformat anfragen</a></div>
+            <div class="cardcta"><a class="btn btn-primary btn-sm cta-aheadx" data-cta="aheadx" href="mailto:kontakt@lukaswagner.at?subject=ahead%20x%20%2F%20Regionalformat%20anfragen">Keynote / Format anfragen</a></div>
           </div></div>
         </div>
       </div>
@@ -412,14 +423,29 @@
       </div>
     </section>
 
+    <!-- E3 · WARUM LUKAS WAGNER -->
+    <section id="warum" style="padding-top:0">
+      <div class="wrap">
+        <div class="sec-head reveal" style="max-width:46rem"><div class="sec-label">Warum Lukas Wagner</div>
+          <h2>Warum Lukas Wagner?</h2>
+          <p class="lead-in">Weil KI nicht nur erklärt, sondern übersetzt, inszeniert und in Handlung verwandelt werden muss.</p>
+        </div>
+        <div class="aud-grid reveal">
+          <div class="aud"><span class="aud-k">Bühne &amp; Storytelling</span><h3>Zuhause auf der Bühne</h3><p>Erfahrung aus Keynotes, Moderation, Speaker-Coaching und Evententwicklung.</p></div>
+          <div class="aud"><span class="aud-k">KI praktisch angewendet</span><h3>Nicht nur Theorie</h3><p>ahead x, Live-Demos, KI-Musik, Storytelling und konkrete Anwendungen statt reiner Theorie.</p></div>
+          <div class="aud"><span class="aud-k">Medien- &amp; Eventverständnis</span><h3>Für echte Bühnen</h3><p>Formate für Unternehmen, Städte, Medienpartner und Regionen, nicht nur Vorträge für Fachpublikum.</p></div>
+          <div class="aud"><span class="aud-k">Europäischer Blick</span><h3>Größer gedacht</h3><p>KI als Frage von Arbeit, Bildung, Standort, Medien und digitaler Souveränität.</p></div>
+        </div>
+      </div>
+    </section>
+
     <!-- F · PROOF STRIP -->
     <section class="proof" style="padding:0">
       <div class="wrap">
-        <div class="proof-stats">
-          <div class="pstat"><div class="n grad-text">500+</div><div class="l">Bühnenauftritte</div></div>
-          <div class="pstat"><div class="n grad-text" data-teilnehmer>1.700+</div><div class="l">Teilnehmer bei ahead x</div></div>
-          <div class="pstat"><div class="n grad-text">8</div><div class="l">KI-Tour-Städte</div></div>
-          <div class="pstat"><div class="n grad-text">92%</div><div class="l">mit 10/10 bewertet</div></div>
+        <div class="prooflist">
+          <span><span class="dot" aria-hidden="true"></span> Bühnenerfahrung aus Keynotes, Moderation und über 100 Events</span>
+          <span><span class="dot" aria-hidden="true"></span> ahead x Formate in mehreren Städten</span>
+          <span><span class="dot" aria-hidden="true"></span> Medien- und Eventpartner aus Österreich</span>
         </div>
         <div class="plat">
           <a href="https://aheadx.at" target="_blank" rel="noopener">ahead x ↗</a>
@@ -442,9 +468,13 @@
           <div class="logo-ph">Tiroler Tageszeitung</div>
           <div class="logo-ph">Kleine Zeitung</div>
         </div>
-        <p class="note" style="padding-top:.8rem">Logos folgen nach Freigabe der jeweiligen Partner.</p>
+      </div>
+    </section>
 
-        <div class="sec-head reveal" style="max-width:44rem;margin-top:2.6rem"><div class="sec-label">Partner-Funnel</div>
+    <!-- F3 · PARTNER-FUNNEL (Premium-Band) -->
+    <section class="band">
+      <div class="wrap">
+        <div class="sec-head reveal" style="max-width:46rem"><div class="sec-label">Partner-Funnel</div>
           <h2>Für Partner, die KI nicht nur sponsern, sondern sichtbar gestalten wollen.</h2>
           <p class="lead-in">ahead x und Lukas Wagner bieten Marken, Medienhäusern und Standortpartnern eine Bühne, um KI-Befähigung glaubwürdig in die Breite zu bringen.</p>
         </div>
@@ -454,7 +484,7 @@
           <div class="tier"><span class="tier-n">Knowledge Partner</span><h3>Inhalt &amp; Substanz</h3><p>Inhaltliche Einbindung in Workshops, Labs oder Ressourcen.</p></div>
           <div class="tier"><span class="tier-n">Founding Partner</span><h3>Strategische Rolle</h3><p>Gestaltende Rolle im Zukunftsformat ahead x FUTURE.</p></div>
         </div>
-        <div style="margin-top:1.4rem;display:flex;align-items:center;gap:1.1rem;flex-wrap:wrap">
+        <div style="margin-top:1.6rem;display:flex;align-items:center;gap:1.1rem;flex-wrap:wrap">
           <a class="btn btn-primary btn-sm cta-aheadx" data-cta="partner" href="mailto:kontakt@lukaswagner.at?subject=Partnerdeck%20anfordern%20Lukas%20Wagner%20%2F%20ahead%20x">Partnerdeck anfordern</a>
           <span class="note" style="margin:0;font-style:normal;color:var(--muted)">Für ausgewählte Partner mit inhaltlichem Fit. Keine reine Logo-Fläche.</span>
         </div>
@@ -473,7 +503,7 @@
           <div class="card reveal"><div class="body"><div class="k">05</div><h3>Europa im KI-Zeitalter</h3><p>Digitale Souveränität, Bildung, Wirtschaft und die Frage, wer die Zukunft gestaltet.</p></div></div>
           <div class="card reveal"><div class="body"><div class="k">06</div><h3>KI live: Was heute schon möglich ist</h3><p>Eine visuelle Demo-Keynote mit Beispielen aus Text, Bild, Video, Musik und Automatisierung.</p></div></div>
         </div>
-        <div style="margin-top:1.4rem"><a class="btn btn-primary btn-sm cta-keynote" data-cta="keynote" href="#kontakt">Passendes Thema anfragen</a></div>
+        <div style="margin-top:1.4rem"><a class="btn btn-primary btn-sm cta-keynote" data-cta="keynote" href="#kontakt">Keynote / Format anfragen</a></div>
       </div>
     </section>
 
@@ -488,7 +518,7 @@
             <div class="ax-formats"><span>city</span><span>labs</span><span>mastermind</span><span>future</span><span>awards</span></div>
             <div style="margin-top:1.3rem;display:flex;gap:.7rem;flex-wrap:wrap">
               <a class="btn btn-primary btn-sm cta-aheadx" data-cta="aheadx" href="https://aheadx.at" target="_blank" rel="noopener">ahead x entdecken</a>
-              <a class="btn btn-ghost btn-sm cta-aheadx" data-cta="aheadx" href="mailto:kontakt@lukaswagner.at?subject=ahead%20x%20%2F%20Regionalformat%20anfragen">Partner werden</a>
+              <a class="btn btn-ghost btn-sm cta-aheadx" data-cta="partner" href="mailto:kontakt@lukaswagner.at?subject=Partnerdeck%20anfordern%20Lukas%20Wagner%20%2F%20ahead%20x">Partnerdeck anfordern</a>
             </div>
           </div>
           <div class="ax-mosaic">
@@ -507,10 +537,10 @@
           <h2>Für wen der KI-Impuls gedacht ist.</h2>
         </div>
         <div class="aud-grid reveal">
-          <div class="aud"><span class="aud-k">Unternehmen</span><h3>KI verständlich ins Team bringen</h3><p>Für Führungskräfte, Teams und Kundenevents, die KI endlich verständlich und praktisch einordnen wollen.</p><a class="go cta-keynote" data-cta="keynote" href="mailto:kontakt@lukaswagner.at?subject=KI%20im%20Unternehmen%20anfragen">KI im Unternehmen anfragen →</a></div>
-          <div class="aud"><span class="aud-k">Städte &amp; Regionen</span><h3>KI für die Bevölkerung greifbar machen</h3><p>Für Gemeinden, Städte und Standortinitiativen, die KI für Bürger:innen, Wirtschaft und Verwaltung erlebbar machen wollen.</p><a class="go cta-aheadx" data-cta="aheadx" href="mailto:kontakt@lukaswagner.at?subject=KI%20in%20unsere%20Region%20bringen">KI in unsere Region bringen →</a></div>
+          <div class="aud"><span class="aud-k">Unternehmen</span><h3>KI verständlich ins Team bringen</h3><p>Für Führungskräfte, Teams und Kundenevents, die KI endlich verständlich und praktisch einordnen wollen.</p><a class="go cta-keynote" data-cta="keynote" href="mailto:kontakt@lukaswagner.at?subject=Keynote%20%2F%20Format%20anfragen%20Unternehmen">Keynote / Format anfragen →</a></div>
+          <div class="aud"><span class="aud-k">Städte &amp; Regionen</span><h3>KI für die Bevölkerung greifbar machen</h3><p>Für Gemeinden, Städte und Standortinitiativen, die KI für Bürger:innen, Wirtschaft und Verwaltung erlebbar machen wollen.</p><a class="go cta-aheadx" data-cta="aheadx" href="mailto:kontakt@lukaswagner.at?subject=Keynote%20%2F%20Format%20anfragen%20Region">Keynote / Format anfragen →</a></div>
           <div class="aud"><span class="aud-k">Medienhäuser &amp; Partner</span><h3>KI als Live-Erlebnis in die Region</h3><p>Für Medienpartner, die KI nicht nur berichten, sondern als Format vor Ort zu den Menschen bringen wollen.</p><a class="go cta-aheadx" data-cta="partner" href="mailto:kontakt@lukaswagner.at?subject=Partnerdeck%20anfordern">Partnerdeck anfordern →</a></div>
-          <div class="aud"><span class="aud-k">Konferenzen &amp; Festivals</span><h3>Ein KI-Programmpunkt mit Energie</h3><p>Für Bühnen, die einen starken KI-Programmpunkt suchen: verständlich, visuell, relevant und publikumsnah.</p><a class="go cta-keynote" data-cta="keynote" href="mailto:kontakt@lukaswagner.at?subject=Speaker-Anfrage%20Lukas%20Wagner">Speaker anfragen →</a></div>
+          <div class="aud"><span class="aud-k">Konferenzen &amp; Festivals</span><h3>Ein KI-Programmpunkt mit Energie</h3><p>Für Bühnen, die einen starken KI-Programmpunkt suchen: verständlich, visuell, relevant und publikumsnah.</p><a class="go cta-keynote" data-cta="keynote" href="mailto:kontakt@lukaswagner.at?subject=Keynote%20%2F%20Format%20anfragen%20Konferenz">Keynote / Format anfragen →</a></div>
         </div>
       </div>
     </section>
@@ -523,8 +553,9 @@
             <div class="sec-label">Tour · Lukas live erleben</div>
             <h2>Herbst-Tour 2026, über 12 Städte in Österreich &amp; der Schweiz.</h2>
           </div>
-          <span class="tour-meta">Letzte Saison: 4 von 8 Terminen ausverkauft</span>
+          <span class="tour-meta">Live erleben · Herbst 2026</span>
         </div>
+        <!-- TODO: optional DACH-Karte mit Route hier einbauen, sobald Kartenasset vorhanden -->
         <div class="tour-list reveal">
           <div class="tour-row"><span class="tour-date"><b>24</b><span>Sep</span></span><div class="tour-city"><h3>Wien</h3><span>KI-Keynote · live</span></div><span class="tour-badge">AT</span></div>
           <div class="tour-row"><span class="tour-date"><b>01</b><span>Okt</span></span><div class="tour-city"><h3>Götzis</h3><span>Kulturbühne Ambach</span></div><span class="tour-badge">AT</span></div>
@@ -535,36 +566,15 @@
         </div>
         <div class="tour-extra reveal"><b>Außerdem im Oktober:</b><span>Salzburg</span><span>Linz</span><span>Innsbruck</span><span>St. Pölten</span><span>Graz</span><span>Klagenfurt</span></div>
         <div class="tour-extra reveal"><b>Vorschau 2027:</b><span>München</span><span>St. Gallen</span></div>
-        <div style="margin-top:1.4rem;display:flex;align-items:center;gap:1.1rem;flex-wrap:wrap">
-          <a class="btn btn-primary btn-sm cta-aheadx" data-cta="tour" href="#kontakt">Termin anfragen</a>
-          <span class="note" style="margin:0;font-style:normal;color:var(--muted)">Plätze pro Stadt begrenzt, früh anfragen lohnt sich.</span>
+        <div style="margin-top:1.4rem;display:flex;align-items:center;gap:.7rem 1.1rem;flex-wrap:wrap">
+          <a class="btn btn-primary btn-sm cta-keynote" data-cta="keynote" href="#kontakt">Keynote / Format anfragen</a>
+          <a class="btn btn-ghost btn-sm cta-aheadx" data-cta="partner" href="mailto:kontakt@lukaswagner.at?subject=Partnerstadt%20werden%20%2F%20ahead%20x%20Tour">Partnerdeck anfordern</a>
+          <span class="note" style="margin:0;font-style:normal;color:var(--muted)">Tourtermine und Partnerstädte auf Anfrage.</span>
         </div>
       </div>
     </section>
 
-    <!-- I · CREATIVE INTELLIGENCE PROJECTS -->
-    <section id="projekte">
-      <div class="wrap">
-        <div class="sec-head reveal"><div class="sec-label">KI, Kultur &amp; Storytelling</div><h2>Lukas redet nicht nur über KI, er wendet sie an.</h2>
-          <p class="note" style="font-style:normal;color:var(--muted)">Lukas entwickelt mit KI Formate, Musik, Geschichten und Medienprojekte, als praktische Beispiele, wie neue Technologie Menschen erreicht.</p>
-        </div>
-        <div class="grid g3 proj">
-          <div class="card reveal"><div class="cardtop">Studio XXV<small>assets/studio-xxv-cover.jpg</small></div><div class="body">
-            <h3>Studio XXV</h3>
-            <p>KI-Musik- und Künstlerprojekt rund um virtuelle Artists, Songs und digitale Popkultur.</p>
-            <div class="pressline">Presse: Der Standard · Kronen Zeitung</div>
-          </div></div>
-          <div class="card reveal"><div class="cardtop">Mimos Märchenwelt<small>assets/mimos-cover.jpg</small></div><div class="body">
-            <h3>Mimos Märchenwelt</h3>
-            <p>KI-Märchenpodcast für Kinder, ursprünglich als MimosWelt.de entwickelt, auf Spotify verfügbar.</p>
-          </div></div>
-          <div class="card reveal"><div class="cardtop">Songwriting &amp; Storytelling<small>assets/songwriting-notes.jpg</small></div><div class="body">
-            <h3>Songwriting &amp; Storytelling</h3>
-            <p>Texte und narrative Konzepte als kreative Grundlage für Musik, Bühnenmomente und KI-Formate.</p>
-          </div></div>
-        </div>
-      </div>
-    </section>
+    <!-- I · Projekte-Sektion entfernt: in "Warum Lukas Wagner" (KI praktisch angewendet) integriert. Wieder aufnehmen, sobald echte Links/Belege vorhanden. -->
 
     <!-- J · PRESSE / MEDIEN -->
     <section id="presse" style="padding-top:0">
@@ -576,22 +586,13 @@
           <div class="logo-ph">Kronen Zeitung</div>
           <a class="logo-ph" href="https://www.youtube.com/@lukaswagnerai" target="_blank" rel="noopener">YouTube ↗</a>
         </div>
-        <div class="media-grid">
-          <div class="reveal">
-            <p style="color:var(--muted-bright)"><b>Kurz-Bio:</b> Lukas Wagner ist KI-Keynote-Speaker, Unternehmer und Gründer von ahead x. Er hilft Unternehmen, Städten und Regionen, KI zu verstehen, einzuordnen und anzuwenden, international tätig zwischen Europa und Südostasien.</p>
-            <div style="display:flex;gap:.7rem;flex-wrap:wrap;margin-top:1.1rem">
-              <a class="btn btn-ghost btn-sm cta-press" data-cta="press" href="mailto:kontakt@lukaswagner.at?subject=Pressekit%20anfordern%20%E2%80%93%20Lukas%20Wagner">Pressekit anfordern</a>
-              <a class="btn btn-ghost btn-sm cta-press" data-cta="press" href="mailto:kontakt@lukaswagner.at?subject=Presseanfrage%20Lukas%20Wagner">Interview anfragen</a>
-            </div>
+        <div class="reveal" style="max-width:48rem">
+          <p style="color:var(--muted-bright)"><b>Kurz-Bio:</b> Lukas Wagner ist KI-Keynote-Speaker, Unternehmer und Gründer von ahead x. Er hilft Unternehmen, Städten und Regionen, KI zu verstehen, einzuordnen und anzuwenden, international tätig zwischen Europa und Südostasien.</p>
+          <div style="display:flex;gap:.7rem;flex-wrap:wrap;margin-top:1.1rem">
+            <a class="btn btn-ghost btn-sm cta-press" data-cta="press" href="mailto:kontakt@lukaswagner.at?subject=Pressekit%20anfordern%20Lukas%20Wagner">Pressekit anfordern</a>
+            <a class="btn btn-ghost btn-sm cta-press" data-cta="press" href="mailto:kontakt@lukaswagner.at?subject=Presseanfrage%20Lukas%20Wagner">Interview anfragen</a>
           </div>
-          <div class="reveal">
-            <div class="press-strip" style="grid-template-columns:repeat(3,1fr)">
-              <!-- ASSETS: pressefoto-1/2/3.jpg -->
-              <div class="ph" style="aspect-ratio:1/1">Pressefoto 1<small>pressefoto-1.jpg</small></div>
-              <div class="ph" style="aspect-ratio:1/1">Pressefoto 2<small>pressefoto-2.jpg</small></div>
-              <div class="ph" style="aspect-ratio:1/1">Pressefoto 3<small>pressefoto-3.jpg</small></div>
-            </div>
-          </div>
+          <!-- TODO: Pressefotos (pressefoto-1/2/3.jpg) hier als Bilder einbauen, sobald freigegeben -->
         </div>
       </div>
     </section>
@@ -607,8 +608,8 @@
           <a class="cc cta-press" data-cta="press" href="mailto:kontakt@lukaswagner.at?subject=Presseanfrage%20Lukas%20Wagner"><h3>Presse / Interview</h3><span>Medien &amp; Veranstalter:innen.</span><span class="go">Anfrage starten →</span></a>
         </div>
 
-        <!-- OPTIONALES FORMULAR: aktiv nach Eintragen eines Endpoints (Formspree/Tally). Mailto-Karten oben funktionieren sofort. -->
-        <form class="lead" action="/kontakt.php" method="POST">
+        <!-- Formular ohne Backend: JS baut beim Absenden eine mailto-Nachricht (kein Endpoint/localhost noetig). Mailto-Karten oben funktionieren ebenfalls sofort. -->
+        <form class="lead" id="leadform">
           <input type="text" name="name" placeholder="Name" required aria-label="Name" />
           <input type="text" name="organisation" placeholder="Organisation" aria-label="Organisation" />
           <input type="email" name="email" placeholder="E-Mail" required aria-label="E-Mail" />
@@ -641,13 +642,16 @@
       <div class="foot-top">
         <span class="brand">Lukas <b>Wagner</b></span>
         <nav class="foot-links" aria-label="Fußzeile">
-          <a href="#buchen">Keynote</a><a href="#aheadx">ahead x</a><a href="#projekte">Projekte</a><a href="#presse">Presse</a><a href="#kontakt">Kontakt</a>
+          <a href="#buchen">Keynote</a><a href="#aheadx">ahead x</a><a href="#presse">Presse</a><a href="#kontakt">Kontakt</a>
           <a href="https://www.youtube.com/@lukaswagnerai" target="_blank" rel="noopener">YouTube</a>
         </nav>
       </div>
       <div id="impressum">
         <h3>Impressum</h3>
-        <p>[Platzhalter, vor Livegang ergänzen: Name, Anschrift, E-Mail, ggf. UID/Firmenbuch. In Österreich Pflicht.]<br>E-Mail: kontakt@lukaswagner.at · © <span id="year">2026</span> Lukas Wagner<br>Eventfotos: © Nussbaumer Photography</p>
+        <!-- TODO Livegang: finalen Legal-Block ergaenzen (vollstaendiger Name, Anschrift, UID/Firmenbuch) - in Oesterreich Pflicht.
+        <p>Lukas Wagner<br>[Strasse, PLZ Ort]<br>UID/Firmenbuch: [...]</p>
+        -->
+        <p>E-Mail: kontakt@lukaswagner.at · © <span id="year">2026</span> Lukas Wagner<br>Eventfotos: © Nussbaumer Photography</p>
       </div>
     </div>
   </footer>
@@ -657,26 +661,25 @@
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    /* === aheadx.at Kennzahlen-Schnittstelle ===
-       Anzeige-Teilnehmerzahl = offizielle aheadx.at-Zahl * FAKTOR.
-       BASIS = Fallback (manuell gepflegte aheadx.at-Zahl).
-       ENDPOINT = optionale JSON-URL von aheadx.at (Feld "teilnehmer"),
-       z. B. {"teilnehmer":1702}; dann wird live synchronisiert. */
+    /* Kontaktformular ohne Backend: baut beim Absenden eine mailto-Nachricht. */
     (function(){
-      var BASIS = 1702;     // offizielle aheadx.at Teilnehmerzahl (Stand zuletzt geprüft)
-      var FAKTOR = 1;       // 1:1 echte Zahl, kein Multiplikator
-      var ENDPOINT = "";    // z. B. "https://aheadx.at/api/kennzahlen.json" (CORS nötig)
-      function anzeigen(basis){
-        var wert = Math.floor((basis * FAKTOR) / 10) * 10;
-        var text = wert.toLocaleString("de-DE") + "+";
-        document.querySelectorAll("[data-teilnehmer]").forEach(function(el){ el.textContent = text; });
-      }
-      anzeigen(BASIS);
-      if (ENDPOINT) {
-        fetch(ENDPOINT).then(function(r){ return r.json(); }).then(function(d){
-          if (d && d.teilnehmer) anzeigen(Number(d.teilnehmer));
-        }).catch(function(){ /* Fallback BASIS bleibt sichtbar */ });
-      }
+      var lf = document.getElementById('leadform');
+      if (!lf) return;
+      lf.addEventListener('submit', function(e){
+        e.preventDefault();
+        var g = function(n){ var el = lf.querySelector('[name="'+n+'"]'); return el ? el.value.trim() : ''; };
+        var zeilen = [
+          'Name: ' + g('name'),
+          'Organisation: ' + g('organisation'),
+          'E-Mail: ' + g('email'),
+          'Format: ' + g('format'),
+          'Ort / Datum: ' + g('ort_datum'),
+          '',
+          g('nachricht')
+        ];
+        var betreff = 'Anfrage Lukas Wagner' + (g('format') ? ' (' + g('format') + ')' : '');
+        window.location.href = 'mailto:kontakt@lukaswagner.at?subject=' + encodeURIComponent(betreff) + '&body=' + encodeURIComponent(zeilen.join('\n'));
+      });
     })();
     var t=document.querySelector('.nav-toggle'),m=document.getElementById('menu');
     if(t){t.addEventListener('click',function(){var o=m.classList.toggle('open');t.setAttribute('aria-expanded',o?'true':'false');t.setAttribute('aria-label',o?'Menü schließen':'Menü öffnen');});
