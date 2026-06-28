@@ -157,9 +157,13 @@
     .pw{border:1px solid var(--line);border-radius:12px;background:#f4f6fa;min-height:94px;display:flex;align-items:center;justify-content:center;padding:1.1rem 1.5rem;transition:transform .2s}
     .pw:hover{transform:translateY(-3px)}
     .pw img{max-height:44px;max-width:100%;width:auto;object-fit:contain}
-    .quote{border:1px solid var(--line);border-left:2px solid var(--accent-2);border-radius:14px;background:var(--card);padding:1.5rem 1.7rem;max-width:42rem;margin-top:1.4rem}
-    .quote p{font-size:1.12rem;color:var(--fg);line-height:1.4}
-    .quote .by{margin-top:.7rem;color:var(--muted);font-size:.74rem;text-transform:uppercase;letter-spacing:.09em}
+    .quotes{display:grid;grid-template-columns:1fr 1fr;gap:.8rem;margin-top:1rem}
+    .qcard{border:1px solid var(--line);border-left:2px solid var(--accent-2);border-radius:14px;background:var(--card);padding:1.4rem 1.5rem}
+    .qcard p{color:var(--fg);font-size:1.02rem;line-height:1.45}
+    .qcard figcaption{margin-top:.95rem;display:flex;flex-direction:column;gap:.12rem}
+    .qcard figcaption b{font-family:var(--display);font-size:.92rem;font-weight:600}
+    .qcard figcaption span{color:var(--muted);font-size:.78rem}
+    .qmore{display:inline-block;margin-top:1.1rem;color:var(--accent-2);font-size:.9rem;font-weight:600}
 
     /* FÜR WEN */
     .wcard{border:1px solid var(--line);border-radius:var(--r);background:var(--card);padding:1.5rem;transition:transform .2s,border-color .2s}
@@ -194,7 +198,7 @@
       .nav-links{position:absolute;top:64px;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:rgba(7,8,13,.98);backdrop-filter:blur(14px);border-bottom:1px solid var(--line);padding:.4rem 1.5rem 1.1rem;display:none}
       .nav-links.open{display:flex}.nav-links a:not(.btn){padding:.85rem 0;border-bottom:1px solid var(--line)}.nav-links .btn{margin-top:.7rem;justify-content:center}
       .hero{min-height:auto;padding-top:2.4rem}
-      .hero-grid,.grid3,.grid4,.mosaic{grid-template-columns:1fr}
+      .hero-grid,.grid3,.grid4,.mosaic,.quotes{grid-template-columns:1fr}
       .reel-card{aspect-ratio:4/3;max-width:480px}
       .sticky-cta{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:80;justify-content:center;padding:.7rem 1rem calc(.7rem + env(safe-area-inset-bottom));background:rgba(7,8,13,.94);backdrop-filter:blur(12px);border-top:1px solid var(--line)}
       .sticky-cta .btn{width:100%;max-width:420px;justify-content:center}
@@ -354,11 +358,15 @@
           <div class="pw"><img src="assets/logos/kleine-zeitung.svg" alt="Kleine Zeitung" loading="lazy" /></div>
         </div>
 
-        <!-- Mockup: illustrative Veranstalterstimme (kein echtes Zitat) -->
-        <figure class="quote reveal">
-          <p>„Das Format hat aus einem abstrakten Thema einen konkreten Abend gemacht."</p>
-          <figcaption class="by">Beispiel · Veranstalterstimme</figcaption>
-        </figure>
+        <!-- Echte Empfehlungen aus dem LinkedIn-Profil -->
+        <div class="sec-label reveal" style="margin-top:2.4rem;margin-bottom:0">Stimmen aus Coaching &amp; Bühne</div>
+        <div class="quotes reveal">
+          <figure class="qcard"><p>„Seine Fähigkeit, komplexe KI-Konzepte verständlich und anschaulich zu vermitteln, macht ihn zu einem herausragenden Sprecher."</p><figcaption><b>Stefan König</b><span>Finanzstratege</span></figcaption></figure>
+          <figure class="qcard"><p>„Lukas übersetzt die Komplexität des Themas meisterhaft, ohne dabei an Tiefe zu verlieren."</p><figcaption><b>Oliver Carl Drewo</b><span>Webdesign &amp; SEO</span></figcaption></figure>
+          <figure class="qcard"><p>„Willst du deinen Talk auf den Punkt bringen? Frag Lukas."</p><figcaption><b>Andreas Gruber</b><span>Speaker, TEDxSalzburg</span></figcaption></figure>
+          <figure class="qcard"><p>„Alle im Raum können nicht anders, als an seinen Lippen zu hängen."</p><figcaption><b>Romy Sigl</b><span>CEO CoworkingSalzburg</span></figcaption></figure>
+        </div>
+        <a class="qmore reveal" href="https://www.linkedin.com/in/lukaswagnerai/details/recommendations/" target="_blank" rel="noopener">Weitere Empfehlungen auf LinkedIn →</a>
 
         <div class="cta-row reveal">
           <a class="btn btn-primary" href="https://aheadx.at" target="_blank" rel="noopener">ahead x ansehen</a>
