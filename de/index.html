@@ -142,6 +142,9 @@
     .fcard .tag{margin-top:auto;font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;color:var(--accent-2)}
 
     /* PROOF MOSAIC */
+    .stats{display:flex;flex-wrap:wrap;gap:1.4rem 2.8rem;margin:0 0 2rem}
+    .stat .n{font-family:var(--display);font-weight:700;font-size:clamp(1.7rem,3.6vw,2.5rem);line-height:1;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+    .stat .l{color:var(--muted);font-size:.84rem;margin-top:.25rem}
     .mosaic{display:grid;grid-template-columns:1.2fr 1fr;gap:.8rem;align-items:stretch}
     .mosaic figure{position:relative;border-radius:16px;overflow:hidden;border:1px solid var(--line)}
     .mosaic figure img{width:100%;height:100%;object-fit:cover}
@@ -322,29 +325,17 @@
           <p class="lead-in">Mit ahead x entstehen Live-Formate, Workshops und Zukunftsveranstaltungen, die KI aus der Expert:innenblase holen.</p>
         </div>
 
+        <div class="stats reveal">
+          <div class="stat"><div class="n">500+</div><div class="l">Bühnenauftritte</div></div>
+          <div class="stat"><div class="n">1.700+</div><div class="l">Teilnehmer bei ahead x</div></div>
+          <div class="stat"><div class="n">12+</div><div class="l">Städte Herbst-Tour</div></div>
+          <div class="stat"><div class="n">30+</div><div class="l">Empfehlungen auf LinkedIn</div></div>
+        </div>
+
         <div class="mosaic reveal">
           <figure class="big"><img src="/assets/lukas-stage.jpg" alt="Lukas Wagner auf der Bühne" loading="lazy" /><figcaption>Bühne</figcaption></figure>
-          <figure class="sm"><img src="/assets/aheadx-audience.jpg" alt="Publikum bei einem ahead x Format" loading="lazy" /><figcaption>Publikum</figcaption></figure>
-          <!-- Mockup: abstrakte DACH-Tour-Map -->
-          <div class="map">
-            <h4>Tour · DACH</h4>
-            <div class="mini">Herbst 2026 · live erleben</div>
-            <svg viewBox="0 0 360 240" xmlns="http://www.w3.org/2000/svg" aria-label="Abstrakte Tourkarte mit Stationen in Österreich und der Schweiz">
-              <defs><radialGradient id="g" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#5be0c0"/><stop offset="100%" stop-color="#8aa0ff"/></radialGradient></defs>
-              <path d="M40 150 C70 90 150 70 210 80 C280 92 320 120 330 150 C320 190 250 205 190 200 C120 194 60 200 40 150 Z" fill="rgba(255,255,255,.03)" stroke="rgba(255,255,255,.12)"/>
-              <polyline points="70,165 95,150 108,158 118,165 205,120 250,108 300,150" fill="none" stroke="rgba(91,224,192,.35)" stroke-width="1.5" stroke-dasharray="3 4"/>
-              <g font-family="Inter,sans-serif" font-size="9" fill="#c9cfda">
-                <g><circle cx="70" cy="165" r="4" fill="url(#g)"/><text x="70" y="183" text-anchor="middle">Zürich</text></g>
-                <g><circle cx="95" cy="150" r="4" fill="url(#g)"/><text x="92" y="142" text-anchor="end">Bregenz</text></g>
-                <g><circle cx="108" cy="158" r="4" fill="url(#g)"/><text x="108" y="176" text-anchor="middle">Dornbirn</text></g>
-                <g><circle cx="118" cy="167" r="4" fill="url(#g)"/><text x="124" y="180" text-anchor="start">Götzis</text></g>
-                <g><circle cx="205" cy="120" r="4" fill="url(#g)"/><text x="205" y="112" text-anchor="middle">Salzburg</text></g>
-                <g><circle cx="250" cy="108" r="4" fill="url(#g)"/><text x="252" y="100" text-anchor="start">Linz</text></g>
-                <g><circle cx="305" cy="118" r="4.5" fill="url(#g)"/><text x="308" y="112" text-anchor="start">Wien</text></g>
-                <g><circle cx="300" cy="150" r="4" fill="url(#g)"/><text x="304" y="166" text-anchor="start">Graz</text></g>
-              </g>
-            </svg>
-          </div>
+          <figure class="sm"><img src="/assets/speaker-reel-thumb.jpg" alt="Lukas Wagner bei einer Live-Demo" loading="lazy" /><figcaption>Live-Demo</figcaption></figure>
+          <figure class="sm"><img src="/assets/aheadx-demo.jpg" alt="Hands-on KI-Workshop" loading="lazy" /><figcaption>Workshop</figcaption></figure>
         </div>
 
         <!-- Partner-Logos von aheadx.at, selbst gehostet unter assets/logos/ -->
