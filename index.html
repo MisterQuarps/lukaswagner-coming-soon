@@ -159,6 +159,41 @@
     .tour-extra b{color:var(--muted);font-size:.85rem;font-weight:600;margin-right:.15rem}
     .tour-extra span{border:1px solid var(--line);border-radius:8px;padding:.35rem .7rem;font-size:.82rem;color:var(--muted-bright);background:rgba(255,255,255,.02)}
 
+    /* === Stufe 2: Premium-Sektionen === */
+    .lead-in{max-width:44rem;color:var(--muted-bright);font-size:1.05rem;margin-top:.7rem}
+    .split2{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:1.7rem}
+    .vs{border:1px solid var(--line);border-radius:var(--r);background:var(--card);padding:1.6rem}
+    .vs.after{border-color:rgba(91,224,192,.4);background:radial-gradient(130% 130% at 100% 0,rgba(91,224,192,.09),transparent 55%),var(--card)}
+    .vs .vs-tag{font-family:var(--display);font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;margin-bottom:1rem}
+    .vs.before .vs-tag{color:var(--muted)}.vs.after .vs-tag{color:var(--accent-2)}
+    .vs ul{list-style:none;display:flex;flex-direction:column;gap:.75rem}
+    .vs li{padding-left:1.6rem;position:relative;color:var(--muted-bright);font-size:.96rem}
+    .vs.before li::before{content:"×";position:absolute;left:0;color:var(--muted);font-weight:700}
+    .vs.after li::before{content:"→";position:absolute;left:0;color:var(--accent-2);font-weight:700}
+    .flow{display:grid;grid-template-columns:repeat(4,1fr);gap:.8rem;margin-top:1.7rem;counter-reset:flow}
+    .flow .step{border:1px solid var(--line);border-radius:14px;background:var(--card);padding:1.25rem}
+    .flow .step::before{counter-increment:flow;content:counter(flow);font-family:var(--display);font-weight:700;font-size:.92rem;color:#08231e;background:var(--grad);width:1.8rem;height:1.8rem;border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:.8rem}
+    .flow .step h3{font-size:1.02rem;margin-bottom:.3rem;line-height:1.2}
+    .flow .step p{color:var(--muted);font-size:.86rem}
+    .xp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1.7rem}
+    .xp{border:1px solid var(--line);border-radius:var(--r);background:var(--card);padding:1.6rem;transition:transform .25s,border-color .25s}
+    .xp:hover{transform:translateY(-4px);border-color:var(--accent)}
+    .xp .xp-ic{font-size:1.5rem;margin-bottom:.7rem;display:block}
+    .xp h3{font-size:1.08rem;margin-bottom:.35rem}
+    .xp p{color:var(--muted);font-size:.9rem}
+    .aud-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin-top:1.7rem}
+    .aud{border:1px solid var(--line);border-radius:var(--r);background:var(--card);padding:1.6rem;display:flex;flex-direction:column;gap:.5rem;transition:transform .2s,border-color .2s}
+    .aud:hover{transform:translateY(-3px);border-color:var(--accent)}
+    .aud .aud-k{font-family:var(--display);font-size:.76rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+    .aud h3{font-size:1.16rem}
+    .aud p{color:var(--muted-bright);font-size:.94rem;flex:1}
+    .aud .go{color:var(--accent-2);font-size:.9rem;font-weight:600}
+    .tier-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:.9rem;margin-top:1.6rem}
+    .tier{border:1px solid var(--line);border-radius:var(--r);background:var(--card);padding:1.35rem;display:flex;flex-direction:column;gap:.45rem}
+    .tier .tier-n{font-family:var(--display);font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent)}
+    .tier h3{font-size:1.05rem}
+    .tier p{color:var(--muted);font-size:.86rem}
+
     .proj .cardtop{height:118px;background:var(--card);border-bottom:1px dashed var(--line-strong);color:var(--muted-bright);font-weight:500;font-size:.8rem;align-items:center;justify-content:center;text-align:center;flex-direction:column;gap:.3rem}
     .proj .pressline{margin-top:.6rem;font-size:.76rem;color:var(--muted);border-top:1px solid var(--line);padding-top:.55rem}
 
@@ -192,12 +227,12 @@
     .reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}.reveal.in{opacity:1;transform:none}
     @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
 
-    @media (max-width:920px){ .ax{grid-template-columns:1fr} .press-strip{grid-template-columns:repeat(2,1fr)} .contact-cards{grid-template-columns:1fr 1fr} }
+    @media (max-width:920px){ .ax{grid-template-columns:1fr} .press-strip{grid-template-columns:repeat(2,1fr)} .contact-cards{grid-template-columns:1fr 1fr} .flow,.tier-grid,.xp-grid{grid-template-columns:repeat(2,1fr)} }
     @media (max-width:820px){
       .nav-toggle{display:inline-flex}
       .nav-links{position:absolute;top:66px;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:rgba(10,12,17,.98);backdrop-filter:blur(14px);border-bottom:1px solid var(--line);padding:.4rem 1.5rem 1.1rem;display:none}
       .nav-links.open{display:flex}.nav-links a:not(.btn){padding:.8rem 0;border-bottom:1px solid var(--line)}.nav-links .btn{margin-top:.7rem;justify-content:center}
-      .hero-grid,.g3,.g4,.split,.media-grid,form.lead{grid-template-columns:1fr}
+      .hero-grid,.g3,.g4,.split,.split2,.media-grid,form.lead,.flow,.xp-grid,.aud-grid,.tier-grid{grid-template-columns:1fr}
       .collage .big{aspect-ratio:16/10}
       .sticky-cta{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:80;justify-content:center;padding:.7rem 1rem calc(.7rem + env(safe-area-inset-bottom));background:rgba(10,12,17,.92);backdrop-filter:blur(12px);border-top:1px solid var(--line)}
       .sticky-cta .btn{width:100%;max-width:420px;justify-content:center}
@@ -290,6 +325,52 @@
       </div>
     </section>
 
+    <!-- D2 · TRANSFORMATION -->
+    <section id="transformation">
+      <div class="wrap">
+        <div class="sec-head reveal"><div class="sec-label">Vorher / Nachher</div>
+          <h2>Vor der Keynote: viele Fragen. Danach: ein gemeinsames Bild.</h2>
+        </div>
+        <div class="split2 reveal">
+          <div class="vs before">
+            <div class="vs-tag">Vorher</div>
+            <ul>
+              <li>KI klingt wichtig, bleibt aber unübersichtlich.</li>
+              <li>Teams testen Tools ohne Richtung.</li>
+              <li>Entscheider:innen spüren Druck, aber keine Klarheit.</li>
+              <li>Das Publikum schwankt zwischen Faszination und Unsicherheit.</li>
+            </ul>
+          </div>
+          <div class="vs after">
+            <div class="vs-tag">Nachher</div>
+            <ul>
+              <li>Menschen verstehen, was KI wirklich verändert.</li>
+              <li>Teams erkennen konkrete Anwendungsfelder.</li>
+              <li>Führung bekommt Sprache und Orientierung.</li>
+              <li>Aus Überforderung wird Handlungsmut.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- D3 · SIGNATURE KEYNOTE -->
+    <section id="keynote-erlebnis" style="padding-top:0">
+      <div class="wrap">
+        <div class="sec-head reveal"><div class="sec-label">Die Signature-Keynote</div>
+          <h2>Keine KI-Vorlesung. Ein Live-Moment, der hängen bleibt.</h2>
+          <p class="lead-in">Lukas Wagner verbindet Storytelling, Live-Demos, klare Einordnung und Publikumsnähe. Der Moment soll nicht zeigen, wie beeindruckend KI ist, sondern was Menschen jetzt damit anfangen können.</p>
+        </div>
+        <div class="flow reveal">
+          <div class="step"><h3>Einordnung statt Hype</h3><p>Was ist wirklich relevant, was nur Tool-Theater? Was bedeutet KI für Arbeit, Wirtschaft und Gesellschaft?</p></div>
+          <div class="step"><h3>Live-Demos statt Folien</h3><p>Texte, Bilder, Videos, Agenten und Automatisierungen werden live greifbar gemacht.</p></div>
+          <div class="step"><h3>Publikum statt Blase</h3><p>Verständlich und nahbar, für Menschen, die KI nicht studieren, aber damit arbeiten.</p></div>
+          <div class="step"><h3>Nächste Schritte statt Staunen</h3><p>Am Ende bleibt nicht nur Wow. Es bleibt Orientierung.</p></div>
+        </div>
+        <div style="margin-top:1.4rem"><a class="btn btn-primary btn-sm cta-keynote" data-cta="keynote" href="#kontakt">Keynote anfragen</a></div>
+      </div>
+    </section>
+
     <!-- E · BUCHUNGSPFADE -->
     <section id="buchen">
       <div class="wrap">
@@ -314,12 +395,30 @@
       </div>
     </section>
 
+    <!-- E2 · EXPERIENCE AREAS -->
+    <section id="erlebnis" style="padding-top:0">
+      <div class="wrap">
+        <div class="sec-head reveal"><div class="sec-label">Auf der Bühne</div>
+          <h2>Was das Publikum erlebt.</h2>
+        </div>
+        <div class="xp-grid reveal">
+          <div class="xp"><span class="xp-ic" aria-hidden="true">◐</span><h3>KI live auf der Bühne</h3><p>Generative KI, Tools, Agenten und kreative Anwendungen werden nicht erklärt, sondern gezeigt.</p></div>
+          <div class="xp"><span class="xp-ic" aria-hidden="true">✦</span><h3>Aha-Momente für alle</h3><p>Komplexe Entwicklungen werden so übersetzt, dass sie auch ohne Tech-Hintergrund im Alltag ankommen.</p></div>
+          <div class="xp"><span class="xp-ic" aria-hidden="true">◈</span><h3>Zukunftsbilder statt Buzzwords</h3><p>Was bedeutet KI für Arbeit, Bildung, Medien, Verwaltung, Marketing und Führung?</p></div>
+          <div class="xp"><span class="xp-ic" aria-hidden="true">◉</span><h3>Publikumsenergie</h3><p>Fragen, Beispiele, Interaktion und Humor machen aus dem Vortrag einen gemeinsamen Moment.</p></div>
+          <div class="xp"><span class="xp-ic" aria-hidden="true">➜</span><h3>Transfer in die Praxis</h3><p>Was kann ich morgen ausprobieren? Was sollte meine Organisation jetzt klären?</p></div>
+          <div class="xp"><span class="xp-ic" aria-hidden="true">▣</span><h3>Auf die Zielgruppe zugeschnitten</h3><p>Tiefe, Beispiele und Sprache richten sich nach Anlass, Branche und Publikum.</p></div>
+        </div>
+      </div>
+    </section>
+
     <!-- F · PROOF STRIP -->
     <section class="proof" style="padding:0">
       <div class="wrap">
         <div class="proof-stats">
-          <div class="pstat"><div class="n grad-text" data-teilnehmer>2.040+</div><div class="l">Teilnehmer</div></div>
-          <div class="pstat"><div class="n grad-text">8</div><div class="l">Städte</div></div>
+          <div class="pstat"><div class="n grad-text">500+</div><div class="l">Bühnenauftritte</div></div>
+          <div class="pstat"><div class="n grad-text" data-teilnehmer>1.700+</div><div class="l">Teilnehmer bei ahead x</div></div>
+          <div class="pstat"><div class="n grad-text">8</div><div class="l">KI-Tour-Städte</div></div>
           <div class="pstat"><div class="n grad-text">92%</div><div class="l">mit 10/10 bewertet</div></div>
         </div>
         <div class="plat">
@@ -344,23 +443,37 @@
           <div class="logo-ph">Kleine Zeitung</div>
         </div>
         <p class="note" style="padding-top:.8rem">Logos folgen nach Freigabe der jeweiligen Partner.</p>
+
+        <div class="sec-head reveal" style="max-width:44rem;margin-top:2.6rem"><div class="sec-label">Partner-Funnel</div>
+          <h2>Für Partner, die KI nicht nur sponsern, sondern sichtbar gestalten wollen.</h2>
+          <p class="lead-in">ahead x und Lukas Wagner bieten Marken, Medienhäusern und Standortpartnern eine Bühne, um KI-Befähigung glaubwürdig in die Breite zu bringen.</p>
+        </div>
+        <div class="tier-grid reveal">
+          <div class="tier"><span class="tier-n">Event Partner</span><h3>Eine Bühne</h3><p>Lokale Sichtbarkeit bei einem Format.</p></div>
+          <div class="tier"><span class="tier-n">Regional Partner</span><h3>Mehrere Städte</h3><p>Sichtbarkeit über mehrere Tourstationen einer Region.</p></div>
+          <div class="tier"><span class="tier-n">Knowledge Partner</span><h3>Inhalt &amp; Substanz</h3><p>Inhaltliche Einbindung in Workshops, Labs oder Ressourcen.</p></div>
+          <div class="tier"><span class="tier-n">Founding Partner</span><h3>Strategische Rolle</h3><p>Gestaltende Rolle im Zukunftsformat ahead x FUTURE.</p></div>
+        </div>
+        <div style="margin-top:1.4rem;display:flex;align-items:center;gap:1.1rem;flex-wrap:wrap">
+          <a class="btn btn-primary btn-sm cta-aheadx" data-cta="partner" href="mailto:kontakt@lukaswagner.at?subject=Partnerdeck%20anfordern%20Lukas%20Wagner%20%2F%20ahead%20x">Partnerdeck anfordern</a>
+          <span class="note" style="margin:0;font-style:normal;color:var(--muted)">Für ausgewählte Partner mit inhaltlichem Fit. Keine reine Logo-Fläche.</span>
+        </div>
       </div>
     </section>
 
     <!-- G · SIGNATURE-ANGEBOTE -->
     <section id="themen" style="padding-top:0">
       <div class="wrap">
-        <div class="sec-head reveal"><div class="sec-label">Signature-Themen</div><h2>Themen, die Orientierung geben.</h2></div>
-        <div class="grid g4">
-          <div class="card reveal"><div class="body"><div class="k">01</div><h3>KI verstehen, bevor sie dich überholt</h3><p>Der verständliche Einstieg für Publikum, Teams und Entscheider:innen.</p></div></div>
-          <div class="card reveal"><div class="body"><div class="k">02</div><h3>Vom Prompt zum Produktivitätsvorteil</h3><p>Wie KI im Arbeitsalltag konkret hilft, ohne Tool-Chaos.</p></div></div>
-          <div class="card reveal"><div class="body"><div class="k">03</div><h3>KI in unsere Stadt bringen</h3><p>Ein Impuls für Bürger:innen, Wirtschaft und regionale Zukunftsfähigkeit.</p></div></div>
-          <div class="card reveal"><div class="body"><div class="k">04</div><h3>Europa im KI-Zeitalter</h3><p>Warum KI zur Standort-, Bildungs- und Gesellschaftsfrage wird.</p></div></div>
+        <div class="sec-head reveal"><div class="sec-label">Keynote-Themen</div><h2>Keynotes, die KI nicht größer machen, sondern klarer.</h2></div>
+        <div class="grid g3">
+          <div class="card reveal"><div class="body"><div class="k">01</div><h3>KI verstehen, bevor sie entscheidet</h3><p>Was Unternehmen und Gesellschaft jetzt über künstliche Intelligenz wissen müssen.</p></div></div>
+          <div class="card reveal"><div class="body"><div class="k">02</div><h3>Vom Tool-Chaos zur KI-Kompetenz</h3><p>Wie Teams produktiver werden, ohne sich in 100 Apps zu verlieren.</p></div></div>
+          <div class="card reveal"><div class="body"><div class="k">03</div><h3>Die neue Arbeit: Was bleibt menschlich?</h3><p>Wie KI Aufgaben, Rollen, Kommunikation und Verantwortung verändert.</p></div></div>
+          <div class="card reveal"><div class="body"><div class="k">04</div><h3>KI für Städte und Regionen</h3><p>Warum künstliche Intelligenz zur Standortfrage wird.</p></div></div>
+          <div class="card reveal"><div class="body"><div class="k">05</div><h3>Europa im KI-Zeitalter</h3><p>Digitale Souveränität, Bildung, Wirtschaft und die Frage, wer die Zukunft gestaltet.</p></div></div>
+          <div class="card reveal"><div class="body"><div class="k">06</div><h3>KI live: Was heute schon möglich ist</h3><p>Eine visuelle Demo-Keynote mit Beispielen aus Text, Bild, Video, Musik und Automatisierung.</p></div></div>
         </div>
-        <div style="margin-top:1.2rem;display:flex;align-items:center;gap:1.2rem;flex-wrap:wrap">
-          <a class="btn btn-primary btn-sm cta-keynote" data-cta="keynote" href="#kontakt">Passendes Thema anfragen</a>
-          <details class="faq" style="margin:0"><summary style="font-size:.92rem;padding:.4rem 0">Weitere Themen auf Anfrage</summary><p style="padding:.3rem 0 .6rem">KI live erleben · Die neue Arbeitswelt: Was bleibt menschlich? · weitere Themen individuell auf Anfrage.</p></details>
-        </div>
+        <div style="margin-top:1.4rem"><a class="btn btn-primary btn-sm cta-keynote" data-cta="keynote" href="#kontakt">Passendes Thema anfragen</a></div>
       </div>
     </section>
 
@@ -369,9 +482,9 @@
       <div class="wrap">
         <div class="ax reveal">
           <div>
-            <div class="sec-label">Case · Proof</div>
-            <h2>ahead x: KI-Befähigung als Live-Erlebnis.</h2>
-            <p>Mit ahead x baut Lukas Wagner eine wachsende Plattform für KI-Befähigung im deutschsprachigen Raum. Das Ziel: KI aus der Expert:innenblase holen und für Menschen, Unternehmen und Regionen vor Ort erlebbar machen.</p>
+            <div class="sec-label">ahead x · Der Beweis</div>
+            <h2>Lukas Wagner spricht nicht nur über KI-Befähigung. Er baut sie.</h2>
+            <p>Mit ahead x entsteht eine Plattform, die KI aus der Expert:innenblase holt: in Städte, Unternehmen, Medienhäuser und Regionen. Keynotes, Workshops, Labs, Awards und Zukunftsformate werden zu einem Ökosystem für Orientierung.</p>
             <div class="ax-formats"><span>city</span><span>labs</span><span>mastermind</span><span>future</span><span>awards</span></div>
             <div style="margin-top:1.3rem;display:flex;gap:.7rem;flex-wrap:wrap">
               <a class="btn btn-primary btn-sm cta-aheadx" data-cta="aheadx" href="https://aheadx.at" target="_blank" rel="noopener">ahead x entdecken</a>
@@ -383,6 +496,21 @@
             <img class="tile" style="aspect-ratio:4/3" src="assets/aheadx-demo.jpg" alt="Hands-on KI-Workshop bei ahead x" loading="lazy" />
             <img class="tile" style="aspect-ratio:4/3;grid-column:1 / -1" src="assets/speaker-reel-thumb.jpg" alt="Lukas Wagner präsentiert bei einem ahead x Format" loading="lazy" />
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- H3 · ZIELGRUPPENPFADE -->
+    <section id="fuer-wen" style="padding-top:0">
+      <div class="wrap">
+        <div class="sec-head reveal"><div class="sec-label">Für wen</div>
+          <h2>Für wen der KI-Impuls gedacht ist.</h2>
+        </div>
+        <div class="aud-grid reveal">
+          <div class="aud"><span class="aud-k">Unternehmen</span><h3>KI verständlich ins Team bringen</h3><p>Für Führungskräfte, Teams und Kundenevents, die KI endlich verständlich und praktisch einordnen wollen.</p><a class="go cta-keynote" data-cta="keynote" href="mailto:kontakt@lukaswagner.at?subject=KI%20im%20Unternehmen%20anfragen">KI im Unternehmen anfragen →</a></div>
+          <div class="aud"><span class="aud-k">Städte &amp; Regionen</span><h3>KI für die Bevölkerung greifbar machen</h3><p>Für Gemeinden, Städte und Standortinitiativen, die KI für Bürger:innen, Wirtschaft und Verwaltung erlebbar machen wollen.</p><a class="go cta-aheadx" data-cta="aheadx" href="mailto:kontakt@lukaswagner.at?subject=KI%20in%20unsere%20Region%20bringen">KI in unsere Region bringen →</a></div>
+          <div class="aud"><span class="aud-k">Medienhäuser &amp; Partner</span><h3>KI als Live-Erlebnis in die Region</h3><p>Für Medienpartner, die KI nicht nur berichten, sondern als Format vor Ort zu den Menschen bringen wollen.</p><a class="go cta-aheadx" data-cta="partner" href="mailto:kontakt@lukaswagner.at?subject=Partnerdeck%20anfordern">Partnerdeck anfordern →</a></div>
+          <div class="aud"><span class="aud-k">Konferenzen &amp; Festivals</span><h3>Ein KI-Programmpunkt mit Energie</h3><p>Für Bühnen, die einen starken KI-Programmpunkt suchen: verständlich, visuell, relevant und publikumsnah.</p><a class="go cta-keynote" data-cta="keynote" href="mailto:kontakt@lukaswagner.at?subject=Speaker-Anfrage%20Lukas%20Wagner">Speaker anfragen →</a></div>
         </div>
       </div>
     </section>
@@ -536,7 +664,7 @@
        z. B. {"teilnehmer":1702}; dann wird live synchronisiert. */
     (function(){
       var BASIS = 1702;     // offizielle aheadx.at Teilnehmerzahl (Stand zuletzt geprüft)
-      var FAKTOR = 1.2;
+      var FAKTOR = 1;       // 1:1 echte Zahl, kein Multiplikator
       var ENDPOINT = "";    // z. B. "https://aheadx.at/api/kennzahlen.json" (CORS nötig)
       function anzeigen(basis){
         var wert = Math.floor((basis * FAKTOR) / 10) * 10;
