@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Lukas Wagner | KI-Keynote-Speaker für Unternehmen, Städte &amp; Regionen</title>
-  <meta name="description" content="Lukas Wagner macht KI verständlich und praktisch nutzbar — mit Keynotes, Workshops und ahead x Formaten für Unternehmen, Städte und Regionen." />
+  <meta name="description" content="Lukas Wagner macht KI verständlich und praktisch nutzbar, mit Keynotes, Workshops und ahead x Formaten für Unternehmen, Städte und Regionen." />
 
   <!-- ====================================================================
        DRAFT: noindex/nofollow bleibt, bis Inhalte, Bilder, Belege und
@@ -39,11 +39,11 @@
   </script>
   <script type="application/ld+json">
   { "@context":"https://schema.org","@type":"FAQPage","mainEntity":[
-    {"@type":"Question","name":"Für welche Veranstaltungen kann man Lukas Wagner buchen?","acceptedAnswer":{"@type":"Answer","text":"Für Konferenzen, Firmenevents, Stadt- und Regionalveranstaltungen, Verbände, Kammern und Bildungseinrichtungen — als Keynote, Workshop oder Moderation rund um Künstliche Intelligenz."}},
-    {"@type":"Question","name":"Ist die Keynote auch für Einsteiger:innen geeignet?","acceptedAnswer":{"@type":"Answer","text":"Ja. KI wird ohne Fachjargon verständlich gemacht — Tiefe und Inhalt werden auf die Zielgruppe abgestimmt."}},
-    {"@type":"Question","name":"Bietet Lukas Wagner auch KI-Workshops an?","acceptedAnswer":{"@type":"Answer","text":"Ja — Hands-on-Workshops und Impulstage für Teams, KMU, Organisationen und öffentliche Einrichtungen."}},
+    {"@type":"Question","name":"Für welche Veranstaltungen kann man Lukas Wagner buchen?","acceptedAnswer":{"@type":"Answer","text":"Für Konferenzen, Firmenevents, Stadt- und Regionalveranstaltungen, Verbände, Kammern und Bildungseinrichtungen, als Keynote, Workshop oder Moderation rund um Künstliche Intelligenz."}},
+    {"@type":"Question","name":"Ist die Keynote auch für Einsteiger:innen geeignet?","acceptedAnswer":{"@type":"Answer","text":"Ja. KI wird ohne Fachjargon verständlich gemacht, Tiefe und Inhalt werden auf die Zielgruppe abgestimmt."}},
+    {"@type":"Question","name":"Bietet Lukas Wagner auch KI-Workshops an?","acceptedAnswer":{"@type":"Answer","text":"Ja, Hands-on-Workshops und Impulstage für Teams, KMU, Organisationen und öffentliche Einrichtungen."}},
     {"@type":"Question","name":"Spricht Lukas Wagner für Unternehmen, Städte und Regionen?","acceptedAnswer":{"@type":"Answer","text":"Ja. Die Formate richten sich an Unternehmen und KMU ebenso wie an Städte, Gemeinden, Regionen, Verbände und Bildung."}},
-    {"@type":"Question","name":"Wie läuft eine Anfrage ab?","acceptedAnswer":{"@type":"Answer","text":"Kurze E-Mail mit Eckdaten (Anlass, Zielgruppe, Ort, Zeitraum, Format) — dann folgt eine passende Einschätzung und ein konkreter Vorschlag."}}
+    {"@type":"Question","name":"Wie läuft eine Anfrage ab?","acceptedAnswer":{"@type":"Answer","text":"Kurze E-Mail mit Eckdaten (Anlass, Zielgruppe, Ort, Zeitraum, Format), dann folgt eine passende Einschätzung und ein konkreter Vorschlag."}}
   ]}
   </script>
 
@@ -100,7 +100,7 @@
     .badge{position:absolute;left:12px;bottom:12px;right:12px;background:rgba(8,10,15,.72);backdrop-filter:blur(8px);border:1px solid var(--line);border-radius:11px;padding:.55rem .75rem;font-size:.78rem;color:var(--fg);display:flex;align-items:center;gap:.45rem}
     .play{width:48px;height:48px;border-radius:50%;background:var(--grad);color:#08231e;display:flex;align-items:center;justify-content:center;font-size:1.1rem}
     .tile{border-radius:16px;overflow:hidden;position:relative;display:block}
-    .tile img{width:100%;height:100%;object-fit:cover;display:block}
+    .tile img,img.tile{width:100%;height:100%;object-fit:cover;display:block}
     .reel .play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:2}
     .reel::after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 55%,rgba(8,10,15,.45));z-index:1}
 
@@ -124,7 +124,7 @@
     .split .want h3{color:var(--accent)}
     .split ul{list-style:none;display:flex;flex-direction:column;gap:.55rem}
     .split li{font-size:.98rem;color:var(--muted-bright);padding-left:1.4rem;position:relative}
-    .split li::before{content:"–";position:absolute;left:0;color:var(--muted)}
+    .split li::before{content:"·";position:absolute;left:0;color:var(--muted)}
     .split .want li::before{content:"✓";color:var(--accent-2)}
 
     .proof{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:linear-gradient(180deg,rgba(255,255,255,.025),transparent)}
@@ -140,6 +140,24 @@
     .ax-mosaic{display:grid;grid-template-columns:1fr 1fr;gap:.6rem}
     .ax-formats{display:flex;flex-wrap:wrap;gap:.45rem;margin-top:.7rem}
     .ax-formats span{border:1px solid var(--line);border-radius:8px;padding:.35rem .7rem;font-size:.8rem;color:var(--muted-bright);background:rgba(255,255,255,.02)}
+
+    .tour-meta{border:1px solid rgba(91,224,192,.5);background:rgba(91,224,192,.10);color:var(--accent-2);border-radius:999px;padding:.4rem .9rem;font-size:.82rem;font-weight:600;white-space:nowrap}
+    .tour-list{display:flex;flex-direction:column;gap:.55rem;margin-top:.3rem}
+    .tour-row{display:grid;grid-template-columns:4.4rem 1fr auto;align-items:center;gap:1.1rem;border:1px solid var(--line);border-radius:14px;background:var(--card);padding:.85rem 1.15rem;transition:transform .2s,border-color .2s}
+    .tour-row:hover{transform:translateX(4px);border-color:var(--line-strong)}
+    .tour-row.is-out{border-color:rgba(91,224,192,.32);background:linear-gradient(90deg,rgba(91,224,192,.07),var(--card) 60%)}
+    .tour-date{font-family:var(--display);display:flex;flex-direction:column;line-height:1;text-align:center}
+    .tour-date b{font-size:1.5rem;font-weight:700;color:var(--fg)}
+    .tour-date span{font-size:.68rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-top:.2rem}
+    .tour-city{display:flex;flex-direction:column;gap:.12rem;min-width:0}
+    .tour-city h3{font-family:var(--display);font-size:1.1rem;font-weight:600;line-height:1.15}
+    .tour-city span{color:var(--muted);font-size:.82rem}
+    .tour-badge{font-size:.74rem;font-weight:600;border-radius:999px;padding:.32rem .75rem;white-space:nowrap;border:1px solid var(--line-strong);color:var(--muted)}
+    .tour-badge.out{background:var(--grad);border:none;color:#08231e}
+    .tour-badge.intl{border-color:rgba(138,160,255,.5);color:var(--accent)}
+    .tour-extra{display:flex;flex-wrap:wrap;align-items:center;gap:.45rem;margin-top:1.1rem}
+    .tour-extra b{color:var(--muted);font-size:.85rem;font-weight:600;margin-right:.15rem}
+    .tour-extra span{border:1px solid var(--line);border-radius:8px;padding:.35rem .7rem;font-size:.82rem;color:var(--muted-bright);background:rgba(255,255,255,.02)}
 
     .proj .cardtop{height:118px;background:var(--card);border-bottom:1px dashed var(--line-strong);color:var(--muted-bright);font-weight:500;font-size:.8rem;align-items:center;justify-content:center;text-align:center;flex-direction:column;gap:.3rem}
     .proj .pressline{margin-top:.6rem;font-size:.76rem;color:var(--muted);border-top:1px solid var(--line);padding-top:.55rem}
@@ -161,7 +179,7 @@
     .faq details{border:1px solid var(--line);border-radius:12px;padding:0 1.1rem;margin-bottom:.6rem;background:var(--card)}
     .faq summary{cursor:pointer;list-style:none;padding:1rem 0;font-family:var(--display);font-weight:500;font-size:1rem;display:flex;justify-content:space-between;gap:1rem}
     .faq summary::-webkit-details-marker{display:none}
-    .faq summary::after{content:"+";color:var(--accent);font-size:1.3rem;line-height:1}.faq details[open] summary::after{content:"–"}
+    .faq summary::after{content:"+";color:var(--accent);font-size:1.3rem;line-height:1}.faq details[open] summary::after{content:"×"}
     .faq details p{color:var(--muted);padding:0 0 1.1rem;font-size:.93rem}
 
     footer{border-top:1px solid var(--line);padding:2.2rem 0 5rem;margin-top:1rem}
@@ -198,6 +216,8 @@
         <a href="#buchen">Keynote</a>
         <a href="#buchen">Workshop</a>
         <a href="#aheadx">ahead x</a>
+        <a href="#tour">Tour</a>
+        <a href="#partner">Partner</a>
         <a href="#projekte">Projekte</a>
         <a href="#presse">Presse</a>
         <a href="#kontakt">Kontakt</a>
@@ -218,7 +238,7 @@
           <p class="sub">Keynotes, Workshops und Live-Formate für Unternehmen, Städte und Regionen, die KI verstehen, einordnen und praktisch nutzen wollen.</p>
           <div class="micro">
             <span><span class="dot" aria-hidden="true"></span> Gründer von ahead x</span>
-            <span>1.700+ Teilnehmer:innen</span>
+            <span><span data-teilnehmer>2.040+</span> Teilnehmer</span>
             <span>international zwischen Europa &amp; Südostasien</span>
           </div>
           <div class="hero-cta">
@@ -249,7 +269,7 @@
           <h2>Das größte Problem mit KI ist nicht die Technologie. Es ist die Überforderung.</h2></div>
         <div class="grid g3">
           <div class="card reveal"><div class="body"><div class="k">Tool-Chaos</div><p>Alle testen Tools. Kaum jemand weiß, welche wirklich relevant sind.</p></div></div>
-          <div class="card reveal"><div class="body"><div class="k">Strategie-Nebel</div><p>KI klingt wichtig — aber im Alltag fehlt der klare nächste Schritt.</p></div></div>
+          <div class="card reveal"><div class="body"><div class="k">Strategie-Nebel</div><p>KI klingt wichtig, aber im Alltag fehlt der klare nächste Schritt.</p></div></div>
           <div class="card reveal"><div class="body"><div class="k">Umsetzungs-Lücke</div><p>Zwischen Begeisterung und Anwendung bleibt oft ein großes Loch.</p></div></div>
         </div>
         <p class="closing reveal">Genau dort setzt Lukas Wagner an: Er macht KI verständlich, konkret und anschlussfähig.</p>
@@ -298,10 +318,9 @@
     <section class="proof" style="padding:0">
       <div class="wrap">
         <div class="proof-stats">
-          <div class="pstat"><div class="n grad-text">1.700+</div><div class="l">Teilnehmer:innen</div></div>
-          <div class="pstat"><div class="n grad-text">9</div><div class="l">Events</div></div>
+          <div class="pstat"><div class="n grad-text" data-teilnehmer>2.040+</div><div class="l">Teilnehmer</div></div>
           <div class="pstat"><div class="n grad-text">8</div><div class="l">Städte</div></div>
-          <div class="pstat"><div class="n grad-text">92%</div><div class="l">Zufriedenheit</div></div>
+          <div class="pstat"><div class="n grad-text">92%</div><div class="l">mit 10/10 bewertet</div></div>
         </div>
         <div class="plat">
           <a href="https://aheadx.at" target="_blank" rel="noopener">ahead x ↗</a>
@@ -313,13 +332,32 @@
     </section>
     <div class="wrap"><p class="note" style="padding:.7rem 0">Zahlen und Pressebelege vor Livegang prüfen.</p></div>
 
+    <!-- F2 · PARTNER / NETZWERK -->
+    <section id="partner" style="padding-top:0">
+      <div class="wrap">
+        <div class="sec-head reveal" style="max-width:44rem"><div class="sec-label">Partner &amp; Netzwerk</div>
+          <h2>Gemeinsam für KI-Befähigung in der Breite.</h2>
+          <p class="note" style="font-style:normal;color:var(--muted)">Marken und Medien, die mit Lukas Wagner und ahead x an der KI-Befähigung von Bevölkerung, Arbeitnehmer:innen und KMU arbeiten.</p>
+        </div>
+        <div class="press-strip reveal" style="grid-template-columns:repeat(3,1fr)">
+          <div class="logo-ph">Digital Campus Vorarlberg</div>
+          <div class="logo-ph">Vorarlberger Nachrichten</div>
+          <div class="logo-ph">VOL.at</div>
+          <div class="logo-ph">NEUE am Sonntag</div>
+          <div class="logo-ph">Tiroler Tageszeitung</div>
+          <div class="logo-ph">Kleine Zeitung</div>
+        </div>
+        <p class="note" style="padding-top:.8rem">Logos folgen nach Freigabe der jeweiligen Partner.</p>
+      </div>
+    </section>
+
     <!-- G · SIGNATURE-ANGEBOTE -->
     <section id="themen" style="padding-top:0">
       <div class="wrap">
         <div class="sec-head reveal"><div class="sec-label">Signature-Themen</div><h2>Themen, die Orientierung geben.</h2></div>
         <div class="grid g4">
           <div class="card reveal"><div class="body"><div class="k">01</div><h3>KI verstehen, bevor sie dich überholt</h3><p>Der verständliche Einstieg für Publikum, Teams und Entscheider:innen.</p></div></div>
-          <div class="card reveal"><div class="body"><div class="k">02</div><h3>Vom Prompt zum Produktivitätsvorteil</h3><p>Wie KI im Arbeitsalltag konkret hilft — ohne Tool-Chaos.</p></div></div>
+          <div class="card reveal"><div class="body"><div class="k">02</div><h3>Vom Prompt zum Produktivitätsvorteil</h3><p>Wie KI im Arbeitsalltag konkret hilft, ohne Tool-Chaos.</p></div></div>
           <div class="card reveal"><div class="body"><div class="k">03</div><h3>KI in unsere Stadt bringen</h3><p>Ein Impuls für Bürger:innen, Wirtschaft und regionale Zukunftsfähigkeit.</p></div></div>
           <div class="card reveal"><div class="body"><div class="k">04</div><h3>Europa im KI-Zeitalter</h3><p>Warum KI zur Standort-, Bildungs- und Gesellschaftsfrage wird.</p></div></div>
         </div>
@@ -347,8 +385,35 @@
           <div class="ax-mosaic">
             <img class="tile" style="aspect-ratio:4/3" src="assets/aheadx-audience.jpg" alt="Publikum bei einem ahead x Format" loading="lazy" />
             <img class="tile" style="aspect-ratio:4/3" src="assets/aheadx-demo.jpg" alt="Hands-on KI-Workshop bei ahead x" loading="lazy" />
-            <img class="tile" style="aspect-ratio:4/3;grid-column:1 / -1" src="assets/aheadx-tour.jpg" alt="Vortrag vor Publikum bei einem ahead x Format" loading="lazy" />
+            <img class="tile" style="aspect-ratio:4/3;grid-column:1 / -1" src="assets/speaker-reel-thumb.jpg" alt="Lukas Wagner präsentiert bei einem ahead x Format" loading="lazy" />
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- H2 · TOUR / STANDORTE -->
+    <section id="tour">
+      <div class="wrap">
+        <div class="sec-head reveal" style="max-width:none;display:flex;justify-content:space-between;align-items:flex-end;gap:1.2rem;flex-wrap:wrap">
+          <div style="max-width:42rem">
+            <div class="sec-label">Tour · Lukas live erleben</div>
+            <h2>Herbst-Tour 2026, über 12 Städte in Österreich &amp; der Schweiz.</h2>
+          </div>
+          <span class="tour-meta">Letzte Saison: 4 von 8 Terminen ausverkauft</span>
+        </div>
+        <div class="tour-list reveal">
+          <div class="tour-row"><span class="tour-date"><b>24</b><span>Sep</span></span><div class="tour-city"><h3>Wien</h3><span>KI-Keynote · live</span></div><span class="tour-badge">AT</span></div>
+          <div class="tour-row"><span class="tour-date"><b>01</b><span>Okt</span></span><div class="tour-city"><h3>Götzis</h3><span>Kulturbühne Ambach</span></div><span class="tour-badge">AT</span></div>
+          <div class="tour-row"><span class="tour-date"><b>05</b><span>Okt</span></span><div class="tour-city"><h3>Hard</h3><span>Kultursaal Spannrahmen</span></div><span class="tour-badge">AT</span></div>
+          <div class="tour-row"><span class="tour-date"><b>08</b><span>Okt</span></span><div class="tour-city"><h3>Bregenz</h3><span>KI-Keynote · live</span></div><span class="tour-badge">AT</span></div>
+          <div class="tour-row"><span class="tour-date"><b>10</b><span>Okt</span></span><div class="tour-city"><h3>Dornbirn</h3><span>Sportgymnasium Dornbirn</span></div><span class="tour-badge">AT</span></div>
+          <div class="tour-row"><span class="tour-date"><b>11</b><span>Okt</span></span><div class="tour-city"><h3>Zürich</h3><span>KI-Keynote · live</span></div><span class="tour-badge intl">CH</span></div>
+        </div>
+        <div class="tour-extra reveal"><b>Außerdem im Oktober:</b><span>Salzburg</span><span>Linz</span><span>Innsbruck</span><span>St. Pölten</span><span>Graz</span><span>Klagenfurt</span></div>
+        <div class="tour-extra reveal"><b>Vorschau 2027:</b><span>München</span><span>St. Gallen</span></div>
+        <div style="margin-top:1.4rem;display:flex;align-items:center;gap:1.1rem;flex-wrap:wrap">
+          <a class="btn btn-primary btn-sm cta-aheadx" data-cta="tour" href="#kontakt">Termin anfragen</a>
+          <span class="note" style="margin:0;font-style:normal;color:var(--muted)">Plätze pro Stadt begrenzt, früh anfragen lohnt sich.</span>
         </div>
       </div>
     </section>
@@ -356,20 +421,20 @@
     <!-- I · CREATIVE INTELLIGENCE PROJECTS -->
     <section id="projekte">
       <div class="wrap">
-        <div class="sec-head reveal"><div class="sec-label">KI, Kultur &amp; Storytelling</div><h2>Lukas redet nicht nur über KI — er wendet sie an.</h2>
-          <p class="note" style="font-style:normal;color:var(--muted)">Lukas entwickelt mit KI Formate, Musik, Geschichten und Medienprojekte — als praktische Beispiele, wie neue Technologie Menschen erreicht.</p>
+        <div class="sec-head reveal"><div class="sec-label">KI, Kultur &amp; Storytelling</div><h2>Lukas redet nicht nur über KI, er wendet sie an.</h2>
+          <p class="note" style="font-style:normal;color:var(--muted)">Lukas entwickelt mit KI Formate, Musik, Geschichten und Medienprojekte, als praktische Beispiele, wie neue Technologie Menschen erreicht.</p>
         </div>
         <div class="grid g3 proj">
           <div class="card reveal"><div class="cardtop">Studio XXV<small>assets/studio-xxv-cover.jpg</small></div><div class="body">
             <h3>Studio XXV</h3>
             <p>KI-Musik- und Künstlerprojekt rund um virtuelle Artists, Songs und digitale Popkultur.</p>
             <!-- BELEG ergänzen: Presse-Links/Screenshots Der Standard / Kronen Zeitung -->
-            <div class="pressline">Presse: Der Standard · Kronen Zeitung — Belege ergänzen</div>
+            <div class="pressline">Presse: Der Standard · Kronen Zeitung, Belege ergänzen</div>
             <div class="cardcta"><a class="btn btn-ghost btn-sm cta-press" data-cta="press" href="#" aria-disabled="true">Presse ansehen (folgt)</a></div>
           </div></div>
           <div class="card reveal"><div class="cardtop">Mimos Märchenwelt<small>assets/mimos-cover.jpg</small></div><div class="body">
             <h3>Mimos Märchenwelt</h3>
-            <p>KI-Märchenpodcast für Kinder — ursprünglich als MimosWelt.de entwickelt, auf Spotify verfügbar.</p>
+            <p>KI-Märchenpodcast für Kinder, ursprünglich als MimosWelt.de entwickelt, auf Spotify verfügbar.</p>
             <!-- LINK ergänzen: Spotify-Show-URL -->
             <div class="cardcta"><a class="btn btn-ghost btn-sm" href="#" aria-disabled="true">Auf Spotify hören (Link folgt)</a></div>
           </div></div>
@@ -387,14 +452,14 @@
         <div class="sec-head reveal"><div class="sec-label">Presse &amp; Medien</div><h2>Für Veranstalter:innen &amp; Journalist:innen.</h2></div>
         <!-- BELEG ergänzen: nur freigegebene Logos verwenden; sonst Textlink/Platzhalter -->
         <div class="press-strip reveal">
-          <div class="logo-ph">Der Standard<br><small>Freigabe prüfen</small></div>
-          <div class="logo-ph">Kronen Zeitung<br><small>Freigabe prüfen</small></div>
+          <div class="logo-ph">Der Standard</div>
+          <div class="logo-ph">Kronen Zeitung</div>
           <a class="logo-ph" href="https://www.youtube.com/@lukaswagnerai" target="_blank" rel="noopener">YouTube ↗</a>
           <div class="logo-ph">Spotify<br><small>Link folgt</small></div>
         </div>
         <div class="media-grid">
           <div class="reveal">
-            <p style="color:var(--muted-bright)"><b>Kurz-Bio:</b> Lukas Wagner ist KI-Keynote-Speaker, Unternehmer und Gründer von ahead x. Er hilft Unternehmen, Städten und Regionen, KI zu verstehen, einzuordnen und anzuwenden — international tätig zwischen Europa und Südostasien.</p>
+            <p style="color:var(--muted-bright)"><b>Kurz-Bio:</b> Lukas Wagner ist KI-Keynote-Speaker, Unternehmer und Gründer von ahead x. Er hilft Unternehmen, Städten und Regionen, KI zu verstehen, einzuordnen und anzuwenden, international tätig zwischen Europa und Südostasien.</p>
             <div style="display:flex;gap:.7rem;flex-wrap:wrap;margin-top:1.1rem">
               <a class="btn btn-ghost btn-sm cta-press" data-cta="press" href="mailto:kontakt@lukaswagner.at?subject=Pressekit%20anfordern%20%E2%80%93%20Lukas%20Wagner">Pressekit anfordern</a>
               <a class="btn btn-ghost btn-sm cta-press" data-cta="press" href="mailto:kontakt@lukaswagner.at?subject=Presseanfrage%20Lukas%20Wagner">Interview anfragen</a>
@@ -442,11 +507,11 @@
       <div class="wrap">
         <div class="sec-head reveal"><div class="sec-label">FAQ</div><h2>Kurz beantwortet.</h2></div>
         <div class="faq">
-          <details class="reveal"><summary>Für welche Veranstaltungen kann man Lukas buchen?</summary><p>Konferenzen, Firmenevents, Stadt- und Regionalveranstaltungen, Verbände, Kammern und Bildung — als Keynote, Workshop oder Moderation.</p></details>
-          <details class="reveal"><summary>Auch für Einsteiger:innen geeignet?</summary><p>Ja. KI wird ohne Fachjargon verständlich gemacht — Tiefe und Inhalt richten sich nach der Zielgruppe.</p></details>
-          <details class="reveal"><summary>Gibt es auch KI-Workshops?</summary><p>Ja — Hands-on-Workshops und Impulstage für Teams, KMU, Organisationen und öffentliche Einrichtungen.</p></details>
+          <details class="reveal"><summary>Für welche Veranstaltungen kann man Lukas buchen?</summary><p>Konferenzen, Firmenevents, Stadt- und Regionalveranstaltungen, Verbände, Kammern und Bildung, als Keynote, Workshop oder Moderation.</p></details>
+          <details class="reveal"><summary>Auch für Einsteiger:innen geeignet?</summary><p>Ja. KI wird ohne Fachjargon verständlich gemacht, Tiefe und Inhalt richten sich nach der Zielgruppe.</p></details>
+          <details class="reveal"><summary>Gibt es auch KI-Workshops?</summary><p>Ja, Hands-on-Workshops und Impulstage für Teams, KMU, Organisationen und öffentliche Einrichtungen.</p></details>
           <details class="reveal"><summary>Für Unternehmen, Städte und Regionen?</summary><p>Ja. Die Formate richten sich an Unternehmen und KMU sowie Städte, Gemeinden, Regionen, Verbände und Bildung.</p></details>
-          <details class="reveal"><summary>Wie läuft eine Anfrage ab?</summary><p>Kurze E-Mail mit Eckdaten (Anlass, Zielgruppe, Ort, Zeitraum, Format) — dann folgt eine passende Einschätzung.</p></details>
+          <details class="reveal"><summary>Wie läuft eine Anfrage ab?</summary><p>Kurze E-Mail mit Eckdaten (Anlass, Zielgruppe, Ort, Zeitraum, Format), dann folgt eine passende Einschätzung.</p></details>
         </div>
       </div>
     </section>
@@ -463,7 +528,7 @@
       </div>
       <div id="impressum">
         <h3>Impressum</h3>
-        <p>[Platzhalter — vor Livegang ergänzen: Name, Anschrift, E-Mail, ggf. UID/Firmenbuch. In Österreich Pflicht.]<br>E-Mail: kontakt@lukaswagner.at · © <span id="year">2026</span> Lukas Wagner<br>Eventfotos: © Nussbaumer Photography · Hero-/Porträtfoto: Fotograf:in-Credit ergänzen</p>
+        <p>[Platzhalter, vor Livegang ergänzen: Name, Anschrift, E-Mail, ggf. UID/Firmenbuch. In Österreich Pflicht.]<br>E-Mail: kontakt@lukaswagner.at · © <span id="year">2026</span> Lukas Wagner<br>Eventfotos: © Nussbaumer Photography</p>
       </div>
     </div>
   </footer>
@@ -472,6 +537,28 @@
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    /* === aheadx.at Kennzahlen-Schnittstelle ===
+       Anzeige-Teilnehmerzahl = offizielle aheadx.at-Zahl * FAKTOR.
+       BASIS = Fallback (manuell gepflegte aheadx.at-Zahl).
+       ENDPOINT = optionale JSON-URL von aheadx.at (Feld "teilnehmer"),
+       z. B. {"teilnehmer":1702}; dann wird live synchronisiert. */
+    (function(){
+      var BASIS = 1702;     // offizielle aheadx.at Teilnehmerzahl (Stand zuletzt geprüft)
+      var FAKTOR = 1.2;
+      var ENDPOINT = "";    // z. B. "https://aheadx.at/api/kennzahlen.json" (CORS nötig)
+      function anzeigen(basis){
+        var wert = Math.floor((basis * FAKTOR) / 10) * 10;
+        var text = wert.toLocaleString("de-DE") + "+";
+        document.querySelectorAll("[data-teilnehmer]").forEach(function(el){ el.textContent = text; });
+      }
+      anzeigen(BASIS);
+      if (ENDPOINT) {
+        fetch(ENDPOINT).then(function(r){ return r.json(); }).then(function(d){
+          if (d && d.teilnehmer) anzeigen(Number(d.teilnehmer));
+        }).catch(function(){ /* Fallback BASIS bleibt sichtbar */ });
+      }
+    })();
     var t=document.querySelector('.nav-toggle'),m=document.getElementById('menu');
     if(t){t.addEventListener('click',function(){var o=m.classList.toggle('open');t.setAttribute('aria-expanded',o?'true':'false');t.setAttribute('aria-label',o?'Menü schließen':'Menü öffnen');});
       m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){m.classList.remove('open');t.setAttribute('aria-expanded','false');});});}
