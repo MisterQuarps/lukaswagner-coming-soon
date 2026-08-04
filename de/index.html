@@ -170,6 +170,23 @@
     .stage-wide img{width:100%;height:auto;aspect-ratio:21/9;object-fit:cover;object-position:50% 40%}
     .stage-wide figcaption{position:absolute;left:1.2rem;bottom:1.1rem;font-size:.82rem;color:var(--fg);background:rgba(20,17,16,.62);backdrop-filter:blur(6px);border-radius:999px;padding:.4rem .95rem}
     .xp-closing{margin-top:clamp(2rem,4vw,3rem);font-family:var(--serif);font-size:clamp(1.3rem,2.6vw,1.8rem);font-style:italic;color:var(--amber);max-width:34rem}
+    .xp-close-row{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1.6rem,4vw,3rem);align-items:center}
+    .xp-close-row .xp-closing{margin-top:0}
+
+    /* ============ ASSET-SLOTS (nur im Entwurf, vor Livegang ersetzen) ============ */
+    .slot{border:1px dashed var(--line);border-radius:12px;padding:1.15rem 1.25rem;background:rgba(243,237,228,.03)}
+    .slot-k{font-size:.68rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--amber);margin-bottom:.45rem}
+    .slot-t{font-family:var(--serif);font-size:1.02rem;line-height:1.3;color:var(--fg);margin-bottom:.7rem}
+    .slot dl{display:grid;gap:0}
+    .slot dl div{display:grid;grid-template-columns:5.4rem 1fr;gap:.9rem;padding:.4rem 0;border-top:1px solid var(--line-soft);font-size:.82rem}
+    .slot dt{color:var(--muted);font-weight:600;font-size:.68rem;letter-spacing:.06em;text-transform:uppercase;padding-top:.2rem}
+    .slot dd{color:var(--fg-dim)}
+    .on-paper .slot{border-color:var(--pline);background:rgba(29,25,22,.02)}
+    .on-paper .slot-k{color:var(--red)}
+    .on-paper .slot-t{color:var(--ink-text)}
+    .on-paper .slot dl div{border-color:var(--pline-soft)}
+    .on-paper .slot dt{color:var(--ink-muted)}
+    .on-paper .slot dd{color:var(--ink-muted)}
 
     /* ============ WAS BLEIBT (paper) ============ */
     .keeps{display:grid;grid-template-columns:1fr 1fr;gap:0 clamp(2rem,5vw,4.5rem);margin-top:.5rem}
@@ -188,8 +205,9 @@
     .fmt-meta div{display:grid;grid-template-columns:7.5rem 1fr;gap:1rem;font-size:.93rem;padding:.55rem 0;border-top:1px solid var(--pline-soft)}
     .fmt-meta dt{color:var(--ink-muted);font-weight:600;font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;padding-top:.1rem}
     .fmt-meta dd{color:var(--ink-text)}
-    .fmt-duo{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1.8rem,4vw,3.5rem);margin-top:clamp(1.4rem,3vw,2.2rem)}
-    .fmt-duo article{border-top:2px solid var(--ink-text);padding-top:clamp(1.4rem,3vw,2rem)}
+    .fmt-duo{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:auto auto;gap:clamp(1.8rem,4vw,3.5rem);margin-top:clamp(1.4rem,3vw,2.2rem)}
+    /* subgrid haelt Slot- und Textzeile beider Spalten auf gleicher Hoehe (Fallback: normales Grid) */
+    .fmt-duo article{border-top:2px solid var(--ink-text);padding-top:clamp(1.4rem,3vw,2rem);grid-row:1 / span 2;display:grid;grid-template-rows:subgrid;gap:1.2rem;align-content:start}
     .fmt-duo h3{font-size:clamp(1.4rem,2.6vw,1.8rem);font-weight:500;margin-bottom:.6rem}
     .fmt-duo p{color:var(--ink-muted);font-size:.97rem;max-width:30rem}
     .fmt-duo .tlink{margin-top:.8rem}
@@ -285,6 +303,7 @@
       .fmt-feature{grid-template-columns:1fr;gap:1.6rem}
       .fmt-feature img{aspect-ratio:3/2;object-position:62% 38%}
       .case-steps{grid-template-columns:1fr}
+      .xp-close-row{grid-template-columns:1fr}
       .layers{grid-template-columns:1fr}
       .keeps{grid-template-columns:1fr}
       .quote-row{grid-template-columns:1fr;gap:1.4rem}
@@ -295,7 +314,9 @@
       .nav-links.open{display:flex}
       .nav-links a:not(.btn){padding:.9rem 0;border-bottom:1px solid var(--line-soft);min-height:44px;display:flex;align-items:center}
       .nav-links .btn{margin-top:.8rem;justify-content:center;min-height:44px}
-      .fmt-duo{grid-template-columns:1fr;gap:2.2rem}
+      .fmt-duo{grid-template-columns:1fr;grid-template-rows:none;gap:2.2rem}
+      .fmt-duo article{grid-row:auto;display:block}
+      .fmt-duo .slot{margin-bottom:1.2rem}
       .stage-wide img{aspect-ratio:16/10}
       .sticky-cta{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:80;justify-content:center;padding:.65rem 1rem calc(.65rem + env(safe-area-inset-bottom));background:rgba(20,17,16,.94);backdrop-filter:blur(12px);border-top:1px solid var(--line-soft);transform:translateY(110%);transition:transform .35s ease}
       .sticky-cta.show{transform:none}
@@ -419,7 +440,21 @@
             <figcaption>ahead x live: Aus Publikumsfragen werden Demos</figcaption>
           </figure>
         </div>
-        <p class="xp-closing reveal">Aus einem abstrakten Thema wird ein gemeinsamer Moment.</p>
+        <div class="xp-close-row reveal" style="margin-top:clamp(2rem,4vw,3rem)">
+          <p class="xp-closing">Aus einem abstrakten Thema wird ein gemeinsamer Moment.</p>
+          <!-- ASSET-SLOT: sobald das Reel da ist, diesen Block durch ein <video controls poster="..."> oder
+               einen datenschutzfreundlichen Embed ersetzen. Laufzeit erst angeben, wenn der Schnitt final ist. -->
+          <div class="slot">
+            <p class="slot-k">Asset-Slot · Video</p>
+            <p class="slot-t">Speaker-Reel: Lukas Wagner live</p>
+            <dl>
+              <div><dt>Datei</dt><dd>assets/speaker-reel.mp4 + assets/speaker-reel-poster.jpg</dd></div>
+              <div><dt>Inhalt</dt><dd>60 bis 90 Sekunden aus echten Auftritten: Bühne, Publikumsreaktion, Live-Demo, Transfer</dd></div>
+              <div><dt>Format</dt><dd>16:9, min. 1920 × 1080 px, Poster in gleicher Größe</dd></div>
+              <div><dt>Regeln</dt><dd>kein Autoplay mit Ton, Laufzeit nur angeben wenn belegt</dd></div>
+            </dl>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -474,6 +509,21 @@
 
         <div class="fmt-duo">
           <article class="reveal">
+            <!-- ASSET-SLOT: ersetzen durch
+                 <figure><img src="/assets/workshop-hands-on.jpg" srcset="/assets/workshop-hands-on-800.jpg 800w, /assets/workshop-hands-on.jpg 1600w"
+                 sizes="(max-width:820px) 92vw, 44vw" width="1600" height="1000" loading="lazy" alt="..." /></figure> -->
+            <div class="slot">
+              <p class="slot-k">Asset-Slot · Foto</p>
+              <p class="slot-t">Workshop: Lukas mit Teilnehmenden</p>
+              <dl>
+                <div><dt>Datei</dt><dd>assets/workshop-hands-on.jpg</dd></div>
+                <div><dt>Motiv</dt><dd>Lukas im Gespräch am Tisch, offene Laptops, echte Arbeitssituation, keine gestellte Pose</dd></div>
+                <div><dt>Format</dt><dd>16:10 quer, min. 1600 × 1000 px</dd></div>
+                <div><dt>Mobil</dt><dd>4:3-Crop, zwei Personen mittig</dd></div>
+                <div><dt>Alt-Text</dt><dd>Lukas Wagner begleitet Teilnehmende beim Ausprobieren von KI-Werkzeugen</dd></div>
+              </dl>
+            </div>
+            <div class="fmt-body">
             <p class="fmt-label">Format 02 · Hands-on</p>
             <h3>Der Workshop</h3>
             <p>Für Teams, KMU und Organisationen, die nach dem Staunen ins Ausprobieren kommen wollen. KI-Werkzeuge am eigenen Arbeitsalltag getestet: begleitet, eingeordnet, praxisnah.</p>
@@ -481,8 +531,23 @@
               <span>halber Tag</span><span>ganzer Tag</span><span>Impulstag</span>
             </div>
             <a class="tlink" data-cta="workshop" href="mailto:kontakt@lukaswagner.at?subject=Workshop-Anfrage%20Lukas%20Wagner&amp;body=Datum%3A%0AOrt%3A%0AZielgruppe%3A%0AAnlass%3A%0A">Workshop anfragen →</a>
+            </div>
           </article>
           <article class="reveal">
+            <!-- ASSET-SLOT: ersetzen durch <figure><img src="/assets/regionalformat-event.jpg" ... /></figure>
+                 (gleiche srcset/sizes-Logik wie beim Workshop-Bild) -->
+            <div class="slot">
+              <p class="slot-k">Asset-Slot · Foto</p>
+              <p class="slot-t">Regionalformat: gefüllter Saal</p>
+              <dl>
+                <div><dt>Datei</dt><dd>assets/regionalformat-event.jpg</dd></div>
+                <div><dt>Motiv</dt><dd>ahead x Stadt-Event, Bühne und volles Publikum im Bild, Raumgefühl statt Nahaufnahme</dd></div>
+                <div><dt>Format</dt><dd>16:10 quer, min. 1600 × 1000 px</dd></div>
+                <div><dt>Mobil</dt><dd>4:3-Crop, Publikum mittig</dd></div>
+                <div><dt>Alt-Text</dt><dd>Gefüllter Saal bei einem ahead x Event in der Region</dd></div>
+              </dl>
+            </div>
+            <div class="fmt-body">
             <p class="fmt-label">Format 03 · ahead x</p>
             <h3>Das Regionalformat</h3>
             <p>Für Städte, Regionen und Partner, die KI öffentlich erlebbar machen wollen: als kuratiertes Live-Event mit lokalen Partnern aus Medien, Wirtschaft und Bildung. Entwickelt und erprobt mit ahead x.</p>
@@ -490,6 +555,7 @@
               <span>city</span><span>labs</span><span>mastermind</span><span>future</span><span>awards</span>
             </div>
             <a class="tlink" data-cta="aheadx" href="mailto:kontakt@lukaswagner.at?subject=Regionalformat%20%2F%20ahead%20x%20anfragen&amp;body=Stadt%2FRegion%3A%0AZeitraum%3A%0AZielgruppe%3A%0AAnlass%3A%0A">Regionalformat anfragen →</a>
+            </div>
           </article>
         </div>
       </div>
@@ -553,6 +619,18 @@
               <li class="reveal"><h3>Das Format</h3><p>Kuratierte Events und Workshops mit Partnern aus Medien, Wirtschaft und Bildung, von city bis labs.</p></li>
               <li class="reveal"><h3>Heute</h3><p>Eine wachsende Plattform für KI-Befähigung im deutschsprachigen Raum, mit Publikum von 16 bis 80.</p></li>
             </ol>
+        <!-- ASSET-SLOT: ersetzt aheadx-tour.jpg, das einen anderen Speaker zeigt und deshalb nicht verwendet wird. -->
+        <div class="slot reveal" style="max-width:36rem;margin-top:clamp(1.6rem,3vw,2.4rem)">
+          <p class="slot-k">Asset-Slot · Foto</p>
+          <p class="slot-t">ahead x Event mit Lukas auf der Bühne</p>
+          <dl>
+            <div><dt>Datei</dt><dd>assets/aheadx-event.jpg</dd></div>
+            <div><dt>Motiv</dt><dd>Lukas moderiert oder spricht bei einem ahead x Event, Publikum sichtbar</dd></div>
+            <div><dt>Format</dt><dd>4:5 hoch, min. 1000 × 1250 px</dd></div>
+            <div><dt>Alt-Text</dt><dd>Lukas Wagner moderiert ein ahead x Event vor vollem Saal</dd></div>
+          </dl>
+        </div>
+
         <!-- ZU PRÜFEN vor Livegang: 9 Events / 8 Städte / 92 % (Quelle: ahead x Auswertung) -->
         <div class="case-foot reveal">
           <div class="case-stats">
