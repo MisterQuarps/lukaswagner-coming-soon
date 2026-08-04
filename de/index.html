@@ -10,6 +10,7 @@
   <!-- ====================================================================
        DRAFT: noindex/nofollow bleibt im Entwurf. Vor Livegang entfernen
        und in robots.txt "Disallow: /" entfernen (sobald Impressum final).
+       Offene Launch-Blocker siehe docs/lukaswagner-asset-brief.md
        ==================================================================== -->
   <meta name="robots" content="noindex, nofollow" />
 
@@ -27,17 +28,21 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
 
-  <link rel="preload" as="image" href="/assets/lukas-stage.jpg" fetchpriority="high" />
+  <link rel="preload" as="image" href="/assets/lukas-stage.jpg"
+        imagesrcset="/assets/lukas-stage-800.jpg 533w, /assets/lukas-stage.jpg 1066w"
+        imagesizes="(max-width:1020px) 92vw, 40vw" fetchpriority="high" />
 
+  <!-- Person-Schema: nur Angaben, die auf lukaswagner.at oder aheadx.at öffentlich belegt sind.
+       Auszeichnungen und Auftrittszahlen bleiben bis zur Freigabe bewusst draußen. -->
   <script type="application/ld+json">
   { "@context":"https://schema.org","@type":"Person","name":"Lukas Wagner","jobTitle":"KI-Keynote-Speaker",
     "description":"Österreichischer KI-Keynote-Speaker, Unternehmer und Gründer von ahead x. Macht Künstliche Intelligenz verständlich und live erlebbar, für Unternehmen, Städte und Regionen.",
     "url":"https://lukaswagner.at/","image":"https://lukaswagner.at/assets/lukas-portrait.jpg","nationality":"Österreich",
     "worksFor":{"@type":"Organization","name":"ahead x","url":"https://aheadx.at"},
-    "award":"Förderpreis für Kunst und Kultur (2017)",
     "sameAs":["https://www.youtube.com/@lukaswagnerai","https://aheadx.at","https://www.linkedin.com/in/lukaswagnerai/"],
     "knowsAbout":["Künstliche Intelligenz","KI-Keynotes","KI für Unternehmen","KI für Städte und Regionen","Zukunft der Arbeit"] }
   </script>
+  <!-- FAQ-JSON-LD muss wortgleich zum sichtbaren FAQ unten bleiben. -->
   <script type="application/ld+json">
   { "@context":"https://schema.org","@type":"FAQPage","mainEntity":[
     {"@type":"Question","name":"Für welche Veranstaltungen kann man Lukas Wagner buchen?","acceptedAnswer":{"@type":"Answer","text":"Für Konferenzen, Firmenevents, Stadt- und Regionalveranstaltungen, Verbände und Bildungseinrichtungen, als Keynote, Workshop oder Moderation rund um Künstliche Intelligenz."}},
@@ -77,14 +82,14 @@
     /* Typo */
     h1,h2,h3{font-family:var(--serif);font-weight:500;letter-spacing:-.01em}
     h2{font-size:clamp(1.9rem,4.2vw,3.1rem);line-height:1.08}
-    .kicker{font-family:var(--sans);font-size:.76rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--amber);display:flex;align-items:center;gap:.9rem;margin-bottom:1.2rem}
+    .kicker{font-family:var(--sans);font-size:.76rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--amber);display:flex;align-items:center;gap:.9rem;margin-bottom:1.1rem}
     .kicker::before{content:"";width:2.2rem;height:1px;background:var(--amber);flex:none}
     .on-paper .kicker{color:var(--red)}
     .on-paper .kicker::before{background:var(--red)}
-    .sec-head{max-width:46rem;margin-bottom:clamp(2rem,4vw,3.2rem)}
-    .lead-in{color:var(--fg-dim);font-size:clamp(1.02rem,1.8vw,1.15rem);margin-top:1rem;max-width:38rem}
+    .sec-head{max-width:46rem;margin-bottom:clamp(1.5rem,3vw,2.2rem)}
+    .lead-in{color:var(--fg-dim);font-size:clamp(1.02rem,1.8vw,1.12rem);margin-top:.9rem;max-width:36rem}
     .on-paper .lead-in{color:var(--ink-muted)}
-    section{padding:clamp(3.8rem,8vw,7rem) 0;position:relative}
+    section{padding:clamp(3rem,6vw,5rem) 0;position:relative}
 
     /* Flächen */
     .on-paper{background:var(--paper);color:var(--ink-text)}
@@ -114,22 +119,22 @@
     .nav-toggle{display:none;background:none;border:1px solid var(--line);color:var(--fg);border-radius:8px;width:44px;height:44px;font-size:1.2rem;cursor:pointer}
 
     /* ============ HERO ============ */
-    .hero{padding:0;min-height:min(92vh,860px);display:flex;align-items:stretch;position:relative;overflow:hidden}
-    .hero-inner{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(2rem,4vw,4rem);align-items:center;width:100%;max-width:var(--maxw);margin:0 auto;padding:clamp(2.5rem,5vw,4rem) clamp(1.25rem,4vw,2.5rem)}
+    .hero{padding:0;min-height:min(88vh,800px);display:flex;align-items:stretch;position:relative;overflow:hidden}
+    .hero-inner{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(2rem,4vw,4rem);align-items:center;width:100%;max-width:var(--maxw);margin:0 auto;padding:clamp(2.2rem,4vw,3.2rem) clamp(1.25rem,4vw,2.5rem)}
     .hero-glow{position:absolute;inset:auto -10% -30% -10%;height:60%;background:radial-gradient(60% 100% at 50% 100%,rgba(226,164,92,.13),transparent 70%);pointer-events:none}
-    .hero-copy .kicker{margin-bottom:2rem}
-    .hero-lead{font-family:var(--serif);font-size:clamp(1.15rem,2.2vw,1.5rem);color:var(--fg-dim);font-weight:400;margin-bottom:.4rem}
-    h1{font-size:clamp(3rem,8.5vw,6.2rem);line-height:.98;margin:0}
+    .hero-copy .kicker{margin-bottom:1.7rem}
+    .hero-lead{font-family:var(--serif);font-size:clamp(1.15rem,2.2vw,1.45rem);color:var(--fg-dim);font-weight:400;margin-bottom:.35rem}
+    h1{font-size:clamp(2.9rem,8vw,5.8rem);line-height:.98;margin:0}
     h1 .hl{display:block}
     h1 .hl em{font-style:italic;color:var(--amber);font-weight:400}
     h1 .stop{color:var(--red-bright)}
-    .hero .sub{color:var(--fg-dim);font-size:clamp(1.02rem,1.9vw,1.18rem);max-width:31rem;margin:1.6rem 0 0}
-    .hero-cta{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:2rem}
-    .hero-trust{display:flex;flex-wrap:wrap;gap:.5rem 1.6rem;margin-top:2.4rem;padding-top:1.4rem;border-top:1px solid var(--line-soft);color:var(--muted);font-size:.86rem}
+    .hero .sub{color:var(--fg-dim);font-size:clamp(1.02rem,1.9vw,1.14rem);max-width:30rem;margin:1.4rem 0 0}
+    .hero-cta{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1.7rem}
+    .hero-trust{display:flex;flex-wrap:wrap;gap:.5rem 1.6rem;margin-top:1.9rem;padding-top:1.2rem;border-top:1px solid var(--line-soft);color:var(--muted);font-size:.86rem}
     .hero-trust span{display:inline-flex;align-items:baseline;gap:.5rem}
     .hero-trust b{color:var(--fg);font-family:var(--serif);font-weight:500;font-size:1rem}
 
-    .hero-fig{position:relative;height:100%;min-height:520px}
+    .hero-fig{position:relative;height:100%;min-height:480px}
     .hero-fig figure{position:absolute;inset:0;border-radius:14px;overflow:hidden}
     .hero-fig img{width:100%;height:100%;object-fit:cover;object-position:50% 18%}
     .hero-fig figure::after{content:"";position:absolute;inset:0;background:linear-gradient(200deg,transparent 55%,rgba(20,17,16,.55))}
@@ -148,9 +153,9 @@
     }
 
     /* ============ PROOF STRIP ============ */
-    .proof{padding:clamp(2.6rem,5vw,4rem) 0}
+    .proof{padding:clamp(2.4rem,4.5vw,3.4rem) 0}
     .proof-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(1.6rem,4vw,3.5rem);align-items:center}
-    .proof-num .n{font-family:var(--serif);font-weight:500;font-size:clamp(3.4rem,7vw,5.4rem);line-height:1;color:var(--fg)}
+    .proof-num .n{font-family:var(--serif);font-weight:500;font-size:clamp(3.2rem,6.5vw,5rem);line-height:1;color:var(--fg)}
     .proof-num .l{color:var(--muted);font-size:.95rem;margin-top:.5rem;max-width:24rem}
     .proof-partners .t{font-size:.72rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:.9rem}
     .logo-row{display:grid;grid-template-columns:repeat(6,1fr);gap:.55rem}
@@ -158,136 +163,125 @@
     .logo-row img{max-height:32px;width:auto;max-width:100%;object-fit:contain}
 
     /* ============ ERLEBNIS ============ */
-    .acts{list-style:none;position:relative;margin-top:1rem}
-    .act{display:grid;grid-template-columns:5rem minmax(0,17rem) minmax(0,1fr);gap:1rem 2rem;align-items:baseline;padding:clamp(1.4rem,3vw,2.2rem) 0;border-top:1px solid var(--line-soft)}
+    .acts{list-style:none;position:relative;margin-top:.6rem}
+    .act{display:grid;grid-template-columns:5rem minmax(0,17rem) minmax(0,1fr);gap:1rem 2rem;align-items:baseline;padding:clamp(1.1rem,2.2vw,1.55rem) 0;border-top:1px solid var(--line-soft)}
     .act:last-child{border-bottom:1px solid var(--line-soft)}
     .act .no{font-family:var(--serif);font-style:italic;font-size:1.05rem;color:var(--red-bright)}
-    .act h3{font-size:clamp(1.5rem,3vw,2.2rem);font-weight:500}
-    .act p{color:var(--fg-dim);font-size:1rem;max-width:34rem}
+    .act h3{font-size:clamp(1.45rem,2.9vw,2.1rem);font-weight:500}
+    .act p{color:var(--fg-dim);font-size:1rem;max-width:32rem}
     .act:nth-child(even) h3{font-style:italic;font-weight:400}
-    .stage-wide{margin:clamp(2.2rem,5vw,3.6rem) 0 0}
+    .stage-wide{margin:clamp(1.6rem,3vw,2.4rem) 0 0}
     .stage-wide figure{position:relative;border-radius:14px;overflow:hidden}
     .stage-wide img{width:100%;height:auto;aspect-ratio:21/9;object-fit:cover;object-position:50% 40%}
     .stage-wide figcaption{position:absolute;left:1.2rem;bottom:1.1rem;font-size:.82rem;color:var(--fg);background:rgba(20,17,16,.62);backdrop-filter:blur(6px);border-radius:999px;padding:.4rem .95rem}
-    .xp-closing{margin-top:clamp(2rem,4vw,3rem);font-family:var(--serif);font-size:clamp(1.3rem,2.6vw,1.8rem);font-style:italic;color:var(--amber);max-width:34rem}
-    .xp-close-row{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1.6rem,4vw,3rem);align-items:center}
-    .xp-close-row .xp-closing{margin-top:0}
 
-    /* ============ ASSET-SLOTS (nur im Entwurf, vor Livegang ersetzen) ============ */
-    .slot{border:1px dashed var(--line);border-radius:12px;padding:1.15rem 1.25rem;background:rgba(243,237,228,.03)}
-    .slot-k{font-size:.68rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--amber);margin-bottom:.45rem}
-    .slot-t{font-family:var(--serif);font-size:1.02rem;line-height:1.3;color:var(--fg);margin-bottom:.7rem}
-    .slot dl{display:grid;gap:0}
-    .slot dl div{display:grid;grid-template-columns:5.4rem 1fr;gap:.9rem;padding:.4rem 0;border-top:1px solid var(--line-soft);font-size:.82rem}
-    .slot dt{color:var(--muted);font-weight:600;font-size:.68rem;letter-spacing:.06em;text-transform:uppercase;padding-top:.2rem}
-    .slot dd{color:var(--fg-dim)}
-    .on-paper .slot{border-color:var(--pline);background:rgba(29,25,22,.02)}
-    .on-paper .slot-k{color:var(--red)}
-    .on-paper .slot-t{color:var(--ink-text)}
-    .on-paper .slot dl div{border-color:var(--pline-soft)}
-    .on-paper .slot dt{color:var(--ink-muted)}
-    .on-paper .slot dd{color:var(--ink-muted)}
-
-    /* ============ WAS BLEIBT (paper) ============ */
-    .keeps{display:grid;grid-template-columns:1fr 1fr;gap:0 clamp(2rem,5vw,4.5rem);margin-top:.5rem}
-    .keep{padding:1.35rem 0;border-top:1px solid var(--pline)}
-    .keep h3{font-size:1.15rem;font-weight:600;font-family:var(--sans);letter-spacing:0}
-    .keep p{color:var(--ink-muted);font-size:.95rem;margin-top:.3rem}
-    .keeps-note{margin-top:2rem;color:var(--ink-muted);font-size:.95rem;font-style:italic}
+    /* ============ WAS BLEIBT (paper, 3 Resultate) ============ */
+    .results{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(1.4rem,3vw,3rem);margin-top:.3rem}
+    .result{border-top:2px solid var(--ink-text);padding-top:1.1rem}
+    .result h3{font-family:var(--sans);font-size:1.08rem;font-weight:600;letter-spacing:0;margin-bottom:.3rem}
+    .result p{color:var(--ink-muted);font-size:.94rem}
+    .results-note{margin-top:clamp(1.5rem,3vw,2.2rem);color:var(--ink-muted);font-size:.95rem;font-style:italic}
 
     /* ============ FORMATE (paper) ============ */
-    .fmt-feature{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);gap:clamp(1.8rem,4vw,3.5rem);align-items:center;padding:clamp(1.8rem,4vw,3rem) 0;border-top:2px solid var(--ink-text)}
+    .fmt-feature{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(1.8rem,4vw,3.5rem);align-items:center;padding:clamp(1.6rem,3.5vw,2.6rem) 0;border-top:2px solid var(--ink-text)}
     .fmt-feature figure{border-radius:12px;overflow:hidden}
     .fmt-feature img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:66% 42%}
-    .fmt-label{font-family:var(--serif);font-style:italic;font-size:1rem;color:var(--red);margin-bottom:.5rem}
-    .fmt-feature h3{font-size:clamp(1.7rem,3.4vw,2.5rem);font-weight:500;margin-bottom:.9rem}
-    .fmt-meta{margin:1.2rem 0 1.4rem;display:grid;gap:.1rem}
+    .fmt-label{font-family:var(--serif);font-style:italic;font-size:1rem;color:var(--red);margin-bottom:.45rem}
+    .fmt-feature h3{font-size:clamp(1.7rem,3.4vw,2.4rem);font-weight:500;margin-bottom:.8rem}
+    .fmt-meta{margin:1rem 0 1.3rem;display:grid;gap:.1rem}
     .fmt-meta div{display:grid;grid-template-columns:7.5rem 1fr;gap:1rem;font-size:.93rem;padding:.55rem 0;border-top:1px solid var(--pline-soft)}
     .fmt-meta dt{color:var(--ink-muted);font-weight:600;font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;padding-top:.1rem}
     .fmt-meta dd{color:var(--ink-text)}
-    .fmt-duo{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:auto auto;gap:clamp(1.8rem,4vw,3.5rem);margin-top:clamp(1.4rem,3vw,2.2rem)}
-    /* subgrid haelt Slot- und Textzeile beider Spalten auf gleicher Hoehe (Fallback: normales Grid) */
-    .fmt-duo article{border-top:2px solid var(--ink-text);padding-top:clamp(1.4rem,3vw,2rem);grid-row:1 / span 2;display:grid;grid-template-rows:subgrid;gap:1.2rem;align-content:start}
-    .fmt-duo h3{font-size:clamp(1.4rem,2.6vw,1.8rem);font-weight:500;margin-bottom:.6rem}
+    /* subgrid haelt Kopf-, Medien- und Fusszeile beider Spalten auf gleicher Hoehe */
+    .fmt-duo{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:auto auto auto;gap:clamp(1.6rem,3.5vw,3.5rem);margin-top:clamp(1.2rem,2.5vw,2rem)}
+    .fmt-duo article{border-top:2px solid var(--ink-text);padding-top:clamp(1.2rem,2.5vw,1.8rem);grid-row:1 / span 3;display:grid;grid-template-rows:subgrid;gap:1.1rem;align-content:start}
+    .fmt-duo h3{font-size:clamp(1.4rem,2.6vw,1.75rem);font-weight:500;margin-bottom:.55rem}
     .fmt-duo p{color:var(--ink-muted);font-size:.97rem;max-width:30rem}
-    .fmt-duo .tlink{margin-top:.8rem}
-    .fmt-chips{display:flex;flex-wrap:wrap;gap:.45rem;margin:1rem 0 .2rem}
-    .fmt-chips span{border:1px solid var(--pline);border-radius:999px;padding:.34rem .85rem;font-size:.82rem;color:var(--ink-muted);font-family:var(--serif);font-style:italic}
+    .fmt-duo figure{border-radius:12px;overflow:hidden}
+    .fmt-duo figure img{width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;object-position:50% 35%}
+    .fmt-duo figcaption{margin-top:.5rem;font-size:.8rem;color:var(--ink-muted)}
+    .fmt-foot{align-self:end}
+    /* ahead x Formatfamilie als typografisches System statt leerer Bildflaeche */
+    .fam{list-style:none}
+    .fam li{display:grid;grid-template-columns:7rem 1fr;gap:1rem;padding:.55rem 0;border-top:1px solid var(--pline-soft);font-size:.9rem;align-items:baseline}
+    .fam li:first-child{border-top:none;padding-top:0}
+    .fam b{font-family:var(--serif);font-style:italic;font-weight:500;color:var(--ink-text);font-size:1.02rem}
+    .fam span{color:var(--ink-muted)}
 
     /* ============ WARUM LUKAS ============ */
     h2.why-open{font-family:var(--serif);font-size:clamp(1.6rem,3.6vw,2.7rem);line-height:1.2;font-weight:400;max-width:52rem}
-    .why-open em{font-style:italic;color:var(--amber)}
-    .layers{display:grid;grid-template-columns:1fr 1fr;gap:0 clamp(2.5rem,5vw,5rem);margin-top:clamp(2.2rem,5vw,3.4rem)}
-    .layer{padding:1.7rem 0;border-top:1px solid var(--line)}
-    .layer .no{font-family:var(--serif);font-style:italic;color:var(--red-bright);font-size:.95rem}
-    .layer h3{font-size:1.45rem;font-weight:500;margin:.35rem 0 .45rem}
-    .layer p{color:var(--fg-dim);font-size:.97rem;max-width:30rem}
-    .origin{margin-top:clamp(2.4rem,5vw,3.6rem);border-top:1px solid var(--line);padding-top:1.6rem}
-    .origin .t{font-size:.72rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:1.1rem}
-    .origin-facts{display:flex;flex-wrap:wrap;gap:.6rem 0}
-    .origin-facts span{font-size:.9rem;color:var(--fg-dim);padding:0 1.4rem;border-left:1px solid var(--line)}
-    .origin-facts span:first-child{padding-left:0;border-left:none}
+    h2.why-open em{font-style:italic;color:var(--amber)}
+    .layers{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(1.2rem,2.5vw,2.4rem);margin-top:clamp(1.6rem,3vw,2.2rem)}
+    .layer{padding-top:1.1rem;border-top:1px solid var(--line)}
+    .layer h3{font-size:1.35rem;font-weight:500;margin:0 0 .45rem}
+    .layer p{color:var(--fg-dim);font-size:.93rem}
+    .origin{margin-top:clamp(1.6rem,3vw,2.2rem);border-top:1px solid var(--line);padding-top:1.3rem}
+    .origin-facts{display:grid;grid-template-columns:repeat(4,1fr);gap:.9rem clamp(1.2rem,2.5vw,2.4rem)}
+    .origin-facts span{font-size:.86rem;color:var(--fg-dim);line-height:1.45}
     .origin-facts b{color:var(--fg);font-weight:600}
-    .why-close{margin-top:2.6rem;font-family:var(--serif);font-style:italic;font-size:clamp(1.25rem,2.4vw,1.7rem);color:var(--amber)}
+    .why-close{margin-top:1.8rem;font-family:var(--serif);font-style:italic;font-size:clamp(1.25rem,2.4vw,1.7rem);color:var(--amber)}
 
     /* ============ AHEAD X CASE ============ */
-    .case-steps{list-style:none;counter-reset:cs;display:grid;grid-template-columns:1fr 1fr;gap:0 clamp(2.5rem,5vw,5rem);margin-top:.6rem}
-    .case-steps li{counter-increment:cs;padding:1.4rem 0 1.4rem 3.4rem;border-top:1px solid var(--line-soft);position:relative}
-    .case-steps li::before{content:counter(cs,decimal-leading-zero);position:absolute;left:0;top:1.45rem;font-family:var(--serif);font-style:italic;color:var(--red-bright);font-size:.95rem}
-    .case-steps h3{font-size:1.25rem;font-weight:500}
-    .case-steps p{color:var(--fg-dim);font-size:.95rem;margin-top:.3rem;max-width:28rem}
-    .case-foot{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1.5rem 2.5rem;margin-top:clamp(1.8rem,4vw,2.6rem);padding-top:1.6rem;border-top:1px solid var(--line-soft)}
+    .case-steps{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(1.2rem,2.5vw,2.4rem);position:relative;padding-top:1.7rem}
+    .case-steps::before{content:"";position:absolute;left:0;right:0;top:5px;height:1px;background:var(--line)}
+    .case-steps li{position:relative}
+    .case-steps li::before{content:"";position:absolute;top:calc(-1.7rem + 1px);left:0;width:11px;height:11px;border-radius:50%;background:var(--red-bright);transform:translateY(-5px)}
+    .case-steps h3{font-size:1.2rem;font-weight:500;margin-bottom:.3rem}
+    .case-steps p{color:var(--fg-dim);font-size:.93rem}
+    .case-foot{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:1.4rem 2.5rem;margin-top:clamp(1.8rem,3.5vw,2.6rem);padding-top:1.5rem;border-top:1px solid var(--line-soft)}
     .case-stats{display:flex;gap:2.2rem;flex-wrap:wrap}
-    .case-stats .cs .n{font-family:var(--serif);font-weight:500;font-size:2.1rem;color:var(--fg)}
-    .case-stats .cs .l{color:var(--muted);font-size:.82rem;max-width:14rem}
+    .case-stats .cs .n{font-family:var(--serif);font-weight:500;font-size:2.1rem;color:var(--fg);line-height:1.1}
+    .case-stats .cs .l{color:var(--muted);font-size:.82rem;max-width:12rem}
     .case-cta{display:flex;gap:1.4rem;align-items:center;flex-wrap:wrap}
+    .case-src{margin-top:1rem;color:var(--muted);font-size:.78rem}
 
     /* ============ STIMMEN (paper) ============ */
-    .quote-hero{border-top:2px solid var(--ink-text);padding-top:clamp(1.8rem,4vw,2.6rem)}
-    .quote-hero blockquote p{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(1.7rem,4vw,2.9rem);line-height:1.18;max-width:56rem}
+    .quote-hero{border-top:2px solid var(--ink-text);padding-top:clamp(1.6rem,3.5vw,2.4rem)}
+    .quote-hero blockquote p{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(1.7rem,4vw,2.8rem);line-height:1.18;max-width:56rem}
     .quote-hero blockquote p::before{content:"„"}
     .quote-hero blockquote p::after{content:"“"}
-    .quote-hero figcaption{margin-top:1.3rem;font-size:.95rem;color:var(--ink-muted)}
+    .quote-hero figcaption{margin-top:1.2rem;font-size:.95rem;color:var(--ink-muted)}
     .quote-hero figcaption b{color:var(--ink-text);font-weight:600}
-    .quote-row{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(1.5rem,3vw,2.8rem);margin-top:clamp(2.4rem,5vw,3.6rem)}
-    .quote-row figure{border-top:1px solid var(--pline);padding-top:1.2rem}
-    .quote-row p{font-size:.98rem;color:var(--ink-text)}
+    .quote-row{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(1.4rem,3vw,2.8rem);margin-top:clamp(1.6rem,3vw,2.2rem)}
+    .quote-row figure{border-top:1px solid var(--pline);padding-top:1.1rem}
+    .quote-row p{font-size:.97rem;color:var(--ink-text)}
     .quote-row p::before{content:"„"}
     .quote-row p::after{content:"“"}
-    .quote-row figcaption{margin-top:.8rem;font-size:.84rem;color:var(--ink-muted)}
+    .quote-row figcaption{margin-top:.7rem;font-size:.84rem;color:var(--ink-muted)}
     .quote-row b{color:var(--ink-text);font-weight:600}
-    .quote-src{margin-top:2rem;font-size:.9rem}
+    .quote-src{margin-top:1.6rem;font-size:.9rem}
 
     /* ============ BUCHUNG ============ */
     .book{position:relative;overflow:hidden}
     .book-glow{position:absolute;inset:auto -15% -45% -15%;height:75%;background:radial-gradient(55% 100% at 50% 100%,rgba(184,53,44,.16),transparent 70%);pointer-events:none}
     .book-inner{position:relative;text-align:center;max-width:44rem;margin:0 auto}
-    .book h2{font-size:clamp(2.1rem,4.8vw,3.4rem)}
-    .book .sub{color:var(--fg-dim);font-size:clamp(1.02rem,1.9vw,1.16rem);margin:1.3rem auto 0;max-width:36rem}
+    .book h2{font-size:clamp(2.1rem,4.8vw,3.3rem)}
+    .book .sub{color:var(--fg-dim);font-size:clamp(1.02rem,1.9vw,1.14rem);margin:1.2rem auto 0;max-width:36rem}
     .book .hero-cta{justify-content:center}
-    .book-mail{margin-top:1.6rem;font-size:.95rem;color:var(--muted)}
+    .book-mail{margin-top:1.4rem;font-size:.95rem;color:var(--muted)}
     .book-mail a{color:var(--fg);text-decoration:underline;text-underline-offset:4px}
 
     /* ============ FAQ ============ */
     .faq{max-width:46rem}
     .faq details{border-top:1px solid var(--line-soft);padding:0 .2rem}
     .faq details:last-child{border-bottom:1px solid var(--line-soft)}
-    .faq summary{cursor:pointer;list-style:none;padding:1.15rem 0;font-family:var(--serif);font-weight:500;font-size:1.12rem;display:flex;justify-content:space-between;align-items:center;gap:1rem;min-height:44px}
+    .faq summary{cursor:pointer;list-style:none;padding:1.1rem 0;font-family:var(--serif);font-weight:500;font-size:1.1rem;display:flex;justify-content:space-between;align-items:center;gap:1rem;min-height:44px}
     .faq summary::-webkit-details-marker{display:none}
     .faq summary::after{content:"+";color:var(--amber);font-size:1.4rem;line-height:1;font-family:var(--sans)}
     .faq details[open] summary::after{content:"–"}
-    .faq details p{color:var(--fg-dim);padding:0 0 1.2rem;font-size:.96rem;max-width:40rem}
+    .faq details p{color:var(--fg-dim);padding:0 0 1.1rem;font-size:.96rem;max-width:40rem}
 
-    footer{border-top:1px solid var(--line-soft);padding:2.4rem 0 5.5rem}
+    footer{border-top:1px solid var(--line-soft);padding:2.2rem 0 5.5rem}
     .foot-top{display:flex;flex-wrap:wrap;gap:1.2rem;justify-content:space-between;align-items:center}
     .foot-links{display:flex;flex-wrap:wrap;gap:1.1rem;color:var(--muted);font-size:.88rem}
+    .foot-links a{display:inline-flex;align-items:center;min-height:44px}
     .foot-links a:hover{color:var(--fg)}
-    .legal{color:var(--muted);font-size:.8rem;line-height:1.7;padding-top:1.4rem;margin-top:1.4rem;border-top:1px solid var(--line-soft)}
+    .legal{color:var(--muted);font-size:.8rem;line-height:1.7;padding-top:1.2rem;margin-top:1.2rem;border-top:1px solid var(--line-soft)}
 
     .sticky-cta{display:none}
-    .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
-    .reveal.in{opacity:1;transform:none}
-    @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+    .js .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
+    .js .reveal.in{opacity:1;transform:none}
+    @media (prefers-reduced-motion:reduce){.js .reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
 
     /* ============ RESPONSIVE ============ */
     @media (max-width:1020px){
@@ -302,11 +296,10 @@
       .act p{grid-column:2}
       .fmt-feature{grid-template-columns:1fr;gap:1.6rem}
       .fmt-feature img{aspect-ratio:3/2;object-position:62% 38%}
-      .case-steps{grid-template-columns:1fr}
-      .xp-close-row{grid-template-columns:1fr}
-      .layers{grid-template-columns:1fr}
-      .keeps{grid-template-columns:1fr}
-      .quote-row{grid-template-columns:1fr;gap:1.4rem}
+      .results{grid-template-columns:1fr 1fr}
+      .layers,.origin-facts{grid-template-columns:1fr 1fr}
+      .case-steps{grid-template-columns:1fr 1fr}
+      .quote-row{grid-template-columns:1fr;gap:1.3rem}
     }
     @media (max-width:820px){
       .nav-toggle{display:inline-flex;align-items:center;justify-content:center}
@@ -316,27 +309,35 @@
       .nav-links .btn{margin-top:.8rem;justify-content:center;min-height:44px}
       .fmt-duo{grid-template-columns:1fr;grid-template-rows:none;gap:2.2rem}
       .fmt-duo article{grid-row:auto;display:block}
-      .fmt-duo .slot{margin-bottom:1.2rem}
+      .fmt-duo article > * + *{margin-top:1.1rem}
       .stage-wide img{aspect-ratio:16/10}
       .sticky-cta{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:80;justify-content:center;padding:.65rem 1rem calc(.65rem + env(safe-area-inset-bottom));background:rgba(20,17,16,.94);backdrop-filter:blur(12px);border-top:1px solid var(--line-soft);transform:translateY(110%);transition:transform .35s ease}
       .sticky-cta.show{transform:none}
-      @media (prefers-reduced-motion:reduce){.sticky-cta{transition:none}}
       .sticky-cta .btn{width:100%;max-width:420px}
       footer{padding-bottom:6.5rem}
     }
     @media (max-width:560px){
-      h1{font-size:clamp(2.7rem,13vw,3.4rem)}
+      h1{font-size:clamp(2.6rem,12.5vw,3.4rem)}
       h2 br{display:none}
-      .hero-trust{gap:.7rem;flex-direction:column}
-      .origin-facts{flex-direction:column;gap:.7rem}
-      .origin-facts span{border-left:none;padding:0}
+      .hero-trust{gap:.7rem;flex-direction:column;margin-top:1.5rem}
+      .results{grid-template-columns:1fr;gap:0}
+      .result{padding:1.1rem 0 0}
+      .layers{grid-template-columns:1fr;gap:0}
+      .layer{padding:1.1rem 0 .3rem}
+      .case-steps{grid-template-columns:1fr;gap:0}
+      .case-steps li{padding:1.1rem 0 .3rem}
+      .origin-facts{grid-template-columns:1fr;gap:.7rem}
       .logo-row{grid-template-columns:repeat(2,1fr)}
-      .case-stats{gap:1.2rem}
+      .case-stats{gap:1.4rem}
+      .case-foot{align-items:flex-start}
       .fmt-meta div{grid-template-columns:1fr;gap:.15rem}
+      .fam li{grid-template-columns:5.5rem 1fr;gap:.7rem}
     }
+    @media (prefers-reduced-motion:reduce){.sticky-cta{transition:none}}
   </style>
 </head>
 <body>
+  <script>document.documentElement.className+=" js";</script>
   <a class="skip" href="#main">Zum Inhalt springen</a>
 
   <header>
@@ -375,9 +376,11 @@
             <a class="btn btn-ghost" data-cta="speaker-reel" href="https://www.youtube.com/@lukaswagnerai" target="_blank" rel="noopener">Auftritte auf YouTube ansehen&nbsp;↗</a>
           </div>
           <div class="hero-trust">
-            <span><b>500+</b> Bühnenauftritte</span>
-            <span><b>1.700+</b> Menschen live erreicht</span>
-            <span><b>ahead x</b> Gründer &amp; Kurator</span>
+            <!-- LAUNCH-BLOCKER: "500+ Auftritte" ist noch nicht belegt, Freigabe durch LW noetig.
+                 Die beiden folgenden Angaben sind gegen aheadx.at (Stand 04/2026) geprueft. -->
+            <span><b>500+</b> Auftritte auf Bühnen</span>
+            <span><b>1.700+</b> Teilnahmen bei ahead x</span>
+            <span><b>8 Städte</b> mit eigenen Live-Formaten</span>
           </div>
         </div>
         <div class="hero-fig">
@@ -394,12 +397,12 @@
     </section>
 
     <!-- ============ PROOF STRIP ============ -->
-    <section class="proof band" aria-label="Erfahrung und Partner">
+    <section class="proof band" aria-label="Reichweite und Partner">
       <div class="wrap proof-grid">
         <div class="proof-num reveal">
-          <!-- ZU PRÜFEN vor Livegang: 1.700+ Teilnehmer:innen (Quelle: ahead x) -->
+          <!-- Belegt: aheadx.at nennt "1 702+ Teilnahmen bei allen bisherigen ahead x Formaten", Stand 30.04.2026. -->
           <div class="n"><span data-countup data-target="1700" data-suffix="+">1.700+</span></div>
-          <p class="l">Menschen haben KI bei ahead x Live-Formaten erlebt. Gegründet, kuratiert und moderiert von Lukas Wagner.</p>
+          <p class="l">Teilnahmen bei ahead x Live-Formaten in 8 Städten. Gegründet, kuratiert und moderiert von Lukas Wagner.</p>
         </div>
         <div class="proof-partners reveal">
           <p class="t">Medien- &amp; Netzwerkpartner von ahead x</p>
@@ -420,15 +423,15 @@
       <div class="wrap">
         <div class="sec-head reveal">
           <p class="kicker">Was im Raum passiert</p>
-          <h2>Keine Vorlesung über KI.<br />Ein Moment mit ihr.</h2>
-          <p class="lead-in">Eine Keynote von Lukas Wagner ist kein Foliensatz mit Tool-Liste. Sie ist in fünf Akten gebaut, wie ein guter Abend im Theater.</p>
+          <h2>Keine Vorlesung über KI. <br /> Ein Moment mit ihr.</h2>
+          <p class="lead-in">Eine Keynote von Lukas Wagner ist in fünf Akten gebaut, wie ein guter Abend im Theater.</p>
         </div>
         <ol class="acts">
-          <li class="act reveal"><span class="no">Akt 01</span><h3>Ankommen</h3><p>Menschen kommen mit Fragen, Halbwissen und einer gesunden Portion Skepsis. Genau richtig.</p></li>
-          <li class="act reveal"><span class="no">Akt 02</span><h3>Verstehen</h3><p>KI wird eingeordnet: was relevant ist, was Hype bleibt. In klarer Sprache statt Fachjargon.</p></li>
-          <li class="act reveal"><span class="no">Akt 03</span><h3>Erleben</h3><p>Das Publikum gibt Input, die KI liefert live. Staunen, Lachen, Diskussion, mitten im Raum.</p></li>
-          <li class="act reveal"><span class="no">Akt 04</span><h3>Einordnen</h3><p>Chancen und Grenzen, ohne Alarmismus und ohne Verklärung. Auch Verantwortung hat hier Platz.</p></li>
-          <li class="act reveal"><span class="no">Akt 05</span><h3>Handeln</h3><p>Aus dem Moment wird Richtung: konkrete nächste Schritte für Team, Unternehmen oder Region.</p></li>
+          <li class="act reveal"><span class="no">Akt 01</span><h3>Ankommen</h3><p>Menschen kommen mit Fragen, Halbwissen und Skepsis. Genau richtig.</p></li>
+          <li class="act reveal"><span class="no">Akt 02</span><h3>Verstehen</h3><p>Was ist relevant, was bleibt Hype. Klare Sprache statt Fachjargon.</p></li>
+          <li class="act reveal"><span class="no">Akt 03</span><h3>Erleben</h3><p>Das Publikum gibt Input, die KI liefert live. Staunen, Lachen, Diskussion.</p></li>
+          <li class="act reveal"><span class="no">Akt 04</span><h3>Einordnen</h3><p>Chancen und Grenzen, ohne Alarmismus und ohne Verklärung.</p></li>
+          <li class="act reveal"><span class="no">Akt 05</span><h3>Handeln</h3><p>Aus dem Moment wird Richtung: konkrete nächste Schritte.</p></li>
         </ol>
         <div class="stage-wide reveal">
           <figure>
@@ -440,52 +443,34 @@
             <figcaption>ahead x live: Aus Publikumsfragen werden Demos</figcaption>
           </figure>
         </div>
-        <div class="xp-close-row reveal" style="margin-top:clamp(2rem,4vw,3rem)">
-          <p class="xp-closing">Aus einem abstrakten Thema wird ein gemeinsamer Moment.</p>
-          <!-- ASSET-SLOT: sobald das Reel da ist, diesen Block durch ein <video controls poster="..."> oder
-               einen datenschutzfreundlichen Embed ersetzen. Laufzeit erst angeben, wenn der Schnitt final ist. -->
-          <div class="slot">
-            <p class="slot-k">Asset-Slot · Video</p>
-            <p class="slot-t">Speaker-Reel: Lukas Wagner live</p>
-            <dl>
-              <div><dt>Datei</dt><dd>assets/speaker-reel.mp4 + assets/speaker-reel-poster.jpg</dd></div>
-              <div><dt>Inhalt</dt><dd>60 bis 90 Sekunden aus echten Auftritten: Bühne, Publikumsreaktion, Live-Demo, Transfer</dd></div>
-              <div><dt>Format</dt><dd>16:9, min. 1920 × 1080 px, Poster in gleicher Größe</dd></div>
-              <div><dt>Regeln</dt><dd>kein Autoplay mit Ton, Laufzeit nur angeben wenn belegt</dd></div>
-            </dl>
-          </div>
-        </div>
       </div>
     </section>
 
-    <!-- ============ WAS BLEIBT (paper) ============ -->
-    <section class="on-paper" aria-label="Was bleibt">
+    <!-- ============ WAS BLEIBT (paper, 3 Resultate) ============ -->
+    <section id="wirkung" class="on-paper" style="padding-bottom:clamp(1.4rem,2.5vw,2rem)" aria-label="Was bleibt">
       <div class="wrap">
         <div class="sec-head reveal">
           <p class="kicker">Was bleibt</p>
-          <h2>Menschen kommen mit Fragen.<br />Sie gehen mit einer Richtung.</h2>
+          <h2>Menschen kommen mit Fragen. <br /> Sie gehen mit einer Richtung.</h2>
         </div>
-        <div class="keeps">
-          <div class="keep reveal"><h3>Eine gemeinsame Sprache für KI</h3><p>Team, Führung und Publikum reden danach über dasselbe, nicht über zehn verschiedene Buzzwords.</p></div>
-          <div class="keep reveal"><h3>Realistische Einschätzung statt diffuser Angst</h3><p>Was kann KI heute wirklich, was nicht, und was heißt das für uns?</p></div>
-          <div class="keep reveal"><h3>Konkrete Anwendungsimpulse</h3><p>Ideen, die sich am nächsten Arbeitstag ausprobieren lassen. Ohne neue Software-Einkaufsliste.</p></div>
-          <div class="keep reveal"><h3>Gesprächsstoff für Teams und Führung</h3><p>Die Keynote endet nicht mit dem Applaus. Sie startet Diskussionen, die überfällig waren.</p></div>
-          <div class="keep reveal"><h3>Verständnis für Chancen, Grenzen und Verantwortung</h3><p>Begeisterung ja, aber mit klarem Blick auf das, was Technologie nicht löst.</p></div>
-          <div class="keep reveal"><h3>Motivation für den nächsten Schritt</h3><p>Vom „irgendwann sollten wir …“ zum „so fangen wir an“.</p></div>
+        <div class="results">
+          <div class="result reveal"><h3>Eine gemeinsame Sprache für KI</h3><p>Team und Führung reden danach über dasselbe, nicht über zehn verschiedene Buzzwords.</p></div>
+          <div class="result reveal"><h3>Realistische Orientierung</h3><p>Was KI heute wirklich kann, was nicht, und was das für die eigene Arbeit heißt.</p></div>
+          <div class="result reveal"><h3>Konkrete nächste Schritte</h3><p>Ideen, die sich am nächsten Arbeitstag ausprobieren lassen. Ohne neue Einkaufsliste.</p></div>
         </div>
-        <p class="keeps-note reveal">Keine Transformation über Nacht. Aber ein gemeinsamer Startpunkt, der trägt.</p>
+        <p class="results-note reveal">Keine Transformation über Nacht. Aber ein gemeinsamer Startpunkt, der trägt.</p>
       </div>
     </section>
 
     <!-- ============ FORMATE (paper) ============ -->
-    <section id="formate" class="on-paper" style="padding-top:0" aria-label="Formate">
+    <section id="formate" class="on-paper" style="padding-top:clamp(1.4rem,2.5vw,2rem)" aria-label="Formate">
       <div class="wrap">
         <div class="sec-head reveal">
           <p class="kicker">Formate</p>
           <h2>Ein Erlebnis. Drei Bühnen.</h2>
         </div>
 
-        <!-- Keynote = Hauptleistung, groß -->
+        <!-- Keynote = Hauptleistung, groesste Flaeche -->
         <article class="fmt-feature reveal">
           <figure>
             <img src="/assets/speaker-reel-thumb.jpg"
@@ -501,7 +486,6 @@
               <div><dt>Für wen</dt><dd>Konferenzen, Firmenevents, Stadt- und Zukunftsveranstaltungen, Medienformate</dd></div>
               <div><dt>Situation</dt><dd>Alle reden über KI, aber im Saal sitzt vom Vorstand bis zum Lehrling jede Wissensstufe</dd></div>
               <div><dt>Was passiert</dt><dd>Einordnung, Live-Demos mit Publikumsinput, Dramaturgie statt Folienschlacht</dd></div>
-              <div><dt>Was bleibt</dt><dd>Gemeinsames Verständnis, konkrete Impulse und ein Abend, über den geredet wird</dd></div>
             </dl>
             <a class="btn btn-primary" data-cta="keynote" href="#kontakt">Keynote anfragen</a>
           </div>
@@ -509,52 +493,40 @@
 
         <div class="fmt-duo">
           <article class="reveal">
-            <!-- ASSET-SLOT: ersetzen durch
-                 <figure><img src="/assets/workshop-hands-on.jpg" srcset="/assets/workshop-hands-on-800.jpg 800w, /assets/workshop-hands-on.jpg 1600w"
-                 sizes="(max-width:820px) 92vw, 44vw" width="1600" height="1000" loading="lazy" alt="..." /></figure> -->
-            <div class="slot">
-              <p class="slot-k">Asset-Slot · Foto</p>
-              <p class="slot-t">Workshop: Lukas mit Teilnehmenden</p>
-              <dl>
-                <div><dt>Datei</dt><dd>assets/workshop-hands-on.jpg</dd></div>
-                <div><dt>Motiv</dt><dd>Lukas im Gespräch am Tisch, offene Laptops, echte Arbeitssituation, keine gestellte Pose</dd></div>
-                <div><dt>Format</dt><dd>16:10 quer, min. 1600 × 1000 px</dd></div>
-                <div><dt>Mobil</dt><dd>4:3-Crop, zwei Personen mittig</dd></div>
-                <div><dt>Alt-Text</dt><dd>Lukas Wagner begleitet Teilnehmende beim Ausprobieren von KI-Werkzeugen</dd></div>
-              </dl>
+            <div>
+              <p class="fmt-label">Format 02 · Hands-on</p>
+              <h3>Der Workshop</h3>
+              <p>Für Teams, KMU und Organisationen, die nach dem Staunen ins Ausprobieren kommen wollen. KI-Werkzeuge am eigenen Arbeitsalltag getestet, begleitet und eingeordnet.</p>
             </div>
-            <div class="fmt-body">
-            <p class="fmt-label">Format 02 · Hands-on</p>
-            <h3>Der Workshop</h3>
-            <p>Für Teams, KMU und Organisationen, die nach dem Staunen ins Ausprobieren kommen wollen. KI-Werkzeuge am eigenen Arbeitsalltag getestet: begleitet, eingeordnet, praxisnah.</p>
-            <div class="fmt-chips" aria-label="Workshop-Schwerpunkte">
-              <span>halber Tag</span><span>ganzer Tag</span><span>Impulstag</span>
-            </div>
-            <a class="tlink" data-cta="workshop" href="mailto:kontakt@lukaswagner.at?subject=Workshop-Anfrage%20Lukas%20Wagner&amp;body=Datum%3A%0AOrt%3A%0AZielgruppe%3A%0AAnlass%3A%0A">Workshop anfragen →</a>
+            <!-- Foto zeigt bewusst die Teilnehmendenperspektive, nicht Lukas. Bildunterschrift benennt das offen.
+                 Sobald ein Hands-on-Foto mit Lukas vorliegt, hier ersetzen (Spezifikation: docs/lukaswagner-asset-brief.md). -->
+            <figure>
+              <img src="/assets/aheadx-demo.jpg"
+                   srcset="/assets/aheadx-demo-800.jpg 533w, /assets/aheadx-demo.jpg 866w"
+                   sizes="(max-width:820px) 92vw, 44vw"
+                   width="866" height="1300" loading="lazy"
+                   alt="Teilnehmerin arbeitet bei einem ahead x Workshop konzentriert an ihrem Laptop" />
+              <figcaption>Hands-on bei einem ahead x Workshop</figcaption>
+            </figure>
+            <div class="fmt-foot">
+              <a class="tlink" data-cta="workshop" href="mailto:kontakt@lukaswagner.at?subject=Workshop-Anfrage%20Lukas%20Wagner&amp;body=Datum%3A%0AOrt%3A%0AZielgruppe%3A%0AAnlass%3A%0A">Workshop anfragen →</a>
             </div>
           </article>
           <article class="reveal">
-            <!-- ASSET-SLOT: ersetzen durch <figure><img src="/assets/regionalformat-event.jpg" ... /></figure>
-                 (gleiche srcset/sizes-Logik wie beim Workshop-Bild) -->
-            <div class="slot">
-              <p class="slot-k">Asset-Slot · Foto</p>
-              <p class="slot-t">Regionalformat: gefüllter Saal</p>
-              <dl>
-                <div><dt>Datei</dt><dd>assets/regionalformat-event.jpg</dd></div>
-                <div><dt>Motiv</dt><dd>ahead x Stadt-Event, Bühne und volles Publikum im Bild, Raumgefühl statt Nahaufnahme</dd></div>
-                <div><dt>Format</dt><dd>16:10 quer, min. 1600 × 1000 px</dd></div>
-                <div><dt>Mobil</dt><dd>4:3-Crop, Publikum mittig</dd></div>
-                <div><dt>Alt-Text</dt><dd>Gefüllter Saal bei einem ahead x Event in der Region</dd></div>
-              </dl>
+            <div>
+              <p class="fmt-label">Format 03 · ahead x</p>
+              <h3>Das Regionalformat</h3>
+              <p>Für Städte, Regionen und Partner, die KI öffentlich erlebbar machen wollen. Kuratiert mit lokalen Partnern aus Medien, Wirtschaft und Bildung.</p>
             </div>
-            <div class="fmt-body">
-            <p class="fmt-label">Format 03 · ahead x</p>
-            <h3>Das Regionalformat</h3>
-            <p>Für Städte, Regionen und Partner, die KI öffentlich erlebbar machen wollen: als kuratiertes Live-Event mit lokalen Partnern aus Medien, Wirtschaft und Bildung. Entwickelt und erprobt mit ahead x.</p>
-            <div class="fmt-chips" aria-label="ahead x Formatfamilie">
-              <span>city</span><span>labs</span><span>mastermind</span><span>future</span><span>awards</span>
-            </div>
-            <a class="tlink" data-cta="aheadx" href="mailto:kontakt@lukaswagner.at?subject=Regionalformat%20%2F%20ahead%20x%20anfragen&amp;body=Stadt%2FRegion%3A%0AZeitraum%3A%0AZielgruppe%3A%0AAnlass%3A%0A">Regionalformat anfragen →</a>
+            <!-- Formatfamilie laut aheadx.at (Stand 04/2026). -->
+            <ul class="fam">
+              <li><b>city</b><span>öffentliches Stadt-Event, regional und niederschwellig</span></li>
+              <li><b>labs</b><span>Workshop-Format für Unternehmen und Einsteiger:innen</span></li>
+              <li><b>mastermind</b><span>Format für Entscheider:innen, in Vorbereitung</span></li>
+              <li><b>future</b><span>Flaggschiff aus Award Show und Future Day</span></li>
+            </ul>
+            <div class="fmt-foot">
+              <a class="tlink" data-cta="aheadx" href="mailto:kontakt@lukaswagner.at?subject=Regionalformat%20%2F%20ahead%20x%20anfragen&amp;body=Stadt%2FRegion%3A%0AZeitraum%3A%0AZielgruppe%3A%0AAnlass%3A%0A">Regionalformat anfragen →</a>
             </div>
           </article>
         </div>
@@ -569,34 +541,16 @@
           <h2 class="why-open">Bevor Lukas Wagner <em>künstliche Intelligenz</em> auf die Bühne brachte, brachte er <em>Sprache, Literatur und neue Ideen</em> dorthin.</h2>
         </div>
         <div class="layers">
-          <div class="layer reveal">
-            <span class="no">Ebene 01</span>
-            <h3>Der Speaker</h3>
-            <p>Über 500 Auftritte, vom Poetry-Slam bis zur Konferenzbühne. Er weiß, wie man Aufmerksamkeit gewinnt und hält, ohne laut zu werden.</p>
-          </div>
-          <div class="layer reveal">
-            <span class="no">Ebene 02</span>
-            <h3>Der Übersetzer</h3>
-            <p>Komplexe Zukunftsthemen, verdichtet in Sätze, die hängen bleiben. Für Entscheider:innen genauso wie für Menschen ohne Vorwissen.</p>
-          </div>
-          <div class="layer reveal">
-            <span class="no">Ebene 03</span>
-            <h3>Der Formatentwickler</h3>
-            <p>Er denkt nicht in Vorträgen, sondern in Erlebnissen: Dramaturgie, Publikumsbeteiligung, Raum. Vom einzelnen Slot bis zur ganzen Veranstaltungsreihe.</p>
-          </div>
-          <div class="layer reveal">
-            <span class="no">Ebene 04</span>
-            <h3>Der Gründer</h3>
-            <p>Mit ahead x hat er selbst gebaut, worüber andere nur sprechen: eine Plattform, die KI-Befähigung als Live-Format zu Menschen und Regionen bringt.</p>
-          </div>
+          <div class="layer reveal"><h3>Der Speaker</h3><p>Von der Slam-Bühne zur Konferenzbühne. Hält Aufmerksamkeit, ohne laut zu werden.</p></div>
+          <div class="layer reveal"><h3>Der Übersetzer</h3><p>Komplexe Themen, verdichtet in Sätze, die hängen bleiben.</p></div>
+          <div class="layer reveal"><h3>Der Formatentwickler</h3><p>Denkt in Erlebnissen und Dramaturgie, nicht in Folien.</p></div>
+          <div class="layer reveal"><h3>Der Gründer</h3><p>Hat mit ahead x selbst gebaut, worüber andere nur sprechen.</p></div>
         </div>
         <div class="origin reveal">
-          <p class="t">Herkunft: Von Sprache zu Technologie</p>
           <div class="origin-facts">
-            <!-- Biografische Angaben laut Briefing, Belege vor Livegang final pruefen -->
+            <!-- LAUNCH-BLOCKER: biografische Angaben stammen aus dem Briefing von LW und sind noch nicht extern belegt. -->
             <span><b>Slam-Poet, Autor, Songwriter</b>: die erste Bühne</span>
             <span><b>100+</b> Literatur- &amp; Kulturveranstaltungen organisiert</span>
-            <span>beteiligt am <b>28-Stunden-Poetry-Slam-Weltrekord</b></span>
             <span><b>2017</b> Förderpreis für Kunst und Kultur</span>
             <span><b>TEDxSalzburg</b> Speaker-Coach</span>
           </div>
@@ -611,47 +565,38 @@
         <div class="sec-head reveal">
           <p class="kicker">Case Study</p>
           <h2>ahead x: das eigene Format als Beweis.</h2>
-          <p class="lead-in">Lukas spricht nicht nur darüber, wie man Menschen für KI erreicht. Er hat ein Format dafür gebaut.</p>
+          <p class="lead-in">Lukas spricht nicht nur darüber, wie man Menschen für KI erreicht. Er hat das Format dafür selbst gebaut.</p>
         </div>
         <ol class="case-steps">
-              <li class="reveal"><h3>Das Problem</h3><p>KI-Wissen bleibt in der Expert:innenblase. Menschen, Betriebe und Regionen schauen zu, statt mitzugestalten.</p></li>
-              <li class="reveal"><h3>Die Idee</h3><p>Befähigung nicht als Webinar, sondern als Live-Erlebnis vor Ort: nahbar, verständlich, gemeinsam.</p></li>
-              <li class="reveal"><h3>Das Format</h3><p>Kuratierte Events und Workshops mit Partnern aus Medien, Wirtschaft und Bildung, von city bis labs.</p></li>
-              <li class="reveal"><h3>Heute</h3><p>Eine wachsende Plattform für KI-Befähigung im deutschsprachigen Raum, mit Publikum von 16 bis 80.</p></li>
-            </ol>
-        <!-- ASSET-SLOT: ersetzt aheadx-tour.jpg, das einen anderen Speaker zeigt und deshalb nicht verwendet wird. -->
-        <div class="slot reveal" style="max-width:36rem;margin-top:clamp(1.6rem,3vw,2.4rem)">
-          <p class="slot-k">Asset-Slot · Foto</p>
-          <p class="slot-t">ahead x Event mit Lukas auf der Bühne</p>
-          <dl>
-            <div><dt>Datei</dt><dd>assets/aheadx-event.jpg</dd></div>
-            <div><dt>Motiv</dt><dd>Lukas moderiert oder spricht bei einem ahead x Event, Publikum sichtbar</dd></div>
-            <div><dt>Format</dt><dd>4:5 hoch, min. 1000 × 1250 px</dd></div>
-            <div><dt>Alt-Text</dt><dd>Lukas Wagner moderiert ein ahead x Event vor vollem Saal</dd></div>
-          </dl>
-        </div>
-
-        <!-- ZU PRÜFEN vor Livegang: 9 Events / 8 Städte / 92 % (Quelle: ahead x Auswertung) -->
+          <li class="reveal"><h3>Das Problem</h3><p>KI-Wissen bleibt in der Expert:innenblase. Regionen und Betriebe schauen zu.</p></li>
+          <li class="reveal"><h3>Die Idee</h3><p>Befähigung als Live-Erlebnis vor Ort statt als Webinar.</p></li>
+          <li class="reveal"><h3>Das Format</h3><p>Kuratierte Events mit Partnern aus Medien, Wirtschaft und Bildung.</p></li>
+          <li class="reveal"><h3>Heute</h3><p>Eine wachsende Plattform mit Publikum von 16 bis 80.</p></li>
+        </ol>
+        <!-- Zahlen belegt auf aheadx.at, Stand 30.04.2026: 9 Editionen, 8 Staedte, "92% geben 4 oder 5 von 5". -->
         <div class="case-foot reveal">
           <div class="case-stats">
-            <div class="cs"><div class="n">9</div><div class="l">Events</div></div>
+            <div class="cs"><div class="n">9</div><div class="l">Editionen</div></div>
             <div class="cs"><div class="n">8</div><div class="l">Städte</div></div>
-            <div class="cs"><div class="n">92&nbsp;%</div><div class="l">Zufriedenheit im Teilnehmer:innen-Feedback</div></div>
+            <div class="cs"><div class="n">92&nbsp;%</div><div class="l">geben 4 oder 5 von 5 Punkten</div></div>
           </div>
           <div class="case-cta">
             <a class="btn btn-ghost" data-cta="aheadx" href="https://aheadx.at" target="_blank" rel="noopener">ahead x entdecken&nbsp;↗</a>
             <a class="tlink" data-cta="aheadx" href="mailto:kontakt@lukaswagner.at?subject=Regionalformat%20%2F%20ahead%20x%20anfragen&amp;body=Stadt%2FRegion%3A%0AZeitraum%3A%0AZielgruppe%3A%0AAnlass%3A%0A">Partner werden →</a>
           </div>
         </div>
+        <p class="case-src reveal">Zahlen: ahead x, Stand April 2026</p>
       </div>
     </section>
 
     <!-- ============ STIMMEN (paper) ============ -->
     <section id="stimmen" class="on-paper" aria-label="Stimmen">
       <div class="wrap">
-        <div class="sec-head reveal" style="margin-bottom:1.4rem">
+        <div class="sec-head reveal" style="margin-bottom:1.2rem">
           <h2 class="kicker">Stimmen</h2>
         </div>
+        <!-- LAUNCH-BLOCKER: Zitate stammen aus LinkedIn-Empfehlungen. Vor Livegang Wortlaut,
+             Rollenbezeichnung und Einverstaendnis der genannten Personen bestaetigen lassen. -->
         <figure class="quote-hero reveal">
           <blockquote><p>Alle im Raum können nicht anders, als an seinen Lippen zu hängen.</p></blockquote>
           <figcaption><b>Romy Sigl</b> · CEO CoworkingSalzburg</figcaption>
@@ -679,7 +624,7 @@
       <div class="book-glow" aria-hidden="true"></div>
       <div class="wrap book-inner">
         <p class="kicker reveal" style="justify-content:center">Anfrage</p>
-        <h2 class="reveal">Eine Bühne, ein Abend,<br />ein Thema: KI.</h2>
+        <h2 class="reveal">Eine Bühne, ein Abend, <br /> ein Thema: KI.</h2>
         <p class="sub reveal">Schickt mir Datum, Ort, Zielgruppe und Anlass. Ihr bekommt eine ehrliche Einschätzung, welches Format passt. Und welches nicht.</p>
         <div class="hero-cta reveal">
           <a class="btn btn-primary" data-cta="keynote" href="mailto:kontakt@lukaswagner.at?subject=Keynote-Anfrage%20Lukas%20Wagner&amp;body=Datum%3A%0AOrt%3A%0AZielgruppe%3A%0AAnlass%3A%0A">Keynote anfragen</a>
@@ -690,14 +635,14 @@
     </section>
 
     <!-- ============ FAQ ============ -->
-    <section id="faq" class="band" style="padding-top:clamp(2.6rem,5vw,4rem);padding-bottom:clamp(2.6rem,5vw,4rem)" aria-label="Häufige Fragen">
+    <section id="faq" class="band" style="padding-top:clamp(2.4rem,4.5vw,3.4rem);padding-bottom:clamp(2.4rem,4.5vw,3.4rem)" aria-label="Häufige Fragen">
       <div class="wrap">
         <div class="sec-head reveal">
           <p class="kicker">FAQ</p>
           <h2>Kurz beantwortet.</h2>
         </div>
         <div class="faq reveal">
-          <details><summary>Für welche Veranstaltungen kann man Lukas buchen?</summary><p>Für Konferenzen, Firmenevents, Stadt- und Regionalveranstaltungen, Verbände und Bildungseinrichtungen, als Keynote, Workshop oder Moderation rund um Künstliche Intelligenz.</p></details>
+          <details><summary>Für welche Veranstaltungen kann man Lukas Wagner buchen?</summary><p>Für Konferenzen, Firmenevents, Stadt- und Regionalveranstaltungen, Verbände und Bildungseinrichtungen, als Keynote, Workshop oder Moderation rund um Künstliche Intelligenz.</p></details>
           <details><summary>Ist die Keynote auch für Einsteiger:innen geeignet?</summary><p>Ja. KI wird ohne Fachjargon verständlich gemacht. Tiefe und Inhalt richten sich nach der Zielgruppe.</p></details>
           <details><summary>Bietet Lukas Wagner auch KI-Workshops an?</summary><p>Ja: Hands-on-Workshops und Impulstage für Teams, KMU, Organisationen und öffentliche Einrichtungen.</p></details>
           <details><summary>Wie läuft eine Anfrage ab?</summary><p>Kurze E-Mail mit Datum, Ort, Zielgruppe und Anlass, dann folgt eine ehrliche Einschätzung, welches Format passt.</p></details>
@@ -717,8 +662,9 @@
         </nav>
       </div>
       <div class="legal">
-        <!-- TODO Livegang: finalen Legal-Block ergänzen (vollständiger Name, Anschrift, UID/Firmenbuch), in Österreich Pflicht. -->
-        Impressum &amp; Kontakt: kontakt@lukaswagner.at · © <span id="year">2026</span> Lukas Wagner · Eventfotos © Nussbaumer Photography · Theaterfoto: Credit ergänzen
+        <!-- LAUNCH-BLOCKER 1: Impressum (in Oesterreich Pflicht): vollstaendiger Name, Anschrift, ggf. UID/Firmenbuch.
+             LAUNCH-BLOCKER 2: Urheber-Credit fuer das Theaterfoto im Hero fehlt noch. -->
+        Impressum &amp; Kontakt: kontakt@lukaswagner.at · © <span id="year">2026</span> Lukas Wagner · Eventfotos © Nussbaumer Photography
       </div>
     </div>
   </footer>
@@ -730,10 +676,11 @@
     var t=document.querySelector('.nav-toggle'),m=document.getElementById('menu');
     if(t){t.addEventListener('click',function(){var o=m.classList.toggle('open');t.setAttribute('aria-expanded',o?'true':'false');t.setAttribute('aria-label',o?'Menü schließen':'Menü öffnen');});
       m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){m.classList.remove('open');t.setAttribute('aria-expanded','false');});});}
+    /* Sticky-CTA erscheint ausschliesslich, wenn der Hero aus dem Viewport ist. Ohne IntersectionObserver bleibt sie aus. */
     var sticky=document.querySelector('.sticky-cta'),hero=document.querySelector('.hero');
     if(sticky&&hero&&'IntersectionObserver' in window){
       new IntersectionObserver(function(es){es.forEach(function(e){sticky.classList.toggle('show',!e.isIntersecting);});},{rootMargin:'-80px 0px 0px 0px'}).observe(hero);
-    } else if(sticky){ sticky.classList.add('show'); }
+    }
     var reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     if(!reduced && 'IntersectionObserver' in window){
       var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});
@@ -748,6 +695,8 @@
               if(p<1)requestAnimationFrame(step);}
             requestAnimationFrame(step);}});},{threshold:.5}).observe(cu);}
     } else { document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in');}); }
+    /* Notausgang: feuert der Observer nach 2s gar nicht, wird alles sichtbar gemacht. */
+    setTimeout(function(){ if(!document.querySelector('.reveal.in')){ document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in');}); } },2000);
   </script>
 </body>
 </html>
