@@ -181,16 +181,15 @@
     /* ============ FORMATE (paper) ============ */
     .fmt-feature{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);gap:clamp(1.8rem,4vw,3.5rem);align-items:center;padding:clamp(1.8rem,4vw,3rem) 0;border-top:2px solid var(--ink-text)}
     .fmt-feature figure{border-radius:12px;overflow:hidden}
-    .fmt-feature img{width:100%;height:auto;aspect-ratio:3/2;object-fit:cover}
+    .fmt-feature img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:66% 42%}
     .fmt-label{font-family:var(--serif);font-style:italic;font-size:1rem;color:var(--red);margin-bottom:.5rem}
     .fmt-feature h3{font-size:clamp(1.7rem,3.4vw,2.5rem);font-weight:500;margin-bottom:.9rem}
     .fmt-meta{margin:1.2rem 0 1.4rem;display:grid;gap:.1rem}
     .fmt-meta div{display:grid;grid-template-columns:7.5rem 1fr;gap:1rem;font-size:.93rem;padding:.55rem 0;border-top:1px solid var(--pline-soft)}
     .fmt-meta dt{color:var(--ink-muted);font-weight:600;font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;padding-top:.1rem}
     .fmt-meta dd{color:var(--ink-text)}
-    .fmt-duo{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1.8rem,4vw,3.5rem);border-top:1px solid var(--pline);padding-top:clamp(1.8rem,4vw,2.6rem)}
-    .fmt-duo figure{border-radius:12px;overflow:hidden;margin-bottom:1.1rem}
-    .fmt-duo img{width:100%;height:auto;aspect-ratio:16/10;object-fit:cover}
+    .fmt-duo{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1.8rem,4vw,3.5rem);margin-top:clamp(1.4rem,3vw,2.2rem)}
+    .fmt-duo article{border-top:2px solid var(--ink-text);padding-top:clamp(1.4rem,3vw,2rem)}
     .fmt-duo h3{font-size:clamp(1.4rem,2.6vw,1.8rem);font-weight:500;margin-bottom:.6rem}
     .fmt-duo p{color:var(--ink-muted);font-size:.97rem;max-width:30rem}
     .fmt-duo .tlink{margin-top:.8rem}
@@ -284,6 +283,7 @@
       .act{grid-template-columns:3.4rem minmax(0,1fr)}
       .act p{grid-column:2}
       .fmt-feature{grid-template-columns:1fr;gap:1.6rem}
+      .fmt-feature img{aspect-ratio:3/2;object-position:62% 38%}
       .case-steps{grid-template-columns:1fr}
       .layers{grid-template-columns:1fr}
       .keeps{grid-template-columns:1fr}
@@ -457,7 +457,7 @@
                  srcset="assets/speaker-reel-thumb-900.jpg 900w, assets/speaker-reel-thumb.jpg 1500w"
                  sizes="(max-width:1020px) 92vw, 48vw"
                  width="1500" height="1000" loading="lazy"
-                 alt="Lukas Wagner lächelt während einer Live-Demo am Laptop, hinter ihm eine Präsentation" />
+                 alt="Lukas Wagner lächelt vor der Leinwand, während er eine Live-Demo zeigt" />
           </figure>
           <div>
             <p class="fmt-label">Format 01 · Hauptbühne</p>
@@ -474,20 +474,16 @@
 
         <div class="fmt-duo">
           <article class="reveal">
-            <figure>
-              <img src="assets/aheadx-demo.jpg"
-                   srcset="assets/aheadx-demo-800.jpg 800w, assets/aheadx-demo.jpg 866w"
-                   sizes="(max-width:820px) 92vw, 44vw"
-                   width="866" height="1300" loading="lazy" style="aspect-ratio:16/10;object-position:50% 30%"
-                   alt="Eine Workshop-Teilnehmerin arbeitet konzentriert am Laptop" />
-            </figure>
             <p class="fmt-label">Format 02 · Hands-on</p>
             <h3>Der Workshop</h3>
             <p>Für Teams, KMU und Organisationen, die nach dem Staunen ins Ausprobieren kommen wollen. KI-Werkzeuge am eigenen Arbeitsalltag getestet: begleitet, eingeordnet, praxisnah.</p>
+            <div class="fmt-chips" aria-label="Workshop-Schwerpunkte">
+              <span>halber Tag</span><span>ganzer Tag</span><span>Impulstag</span>
+            </div>
             <a class="tlink" data-cta="workshop" href="mailto:kontakt@lukaswagner.at?subject=Workshop-Anfrage%20Lukas%20Wagner&amp;body=Datum%3A%0AOrt%3A%0AZielgruppe%3A%0AAnlass%3A%0A">Workshop anfragen →</a>
           </article>
           <article class="reveal">
-            <p class="fmt-label" style="margin-top:.4rem">Format 03 · ahead x</p>
+            <p class="fmt-label">Format 03 · ahead x</p>
             <h3>Das Regionalformat</h3>
             <p>Für Städte, Regionen und Partner, die KI öffentlich erlebbar machen wollen: als kuratiertes Live-Event mit lokalen Partnern aus Medien, Wirtschaft und Bildung. Entwickelt und erprobt mit ahead x.</p>
             <div class="fmt-chips" aria-label="ahead x Formatfamilie">
