@@ -2,7 +2,8 @@
 
 ## 0. Zentrale Markenthese
 
-**Zukunft entsteht im Raum.** (EN: The future happens in the room.)
+**Die Zukunft ist kein weiterer Bildschirm. Sie passiert im Raum.**
+(EN: The future is not another screen. It happens in the room.)
 
 Je digitaler die Welt wird, desto mehr zaehlt der Raum, in dem Menschen zusammenkommen.
 Das ist ausdruecklich **keine** technikfeindliche Haltung: Die Zukunft wird digital sein.
@@ -45,11 +46,33 @@ Die DSGVO gilt dagegen ueber das Marktortprinzip, weil sich das Angebot an Mensc
 | # | Punkt | Wo | Verantwortlich |
 |---|---|---|---|
 | 1 | **Urheber-Credit fuer das Theaterfoto** im Hero. Der bestehende Credit deckt nur die Eventfotos ab. | Footer `.legal-foot` | Lukas Wagner |
-| 2 | **Claim "500+ Auftritte auf Buehnen"** bestaetigen oder entfernen. Einzige Zahl der Seite ohne oeffentlichen Beleg. | Hero `.hero-trust` | Lukas Wagner |
+| 2 | ~~Claim "500+ Auftritte"~~ **erledigt**: aus der Seite entfernt. Es steht jetzt keine unbelegte Zahl mehr auf der Website. Bei Bestaetigung kann sie in die Beweiszeile der Expansion zurueck. | entfernt | erledigt |
 | 3 | **Biografische Angaben** bestaetigen (100+ Veranstaltungen, Foerderpreis 2017, TEDxSalzburg). | `#warum` | Lukas Wagner |
 | 4 | **Testimonials**: Wortlaut und Einverstaendnis der vier Personen. Die Zitate waren bereits vor diesem Livegang oeffentlich, das Thema ist damit nicht neu, aber weiter offen. | `#stimmen` | Lukas Wagner |
 | 5 | **Anwaltliche Durchsicht der Datenschutzerklaerung**, insbesondere die Frage eines EU-Vertreters nach Art. 27 DSGVO fuer Verantwortliche ausserhalb der EU. Fuer eine reine Broschuerenseite greift moeglicherweise die Ausnahme, das sollte jemand mit Zulassung beurteilen. | `datenschutz.html` | Lukas Wagner |
 | 6 | **Steuerliche Einordnung** der Konstellation US-LLC plus Events in acht oesterreichischen Staedten (Betriebsstaette, Ort der Geschaeftsleitung). Kein Website-Thema, aber vermutlich das gewichtigere. | extern | Steuerberater |
+
+## 0b. Inszenierung: drei Showstopper
+
+Die Seite hat bewusst genau drei visuelle Hoehepunkte. Alles andere bleibt ruhig.
+
+1. **Hero als Buehnenopening.** Kein Split-Layout. Das Theaterfoto ist ein vertikaler
+   Lichtkorridor rechts, die Typografie besitzt die linke Buehnenhaelfte. Ein Scheinwerfer-Layer
+   folgt bei feiner Zeigereingabe traege dem Cursor, ausschliesslich per `transform`,
+   deshalb ohne Repaint. Auf Touch und bei Reduced Motion steht er fest.
+2. **Der Raum oeffnet sich** (`#raum`). Fuenf Zeilen werden groesser, enger, heller und kippen
+   farblich ins Digitale. Dann Stille. Dann die Wende in Amber. Dann oeffnet sich das
+   Publikumsbild per `clip-path` aus der Mitte wie ein Vorhang.
+3. **Expansion** (`#aheadx`). Ein Lichtpunkt wird zu acht, dann zu einem Netz.
+   Bewusst abstrakt als SVG-Konstellation, **keine Landkarte**, keine erfundenen Staedte.
+
+**Duales Lichtsystem.** Analog Heat (Amber, Buehnenrot, Papierweiss) steht fuer alles
+Menschliche. Digital Light (`--electric`, `--cyan`) erscheint ausschliesslich dort, wo es
+um Ueberlastung, Signal und Expansion geht. Nie fuer Menschen, nie als Deko.
+
+**Randbeschriftung.** `SIGNAL · UEBERLASTUNG`, `ROOM 01 · ATTENTION`, `HUMAN RESPONSE`,
+`LIVE SIGNAL · EXPANSION` sitzen als Buehnenbeschriftung am rechten Rand.
+Ab 820 px ausgeblendet.
 
 ## 1b. Sprachversionen
 

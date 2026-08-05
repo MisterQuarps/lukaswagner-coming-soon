@@ -43,6 +43,24 @@ L['de'] = dict(
     scr_lukas='Lukas Wagner bringt Künstliche Intelligenz in genau diesen Raum.',
     scr_label='Warum echte Räume wichtiger werden',
     scr_alt='Voller Saal bei einem ahead x Format, Menschen hören gemeinsam zu',
+    n_micro='Lukas Wagner · KI-Keynote-Speaker · Gründer von ahead x',
+    n_h1a=['Die Zukunft ist kein', 'weiterer Bildschirm.'],
+    n_h1b=['Sie passiert', '<em>im Raum.</em>'],
+    n_sub='Lukas Wagner bringt Künstliche Intelligenz aus dem Feed auf die Bühne. Damit Unternehmen, Städte und Regionen gemeinsam verstehen, was als Nächstes kommt.',
+    n_cta1='Lukas auf die Bühne holen',
+    n_cta2='Sehen, was im Raum passiert',
+    n_lbl_screens='Signal · Überlastung',
+    n_lbl_room='Room 01 · Attention',
+    n_lbl_why='Human response',
+    n_lbl_x='Live signal · Expansion',
+    n_roles=[('Der Poet', 'Lernte, was Stille mit einem Raum macht.'), ('Der Macher', 'Organisierte über 100 Abende, bevor er eine Plattform baute.'), ('Der Coach', 'Weiß, warum ein Vortrag wirkt, bevor die erste Folie erscheint.'), ('Der Gründer', 'Machte aus einem KI-Abend ein Format für ganze Regionen.'), ('Der Speaker', 'Macht Technologie verständlich, ohne Menschen klein wirken zu lassen.')],
+    n_why_close='Technologie verändert sich. <em>Die Kunst, Menschen zu erreichen, nicht.</em>',
+    n_ex=[('Ein Raum', 'Ein Abend, ein voller Saal, ein Thema.'), ('Eine Stadt', 'Lokale Partner aus Medien, Wirtschaft und Bildung steigen ein.'), ('Acht Städte', 'Dasselbe Prinzip, andere Region. Die Verbindung bleibt lokal.'), ('Eine Plattform', 'Aus einzelnen Abenden wird eine Bewegung.')],
+    n_proofs=[('9', 'Editionen'), ('8', 'Städte'), ('1.700+', 'Teilnahmen'), ('92 %', 'geben 4 oder 5 von 5 Punkten')],
+    n_ex_close='KI ist global. <em>Verständnis beginnt lokal.</em>',
+    n_book_h2=['Ihr habt den Raum.', '<em>Lukas bringt die Zukunft.</em>'],
+    n_book_sub='Datum. Ort. Zielgruppe. Anlass. Mehr braucht es für den ersten Schritt nicht.',
+    n_aside='Keine 87 Folien. Versprochen. Und keine Roboterbilder, ebenfalls versprochen.',
     hero_kicker='KI-Keynote-Speaker · Gründer von ahead x · Formatentwickler',
     hero_lead='',
     h1=['Zukunft','entsteht','im Raum'], em_i=2,
@@ -149,6 +167,24 @@ L['en'] = dict(
     scr_lukas='Lukas Wagner brings artificial intelligence into that room.',
     scr_label='Why real rooms matter more',
     scr_alt='A full room at an ahead x format, people listening together',
+    n_micro='Lukas Wagner · AI Keynote Speaker · Founder of ahead x',
+    n_h1a=['The future is not', 'another screen.'],
+    n_h1b=['It happens', '<em>in the room.</em>'],
+    n_sub='Lukas Wagner brings artificial intelligence out of the feed and onto the stage. So companies, cities and regions can understand together what comes next.',
+    n_cta1='Bring Lukas to your stage',
+    n_cta2='See what happens in the room',
+    n_lbl_screens='Signal · Overload',
+    n_lbl_room='Room 01 · Attention',
+    n_lbl_why='Human response',
+    n_lbl_x='Live signal · Expansion',
+    n_roles=[('The poet', 'Learned what silence does to a room.'), ('The builder', 'Organised more than 100 evenings before building a platform.'), ('The coach', 'Knows why a talk works before the first slide appears.'), ('The founder', 'Turned one AI evening into a format for entire regions.'), ('The speaker', 'Makes technology understandable without making people feel small.')],
+    n_why_close='Technology changes. <em>The art of reaching people does not.</em>',
+    n_ex=[('One room', 'One evening, one full hall, one topic.'), ('One city', 'Local partners from media, business and education step in.'), ('Eight cities', 'Same principle, different region. The connection stays local.'), ('One platform', 'Single evenings turn into a movement.')],
+    n_proofs=[('9', 'editions'), ('8', 'cities'), ('1,700+', 'attendances'), ('92 %', 'rate it 4 or 5 out of 5')],
+    n_ex_close='AI is global. <em>Understanding begins locally.</em>',
+    n_book_h2=['You have the room.', '<em>Lukas brings the future.</em>'],
+    n_book_sub='Date. Location. Audience. Occasion. That is all it takes for the first step.',
+    n_aside='No 87 slides. Promised. And no robot pictures either, also promised.',
     hero_kicker='AI Keynote Speaker · Founder of ahead x · Format Developer',
     hero_lead='',
     h1=['The future','happens','in the room'], em_i=2,
@@ -255,6 +291,24 @@ L['th'] = dict(
     scr_lukas='Lukas Wagner นำปัญญาประดิษฐ์เข้าสู่พื้นที่นั้น',
     scr_label='ทำไมพื้นที่จริงจึงสำคัญขึ้น',
     scr_alt='ห้องที่เต็มไปด้วยผู้คนในงานของ ahead x กำลังรับฟังร่วมกัน',
+    n_micro='Lukas Wagner · วิทยากรคีย์โน้ต AI · ผู้ก่อตั้ง ahead x',
+    n_h1a=['อนาคตไม่ใช่', 'หน้าจออีกอันหนึ่ง'],
+    n_h1b=['มันเกิดขึ้น', '<em>ในพื้นที่จริง</em>'],
+    n_sub='Lukas Wagner นำปัญญาประดิษฐ์ออกจากฟีดขึ้นสู่เวที เพื่อให้องค์กร เมือง และภูมิภาคเข้าใจร่วมกันว่าอะไรกำลังจะมาถึง',
+    n_cta1='เชิญ Lukas ขึ้นเวทีของคุณ',
+    n_cta2='ดูสิ่งที่เกิดขึ้นในห้อง',
+    n_lbl_screens='Signal · Overload',
+    n_lbl_room='Room 01 · Attention',
+    n_lbl_why='Human response',
+    n_lbl_x='Live signal · Expansion',
+    n_roles=[('กวี', 'เรียนรู้ว่าความเงียบทำอะไรกับห้องหนึ่งห้อง'), ('นักสร้าง', 'จัดงานมากกว่า 100 ค่ำคืน ก่อนจะสร้างแพลตฟอร์ม'), ('โค้ช', 'รู้ว่าทอล์กจะได้ผลหรือไม่ ก่อนสไลด์แรกจะขึ้น'), ('ผู้ก่อตั้ง', 'เปลี่ยนค่ำคืน AI หนึ่งคืน ให้เป็นรูปแบบงานสำหรับทั้งภูมิภาค'), ('นักพูด', 'ทำให้เทคโนโลยีเข้าใจง่าย โดยไม่ทำให้ผู้ฟังรู้สึกเล็กลง')],
+    n_why_close='เทคโนโลยีเปลี่ยนไป <em>แต่ศิลปะของการเข้าถึงผู้คนไม่เปลี่ยน</em>',
+    n_ex=[('หนึ่งพื้นที่', 'หนึ่งค่ำคืน หนึ่งห้องที่เต็ม หนึ่งหัวข้อ'), ('หนึ่งเมือง', 'พันธมิตรท้องถิ่นจากสื่อ ภาคธุรกิจ และการศึกษาเข้าร่วม'), ('แปดเมือง', 'หลักการเดียวกัน คนละภูมิภาค ความเชื่อมโยงยังเป็นของท้องถิ่น'), ('หนึ่งแพลตฟอร์ม', 'จากค่ำคืนเดี่ยว ๆ กลายเป็นการเคลื่อนไหว')],
+    n_proofs=[('9', 'ครั้ง'), ('8', 'เมือง'), ('1,700+', 'การเข้าร่วม'), ('92 %', 'ให้คะแนน 4 หรือ 5 จาก 5')],
+    n_ex_close='AI เป็นเรื่องระดับโลก <em>แต่ความเข้าใจเริ่มต้นที่ท้องถิ่น</em>',
+    n_book_h2=['พื้นที่เป็นของคุณ', '<em>Lukas นำอนาคตมาให้</em>'],
+    n_book_sub='วันที่ สถานที่ กลุ่มผู้ฟัง และโอกาสของงาน แค่นี้ก็เริ่มต้นได้แล้ว',
+    n_aside='ไม่มีสไลด์ 87 แผ่น รับรอง และไม่มีภาพหุ่นยนต์ รับรองเช่นกัน',
     hero_kicker='วิทยากรคีย์โน้ต AI · ผู้ก่อตั้ง ahead x · นักออกแบบรูปแบบงาน',
     hero_lead='',
     h1=['อนาคต','เกิดขึ้น','ในพื้นที่จริง'], em_i=2,
@@ -396,6 +450,17 @@ def build(k):
         for q,n,r in d['quotes'])
     faq_html = "\n".join(
         f'          <details><summary>{q}</summary><p>{a}</p></details>' for q,a in d['faq'])
+    h1a = "\n".join(f'            <span class="hl">{t}</span>' for t in d['n_h1a'])
+    h1b = "\n".join(f'            <span class="hl-warm">{t}</span>' for t in d['n_h1b'])
+    roles_html = "\n".join(
+        f'          <article class="role role-{i+1} reveal"><h3>{t}</h3><p>{p_}</p></article>'
+        for i,(t,p_) in enumerate(d['n_roles']))
+    ex_html = "\n".join(
+        f'            <li><div><h3>{t}</h3><p>{p_}</p></div></li>' for t,p_ in d['n_ex'])
+    proofs_html = "\n".join(
+        f'          <div class="pf pf-{i+1}"><b>{n}</b><span>{l}</span></div>'
+        for i,(n,l) in enumerate(d['n_proofs']))
+    book_h2 = "<br />".join(d['n_book_h2'])
     em_i = d.get('em_i', 1)
     # Die drei Zeilen bilden einen Satz: nur die letzte bekommt den Punkt.
     # Thai setzt keinen Satzpunkt, dort entfaellt er ganz.
@@ -468,7 +533,7 @@ def build(k):
       <nav class="nav-links" id="menu" aria-label="Navigation">
 {navl}
         {langs(k)}
-        <a class="btn btn-primary" data-cta="keynote" href="{mk}">{d['cta_keynote']}</a>
+        <a class="btn btn-primary" data-cta="keynote" href="{mk}">{d['n_cta1']}</a>
       </nav>
     </div>
   </header>
@@ -476,35 +541,26 @@ def build(k):
   <main id="main">
     <span id="top"></span>
 
+    <!-- SHOWSTOPPER 1: Buehnenopening. Das Foto ist die Buehne, nicht die Illustration. -->
     <section class="hero" aria-label="Intro">
-      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="hero-stage" aria-hidden="true">
+        <img src="{A}lukas-stage.jpg"
+             srcset="{A}lukas-stage-800.jpg 533w, {A}lukas-stage.jpg 1066w"
+             sizes="100vw" width="1066" height="1600" fetchpriority="high" alt="" />
+      </div>
+      <div class="hero-veil" aria-hidden="true"></div>
+      <div class="hero-spot" aria-hidden="true"></div>
       <div class="hero-inner">
-        <div class="hero-copy">
-          <p class="kicker">{d['hero_kicker']}</p>
-          {lead_html}<h1>
-{h1_html}
-          </h1>
-          <p class="sub">{d['hero_sub']}</p>
-          <div class="hero-cta">
-            <a class="btn btn-primary" data-cta="keynote" href="{mk}">{d['cta_keynote']}</a>
-            <a class="btn btn-ghost" data-cta="speaker-reel" href="https://www.youtube.com/@lukaswagnerai" target="_blank" rel="noopener">{d['cta_reel']}&nbsp;↗</a>
-          </div>
-          <div class="hero-trust">
-            <!-- OFFEN: "500+" ist noch nicht oeffentlich belegt, Freigabe durch LW noetig. -->
-            <span><b>{d['trust'][0][0]}</b> {d['trust'][0][1]}</span>
-            <span><b>{d['trust'][1][0]}</b> {d['trust'][1][1]}</span>
-            <span><b>{d['trust'][2][0]}</b> {d['trust'][2][1]}</span>
-          </div>
-        </div>
-        <div class="hero-fig">
-          <figure>
-            <img src="{A}lukas-stage.jpg"
-                 srcset="{A}lukas-stage-800.jpg 533w, {A}lukas-stage.jpg 1066w"
-                 sizes="(max-width:1020px) 92vw, 40vw"
-                 width="1066" height="1600" fetchpriority="high"
-                 alt="{d['hero_alt']}" />
-            <figcaption>{d['hero_cap']}</figcaption>
-          </figure>
+        <p class="hero-micro">{d['n_micro']}</p>
+        <h1>
+{h1a}
+          <span class="hero-break" aria-hidden="true"></span>
+{h1b}
+        </h1>
+        <p class="sub">{d['n_sub']}</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" data-cta="keynote" href="{mk}">{d['n_cta1']}</a>
+          <a class="btn btn-ghost" data-cta="speaker-reel" href="https://www.youtube.com/@lukaswagnerai" target="_blank" rel="noopener">{d['n_cta2']}&nbsp;↗</a>
         </div>
       </div>
     </section>
@@ -529,15 +585,16 @@ def build(k):
       </div>
     </section>
 
-    <!-- SIGNATURE: Another screen. Die Zeilen ziehen an, dann Stille, dann die Wende. -->
-    <section class="screens" aria-label="{d['scr_label']}">
+    <!-- SHOWSTOPPER 2: Verdichtung, Stille, dann oeffnet sich der Raum wie ein Vorhang. -->
+    <section id="raum" class="screens" aria-label="{d['scr_label']}">
+      <span class="stage-label" aria-hidden="true">{d['n_lbl_screens']}</span>
       <div class="wrap">
-        <div class="screens-stack">
+        <div class="scr-stack">
 {scr_html}
           <div class="scr-pause" aria-hidden="true"></div>
           <p class="scr-turn">{d['scr_turn']}</p>
         </div>
-        <figure class="screens-fig reveal">
+        <figure class="screens-fig">
           <img src="{A}aheadx-audience.jpg"
                srcset="{A}aheadx-audience-900.jpg 900w, {A}aheadx-audience.jpg 1500w"
                sizes="(max-width:1020px) 92vw, 1120px"
@@ -550,6 +607,7 @@ def build(k):
     </section>
 
     <section id="erlebnis" aria-label="{d['xp_kicker']}">
+      <span class="stage-label" aria-hidden="true">{d['n_lbl_room']}</span>
       <div class="wrap">
         <div class="sec-head reveal">
           <p class="kicker">{d['xp_kicker']}</p>
@@ -596,7 +654,7 @@ def build(k):
             <dl class="fmt-meta">
 {f1meta}
             </dl>
-            <a class="btn btn-primary" data-cta="keynote" href="{mk}">{d['cta_keynote']}</a>
+            <a class="btn btn-primary" data-cta="keynote" href="{mk}">{d['n_cta1']}</a>
           </div>
         </article>
 
@@ -637,45 +695,74 @@ def build(k):
     </section>
 
     <section id="warum" aria-label="{d['why_kicker']}">
+      <span class="stage-label" aria-hidden="true">{d['n_lbl_why']}</span>
       <div class="wrap">
         <div class="sec-head reveal" style="max-width:none">
           <p class="kicker">{d['why_kicker']}</p>
           <h2 class="why-open">{d['why_open']}</h2>
         </div>
-        <div class="layers">
-{layers}
+        <div class="roles">
+{roles_html}
         </div>
         <div class="origin reveal">
           <div class="origin-facts">
             <!-- OFFEN: biografische Angaben stammen aus dem Briefing von LW, extern noch nicht belegt. -->
 {origin}
           </div>
-          <p class="why-close">{d['why_close']}</p>
+          <p class="why-close">{d['n_why_close']}</p>
         </div>
       </div>
     </section>
 
+    <!-- SHOWSTOPPER 3: Expansion. Ein Lichtpunkt wird zu acht, dann zu einem Netz.
+         Bewusst abstrakt, keine Landkarte, keine erfundenen Staedte. -->
     <section id="aheadx" class="band" aria-label="{d['case_kicker']}">
+      <span class="stage-label" aria-hidden="true">{d['n_lbl_x']}</span>
       <div class="wrap">
         <div class="sec-head reveal">
           <p class="kicker">{d['case_kicker']}</p>
           <h2>{d['case_h2']}</h2>
           <p class="lead-in">{d['case_lead']}</p>
         </div>
-        <ol class="case-steps">
-{case}
-        </ol>
-        <!-- Zahlen belegt auf aheadx.at, Stand 30.04.2026. -->
-        <div class="case-foot reveal">
-          <div class="case-stats">
-{stats}
-          </div>
-          <div class="case-cta">
-            <a class="btn btn-ghost" data-cta="aheadx" href="https://aheadx.at" target="_blank" rel="noopener">{d['case_cta1']}&nbsp;↗</a>
-            <a class="tlink" data-cta="aheadx" href="{mr}">{d['case_cta2']} →</a>
+        <div class="expand">
+          <ol class="ex-steps reveal">
+{ex_html}
+          </ol>
+          <div class="ex-vis" aria-hidden="true">
+            <svg viewBox="0 0 420 300" role="presentation" focusable="false">
+              <g class="ex-lines">
+                <path class="ex-line" style="animation-delay:1.5s" d="M210 150 L96 74" />
+                <path class="ex-line" style="animation-delay:1.6s" d="M210 150 L330 66" />
+                <path class="ex-line" style="animation-delay:1.7s" d="M210 150 L62 186" />
+                <path class="ex-line" style="animation-delay:1.8s" d="M210 150 L368 168" />
+                <path class="ex-line" style="animation-delay:1.9s" d="M210 150 L138 246" />
+                <path class="ex-line" style="animation-delay:2.0s" d="M210 150 L288 258" />
+                <path class="ex-line" style="animation-delay:2.1s" d="M210 150 L258 44" />
+                <path class="ex-line" style="animation-delay:2.2s" d="M96 74 L62 186" />
+                <path class="ex-line" style="animation-delay:2.3s" d="M330 66 L368 168" />
+              </g>
+              <circle class="ex-ring" cx="210" cy="150" r="26" />
+              <circle class="ex-ring" style="animation-delay:.7s" cx="210" cy="150" r="44" />
+              <circle class="ex-dot ex-dot-1" cx="210" cy="150" r="7" style="animation-delay:.05s" />
+              <circle class="ex-dot" cx="96"  cy="74"  r="4" style="animation-delay:1.05s" />
+              <circle class="ex-dot" cx="330" cy="66"  r="4" style="animation-delay:1.12s" />
+              <circle class="ex-dot" cx="62"  cy="186" r="4" style="animation-delay:1.19s" />
+              <circle class="ex-dot" cx="368" cy="168" r="4" style="animation-delay:1.26s" />
+              <circle class="ex-dot" cx="138" cy="246" r="4" style="animation-delay:1.33s" />
+              <circle class="ex-dot" cx="288" cy="258" r="4" style="animation-delay:1.40s" />
+              <circle class="ex-dot" cx="258" cy="44"  r="4" style="animation-delay:1.47s" />
+            </svg>
           </div>
         </div>
-{case_close_html}
+        <!-- Zahlen belegt auf aheadx.at, Stand 30.04.2026. -->
+        <div class="proofs reveal">
+{proofs_html}
+        </div>
+        <p class="expand-close reveal">{d['n_ex_close']}</p>
+        <div class="case-cta reveal" style="margin-top:clamp(1.8rem,3.5vw,2.6rem)">
+          <a class="btn btn-ghost" data-cta="aheadx" href="https://aheadx.at" target="_blank" rel="noopener">{d['case_cta1']}&nbsp;↗</a>
+          <a class="tlink" data-cta="aheadx" href="{mr}">{d['case_cta2']} →</a>
+        </div>
         <p class="case-src reveal">{d['case_src']}</p>
       </div>
     </section>
@@ -698,16 +785,17 @@ def build(k):
     </section>
 
     <section id="kontakt" class="book" aria-label="{d['book_kicker']}">
-      <div class="book-glow" aria-hidden="true"></div>
+      <div class="book-beam" aria-hidden="true"></div>
       <div class="wrap book-inner">
-        <p class="kicker reveal" style="justify-content:center">{d['book_kicker']}</p>
-        <h2 class="reveal">{d['book_h2']}</h2>
-        <p class="sub reveal">{d['book_sub']}</p>
+        <p class="kicker reveal">{d['book_kicker']}</p>
+        <h2 class="reveal">{book_h2}</h2>
+        <p class="sub reveal">{d['n_book_sub']}</p>
         <div class="hero-cta reveal">
-          <a class="btn btn-primary" data-cta="keynote" href="{mk}">{d['cta_keynote']}</a>
-          <a class="btn btn-ghost" data-cta="speaker-reel" href="https://www.youtube.com/@lukaswagnerai" target="_blank" rel="noopener">{d['cta_reel']}&nbsp;↗</a>
+          <a class="btn btn-primary" data-cta="keynote" href="{mk}">{d['n_cta1']}</a>
+          <a class="btn btn-ghost" data-cta="speaker-reel" href="https://www.youtube.com/@lukaswagnerai" target="_blank" rel="noopener">{d['n_cta2']}&nbsp;↗</a>
         </div>
         <p class="book-mail reveal">{d['book_mail_pre']} <a href="mailto:{MAIL}">{MAIL}</a> · {d['book_mail_post']}</p>
+        <p class="aside reveal">{d['n_aside']}</p>
       </div>
     </section>
 
@@ -744,7 +832,7 @@ def build(k):
     </div>
   </footer>
 
-  <a class="sticky-cta" data-cta="keynote" href="{mk}"><span class="btn btn-primary">{d['cta_keynote']}</span></a>
+  <a class="sticky-cta" data-cta="keynote" href="{mk}"><span class="btn btn-primary">{d['n_cta1']}</span></a>
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
@@ -756,6 +844,12 @@ def build(k):
       new IntersectionObserver(function(es){{es.forEach(function(e){{sticky.classList.toggle('show',!e.isIntersecting);}});}},{{rootMargin:'-80px 0px 0px 0px'}}).observe(hero);
     }}
     /* Signature-Sequenz startet einmalig, wenn der Abschnitt sichtbar wird. Kein Scroll-Hijacking. */
+    [].forEach.call(document.querySelectorAll('.expand'),function(ex){{
+      if('IntersectionObserver' in window){{
+        new IntersectionObserver(function(es,o){{es.forEach(function(e){{if(e.isIntersecting){{ex.classList.add('lit');o.disconnect();}}}});}},{{threshold:.25}}).observe(ex);
+      }}
+      setTimeout(function(){{ex.classList.add('lit');}},6000);
+    }});
     var scr=document.querySelector('.screens');
     if(scr){{
       var lite=function(){{ if(!scr.classList.contains('lit')&&scr.getBoundingClientRect().top<window.innerHeight*.85){{
@@ -770,6 +864,17 @@ def build(k):
       setTimeout(function(){{ scr.classList.add('lit'); }},6000);
     }}
     var reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    /* Der Scheinwerfer reagiert auf Anwesenheit. Nur transform, deshalb kein Repaint. */
+    var spot=document.querySelector('.hero-spot'),heroEl=document.querySelector('.hero');
+    if(spot&&heroEl&&!reduced&&window.matchMedia('(pointer:fine)').matches){{
+      var pend=null;
+      heroEl.addEventListener('pointermove',function(e){{
+        if(pend)return;
+        pend=requestAnimationFrame(function(){{
+          spot.style.transform='translate3d('+e.clientX+'px,'+(e.clientY-heroEl.getBoundingClientRect().top)+'px,0)';
+          pend=null;}});
+      }},{{passive:true}});
+    }}
     if(!reduced && 'IntersectionObserver' in window){{
       var io=new IntersectionObserver(function(es){{es.forEach(function(e){{if(e.isIntersecting){{e.target.classList.add('in');io.unobserve(e.target);}}}});}},{{threshold:.12}});
       document.querySelectorAll('.reveal').forEach(function(el){{io.observe(el);}});
