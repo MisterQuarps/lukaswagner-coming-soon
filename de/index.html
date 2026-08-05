@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Lukas Wagner | KI-Keynote-Speaker für Unternehmen, Städte &amp; Regionen</title>
-  <meta name="description" content="KI-Keynote-Speaker Lukas Wagner macht Künstliche Intelligenz verständlich und live erlebbar: Keynotes, Workshops und ahead x Live-Formate für Unternehmen, Städte und Regionen." />
+  <meta name="description" content="Live-Keynotes, die künstliche Intelligenz verständlich, überraschend und gemeinsam erlebbar machen. Für Unternehmen, Konferenzen, Städte und Regionen." />
 
   <link rel="canonical" href="https://lukaswagner.at/" />
   <link rel="alternate" hreflang="de" href="https://lukaswagner.at/" />
@@ -15,7 +15,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="de_AT" />
   <meta property="og:title" content="Lukas Wagner | KI-Keynote-Speaker" />
-  <meta property="og:description" content="Je digitaler die Welt wird, desto mehr zählt der Raum, in dem Menschen zusammenkommen." />
+  <meta property="og:description" content="Die Zukunft passiert im Raum." />
   <meta property="og:url" content="https://lukaswagner.at/" />
   <meta property="og:image" content="https://lukaswagner.at/assets/og-image.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
@@ -24,21 +24,20 @@
 
   <!-- Schriften liegen lokal. Kein Aufruf an Google, damit keine Besucher-IP an Dritte geht. -->
   <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/fraunces-normal-latin.woff2" crossorigin />
-
   <link rel="preload" as="image" href="/assets/lukas-stage.jpg"
         imagesrcset="/assets/lukas-stage-800.jpg 533w, /assets/lukas-stage.jpg 1066w"
-        imagesizes="(max-width:1020px) 92vw, 40vw" fetchpriority="high" />
+        imagesizes="(max-width:820px) 100vw, 56vw" fetchpriority="high" />
 
   <script type="application/ld+json">
   { "@context":"https://schema.org","@type":"Person","name":"Lukas Wagner","jobTitle":"KI-Keynote-Speaker",
-    "description":"Österreichischer KI-Keynote-Speaker, Unternehmer und Gründer von ahead x. Macht Künstliche Intelligenz verständlich und live erlebbar, für Unternehmen, Städte und Regionen.",
+    "description":"Österreichischer KI-Keynote-Speaker, Unternehmer und Gründer von ahead x. Macht künstliche Intelligenz verständlich und live erlebbar, für Unternehmen, Städte und Regionen.",
     "url":"https://lukaswagner.at/","image":"https://lukaswagner.at/assets/lukas-portrait.jpg","nationality":"Österreich",
     "worksFor":{"@type":"Organization","name":"ahead x","url":"https://aheadx.at"},
     "sameAs":["https://www.youtube.com/@lukaswagnerai","https://aheadx.at","https://www.linkedin.com/in/lukaswagnerai/"] }
   </script>
   <!-- FAQ-JSON-LD ist wortgleich zum sichtbaren FAQ. -->
   <script type="application/ld+json">
-  {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Für welche Veranstaltungen kann man Lukas Wagner buchen?", "acceptedAnswer": {"@type": "Answer", "text": "Für Konferenzen, Firmenevents, Stadt- und Regionalveranstaltungen, Verbände und Bildungseinrichtungen, als Keynote, Workshop oder Moderation rund um Künstliche Intelligenz."}}, {"@type": "Question", "name": "Ist die Keynote auch für Einsteiger:innen geeignet?", "acceptedAnswer": {"@type": "Answer", "text": "Ja. KI wird ohne Fachjargon verständlich gemacht. Tiefe und Inhalt richten sich nach der Zielgruppe."}}, {"@type": "Question", "name": "Bietet Lukas Wagner auch KI-Workshops an?", "acceptedAnswer": {"@type": "Answer", "text": "Ja: Hands-on-Workshops und Impulstage für Teams, KMU, Organisationen und öffentliche Einrichtungen."}}, {"@type": "Question", "name": "Wie läuft eine Anfrage ab?", "acceptedAnswer": {"@type": "Answer", "text": "Kurze E-Mail mit Datum, Ort, Zielgruppe und Anlass, dann folgt eine ehrliche Einschätzung, welches Format passt."}}]}
+  {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Für welche Veranstaltungen kann man Lukas Wagner buchen?", "acceptedAnswer": {"@type": "Answer", "text": "Für Konferenzen, Firmenevents, Stadt- und Regionalveranstaltungen, Verbände und Bildungseinrichtungen, als Keynote, Workshop oder Moderation rund um künstliche Intelligenz."}}, {"@type": "Question", "name": "Ist die Keynote auch für Einsteiger:innen geeignet?", "acceptedAnswer": {"@type": "Answer", "text": "Ja. KI wird ohne Fachjargon verständlich gemacht. Tiefe und Inhalt richten sich nach der Zielgruppe."}}, {"@type": "Question", "name": "Wie läuft eine Anfrage ab?", "acceptedAnswer": {"@type": "Answer", "text": "Kurze E-Mail mit Datum, Ort, Zielgruppe und Anlass, dann folgt eine ehrliche Einschätzung, welches Format passt."}}]}
   </script>
 
   <style>
@@ -127,169 +126,155 @@
     .langs span{opacity:.35}
     .nav-toggle{display:none;background:none;border:1px solid var(--line);color:var(--fg);border-radius:8px;width:44px;height:44px;font-size:1.2rem;cursor:pointer}
 
-    /* ============ HERO: BUEHNENOPENING ============
-       Kein Split-Layout mehr. Das Theaterfoto ist die Buehne, die Typografie steht darauf.
-       Der Scheinwerfer ist ein eigener Layer und wird ausschliesslich per transform bewegt. */
-    .hero{position:relative;min-height:88svh;display:flex;align-items:flex-end;padding:0;overflow:hidden;background:var(--ink)}
-    /* Das Foto ist ein vertikaler Lichtkorridor rechts, kein Rechteck und kein Ganzflaechen-Hintergrund.
-       Die Maske laesst es aus der Dunkelheit heraustreten, die Typografie behaelt die linke Buehnenhaelfte. */
-    .hero-stage{position:absolute;top:0;right:0;bottom:0;left:34%;z-index:0;
-      -webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 30%,#000 100%);
-              mask-image:linear-gradient(90deg,transparent 0%,#000 30%,#000 100%)}
-    .hero-stage img{width:100%;height:100%;object-fit:cover;object-position:50% 18%}
-    .hero-veil{position:absolute;inset:0;z-index:1;pointer-events:none;
-      background:linear-gradient(180deg,rgba(20,17,16,.82) 0%,rgba(20,17,16,.34) 30%,rgba(20,17,16,.55) 66%,rgba(20,17,16,.95) 100%)}
-    .hero-spot{position:absolute;top:0;left:0;width:86vmax;height:86vmax;margin:-43vmax 0 0 -43vmax;z-index:1;
+    /* ============ 01 HERO ============
+       Foto traegt die Flaeche, Schrift bleibt ruhig. Keine Versalien, keine Introanimation. */
+    .hero{padding:0;background:var(--ink)}
+    .hero-grid{display:grid;grid-template-columns:minmax(0,44fr) minmax(0,56fr);align-items:stretch;min-height:78svh}
+    .hero-copy{display:flex;flex-direction:column;justify-content:center;
+      padding:clamp(3rem,7vh,5.5rem) clamp(1.5rem,4vw,3.5rem) clamp(3rem,7vh,5.5rem) max(1.5rem,calc((100vw - var(--maxw))/2 + 1.5rem))}
+    .hero-micro{font-size:.72rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;
+      color:var(--amber);margin-bottom:clamp(1.6rem,4vh,2.6rem)}
+    .hero-pre{font-family:var(--serif);font-size:clamp(1rem,1.7vw,1.2rem);color:var(--muted);margin-bottom:.5rem}
+    h1{font-family:var(--serif);font-weight:400;font-size:clamp(2.2rem,4.2vw,3.6rem);
+      line-height:1.05;letter-spacing:-.02em;margin:0;color:var(--fg)}
+    h1 em{font-style:italic;color:var(--amber);display:block}
+    .hero .sub{color:var(--fg-dim);font-size:clamp(1rem,1.5vw,1.08rem);max-width:32rem;margin:clamp(1.3rem,3vh,2rem) 0 0}
+    .hero-cta{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:clamp(1.4rem,3vh,2rem)}
+    /* Bild absolut, damit das Hochformat die Grid-Zeile nicht aufzieht. */
+    .hero-fig{position:relative;overflow:hidden;margin:0;min-height:52svh}
+    .hero-fig img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:52% 20%}
+    .hero-fig::after{content:"";position:absolute;inset:0;pointer-events:none;
+      background:linear-gradient(90deg,rgba(20,17,16,.92) 0%,rgba(20,17,16,.28) 22%,transparent 45%)}
+    .hero-spot{position:absolute;top:0;left:0;width:60vmax;height:60vmax;margin:-30vmax 0 0 -30vmax;
       pointer-events:none;mix-blend-mode:screen;
-      background:radial-gradient(closest-side,rgba(255,232,205,.22),rgba(255,232,205,.07) 44%,transparent 72%);
-      transform:translate3d(72vw,38vh,0);transition:transform 1s cubic-bezier(.2,.75,.2,1);will-change:transform}
-    .hero-inner{position:relative;z-index:2;width:100%;max-width:var(--maxw);margin:0 auto;
-      padding:clamp(3rem,7.5vh,5rem) clamp(1.25rem,4vw,2.5rem) clamp(2rem,4.5vh,3rem)}
-    .hero-micro{display:flex;align-items:center;gap:.85rem;font-size:.68rem;font-weight:600;
-      letter-spacing:.26em;text-transform:uppercase;color:var(--muted);margin-bottom:clamp(1.1rem,3vh,2rem)}
-    .hero-micro::before{content:"";width:2rem;height:1px;background:var(--cyan);flex:none}
-    h1{font-family:var(--serif);font-weight:500;text-transform:uppercase;
-      font-size:clamp(1.85rem,8vw,4.9rem);line-height:.93;letter-spacing:-.03em;margin:0}
-    h1 .hl{display:block;color:var(--electric)}
-    h1 .hl-warm{display:block;color:var(--fg)}
-    h1 em{font-style:normal;color:var(--amber);text-shadow:0 0 46px rgba(226,164,92,.38),0 0 100px rgba(226,164,92,.16)}
-    .hero-break{height:clamp(.7rem,2.2vh,1.7rem)}
-    .hero .sub{color:var(--fg-dim);font-size:clamp(1rem,1.7vw,1.1rem);max-width:47rem;margin:clamp(1rem,2.4vh,1.5rem) 0 0}
-    .hero-cta{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:clamp(1.1rem,2.4vh,1.5rem)}
-    .hero-trust{display:flex;flex-wrap:wrap;gap:.5rem 1.6rem;margin-top:clamp(1.4rem,3.5vh,2.2rem);
-      padding-top:1.1rem;border-top:1px solid var(--line-soft);color:var(--muted);font-size:.84rem}
-    .hero-trust span{display:inline-flex;align-items:baseline;gap:.5rem}
-    .hero-trust b{color:var(--fg);font-family:var(--serif);font-weight:500;font-size:1rem}
+      background:radial-gradient(closest-side,rgba(255,232,205,.16),transparent 70%);
+      transform:translate3d(50%,45%,0);transition:transform 1.1s cubic-bezier(.2,.75,.2,1);will-change:transform}
 
-    /* Auftritt: Licht an, Typografie betritt die Buehne, dann die Wende. */
+    /* ============ 02 DIE HALTUNG ============ */
+    .haltung{padding:clamp(4rem,9vw,7rem) 0 0;overflow:hidden}
+    .hal-stack{max-width:40rem;margin-top:clamp(1.4rem,3vw,2.2rem)}
+    .hal-line{font-family:var(--serif);font-weight:400;line-height:1.1;letter-spacing:-.015em}
+    .hal-1{font-size:clamp(1.5rem,3.4vw,2.4rem);color:#5a5249;margin-bottom:1.2rem}
+    .hal-2{font-size:clamp(1.8rem,4.2vw,3rem);color:#847b71;margin-bottom:.7rem}
+    .hal-3{font-size:clamp(2.1rem,5vw,3.6rem);color:var(--cyan);margin-bottom:0}
+    .hal-pause{height:clamp(2.6rem,7vw,5rem)}
+    .hal-turn{font-family:var(--serif);font-style:italic;color:var(--amber);
+      font-size:clamp(1.5rem,3.6vw,2.5rem);line-height:1.18;max-width:26ch}
+    .hal-fig{position:relative;margin:clamp(2.4rem,5vw,4rem) 0 0;overflow:hidden;
+      clip-path:inset(0 42% 0 42%);transition:clip-path 1.2s cubic-bezier(.16,.84,.28,1) .2s}
+    .haltung.lit .hal-fig{clip-path:inset(0 0 0 0)}
+    .hal-fig img{width:100%;height:auto;aspect-ratio:21/9;object-fit:cover;object-position:50% 42%}
+    .hal-fig::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(20,17,16,.6))}
+    .hal-fig figcaption{position:absolute;left:clamp(1.25rem,4vw,2.5rem);bottom:1.1rem;z-index:2;
+      font-size:.8rem;color:var(--fg-dim)}
+    .hal-close{margin:clamp(2rem,4vw,3rem) 0 0;font-family:var(--serif);font-size:clamp(1.2rem,2.4vw,1.65rem);
+      line-height:1.3;max-width:32ch;color:var(--fg)}
     @media (prefers-reduced-motion:no-preference){
-      .js .hero-stage,.js .hero-spot{opacity:0;animation:lightUp 1.4s ease .1s forwards}
-      .js .hero-micro,.js .hero h1 .hl,.js .hero h1 .hl-warm,.js .hero .sub,.js .hero .hero-cta,.js .hero .hero-trust{
-        opacity:0;transform:translateY(24px);animation:rise .8s cubic-bezier(.2,.7,.2,1) forwards}
-      .js .hero-micro{animation-delay:.15s}
-      .js .hero h1 .hl:nth-of-type(1){animation-delay:.34s}
-      .js .hero h1 .hl:nth-of-type(2){animation-delay:.46s}
-      .js .hero h1 .hl:nth-of-type(3){animation-delay:.58s}
-      /* Pause, dann der warme Wendepunkt */
-      .js .hero h1 .hl-warm:nth-of-type(1){animation-delay:1.02s}
-      .js .hero h1 .hl-warm:nth-of-type(2){animation-delay:1.16s}
-      .js .hero .sub{animation-delay:1.42s}
-      .js .hero .hero-cta{animation-delay:1.54s}
-      .js .hero .hero-trust{animation-delay:1.66s}
-      @keyframes rise{to{opacity:1;transform:none}}
-      @keyframes lightUp{to{opacity:1}}
+      .js .haltung .hal-line,.js .haltung .hal-turn{opacity:0;transform:translateY(22px)}
+      .js .haltung.lit .hal-line,.js .haltung.lit .hal-turn{animation:halIn .55s cubic-bezier(.2,.75,.2,1) forwards}
+      .js .haltung.lit .hal-1{animation-delay:0s}
+      .js .haltung.lit .hal-2{animation-delay:.3s}
+      .js .haltung.lit .hal-3{animation-delay:.52s}
+      .js .haltung.lit .hal-turn{animation-delay:1.35s;animation-duration:.8s}
+      @keyframes halIn{to{opacity:1;transform:none}}
     }
+    @media (prefers-reduced-motion:reduce){.hal-fig{clip-path:none;transition:none}}
 
-    /* ============ PROOF STRIP ============ */
-    .proof{padding:clamp(2.4rem,4.5vw,3.4rem) 0}
-    .proof-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(1.6rem,4vw,3.5rem);align-items:center}
-    .proof-num .n{font-family:var(--serif);font-weight:500;font-size:clamp(3.2rem,6.5vw,5rem);line-height:1;color:var(--fg)}
-    .proof-num .l{color:var(--muted);font-size:.95rem;margin-top:.5rem;max-width:24rem}
-    .proof-partners .t{font-size:.72rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:.9rem}
-    .logo-row{display:grid;grid-template-columns:repeat(6,1fr);gap:.55rem}
-    .logo-row .lg{background:var(--paper);border-radius:9px;height:60px;display:flex;align-items:center;justify-content:center;padding:.7rem .8rem}
-    .logo-row img{max-height:32px;width:auto;max-width:100%;object-fit:contain}
+    /* ============ 03 DIE KEYNOTE ============ */
+    .scenes{display:grid;gap:clamp(2.4rem,5vw,4rem)}
+    .scene{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(1.6rem,4vw,3.5rem);align-items:center}
+    .scene-1{grid-template-columns:minmax(0,1fr)}
+    .scene-1 .scene-copy{max-width:34rem}
+    .scene-2 .scene-fig{order:-1}
+    .scene-no{font-family:var(--serif);font-style:italic;color:var(--red);font-size:.95rem}
+    .scene h3{font-family:var(--serif);font-weight:500;font-size:clamp(1.6rem,3.2vw,2.3rem);
+      line-height:1.1;margin:.2rem 0 .6rem}
+    .scene p{color:var(--ink-muted);font-size:1rem;max-width:34rem}
+    .scene-res{margin-top:1rem;padding-top:.9rem;border-top:1px solid var(--pline);color:var(--ink-text)}
+    .res-label{display:block;font-size:.68rem;font-weight:600;letter-spacing:.16em;
+      text-transform:uppercase;color:var(--ink-muted);margin-bottom:.2rem}
+    .scene-fig{margin:0;border-radius:12px;overflow:hidden}
+    .scene-fig img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;object-position:56% 38%}
+    .scene-3 .scene-fig img{object-position:50% 32%}
+    .scene-fig figcaption{margin-top:.5rem;font-size:.8rem;color:var(--ink-muted)}
 
-    /* ============ ERLEBNIS ============ */
-    .acts{list-style:none;position:relative;margin-top:.6rem}
-    .act{display:grid;grid-template-columns:5rem minmax(0,17rem) minmax(0,1fr);gap:1rem 2rem;align-items:baseline;padding:clamp(1.1rem,2.2vw,1.55rem) 0;border-top:1px solid var(--line-soft)}
-    .act:last-child{border-bottom:1px solid var(--line-soft)}
-    .act .no{font-family:var(--serif);font-style:italic;font-size:1.05rem;color:var(--red-bright)}
-    .act h3{font-size:clamp(1.45rem,2.9vw,2.1rem);font-weight:500}
-    .act p{color:var(--fg-dim);font-size:1rem;max-width:32rem}
-    .act:nth-child(even) h3{font-style:italic;font-weight:400}
-    .stage-wide{margin:clamp(1.6rem,3vw,2.4rem) 0 0}
-    .stage-wide figure{position:relative;border-radius:14px;overflow:hidden}
-    .stage-wide img{width:100%;height:auto;aspect-ratio:21/9;object-fit:cover;object-position:50% 40%}
-    .stage-wide figcaption{position:absolute;left:1.2rem;bottom:1.1rem;font-size:.82rem;color:var(--fg);background:rgba(20,17,16,.62);backdrop-filter:blur(6px);border-radius:999px;padding:.4rem .95rem}
-
-    /* ============ WAS BLEIBT (paper, 3 Resultate) ============ */
-    .results{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(1.4rem,3vw,3rem);margin-top:.3rem}
-    .result{border-top:2px solid var(--ink-text);padding-top:1.1rem}
-    .result h3{font-family:var(--sans);font-size:1.08rem;font-weight:600;letter-spacing:0;margin-bottom:.3rem}
-    .result p{color:var(--ink-muted);font-size:.94rem}
-    .results-note{margin-top:clamp(1.5rem,3vw,2.2rem);color:var(--ink-muted);font-size:.95rem;font-style:italic}
-
-    /* ============ FORMATE (paper) ============ */
-    .fmt-feature{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(1.8rem,4vw,3.5rem);align-items:center;padding:clamp(1.6rem,3.5vw,2.6rem) 0;border-top:2px solid var(--ink-text)}
-    .fmt-feature figure{border-radius:12px;overflow:hidden}
-    .fmt-feature img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:66% 42%}
-    .fmt-label{font-family:var(--serif);font-style:italic;font-size:1rem;color:var(--red);margin-bottom:.45rem}
-    .fmt-feature h3{font-size:clamp(1.7rem,3.4vw,2.4rem);font-weight:500;margin-bottom:.8rem}
-    .fmt-meta{margin:1rem 0 1.3rem;display:grid;gap:.1rem}
-    .fmt-meta div{display:grid;grid-template-columns:7.5rem 1fr;gap:1rem;font-size:.93rem;padding:.55rem 0;border-top:1px solid var(--pline-soft)}
-    .fmt-meta dt{color:var(--ink-muted);font-weight:600;font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;padding-top:.1rem}
+    .fmt-main{margin-top:clamp(3rem,6vw,5rem);padding-top:clamp(1.8rem,3.5vw,2.6rem);border-top:2px solid var(--ink-text);
+      max-width:46rem}
+    .fmt-main h3{font-family:var(--serif);font-weight:500;font-size:clamp(1.8rem,3.6vw,2.6rem);margin-bottom:1rem}
+    .fmt-meta{display:grid;gap:0;margin:0 0 1.5rem}
+    .fmt-meta div{display:grid;grid-template-columns:8.5rem 1fr;gap:1rem;font-size:.96rem;
+      padding:.6rem 0;border-top:1px solid var(--pline-soft)}
+    .fmt-meta dt{color:var(--ink-muted);font-weight:600;font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;padding-top:.15rem}
     .fmt-meta dd{color:var(--ink-text)}
-    /* subgrid haelt Kopf-, Medien- und Fusszeile beider Spalten auf gleicher Hoehe */
-    .fmt-duo{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:auto auto auto;gap:clamp(1.6rem,3.5vw,3.5rem);margin-top:clamp(1.2rem,2.5vw,2rem)}
-    .fmt-duo article{border-top:2px solid var(--ink-text);padding-top:clamp(1.2rem,2.5vw,1.8rem);grid-row:1 / span 3;display:grid;grid-template-rows:subgrid;gap:1.1rem;align-content:start}
-    .fmt-duo h3{font-size:clamp(1.4rem,2.6vw,1.75rem);font-weight:500;margin-bottom:.55rem}
-    .fmt-duo p{color:var(--ink-muted);font-size:.97rem;max-width:30rem}
-    .fmt-duo figure{border-radius:12px;overflow:hidden}
-    .fmt-duo figure img{width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;object-position:50% 35%}
-    .fmt-duo figcaption{margin-top:.5rem;font-size:.8rem;color:var(--ink-muted)}
-    .fmt-foot{align-self:end}
-    /* ahead x Formatfamilie als typografisches System statt leerer Bildflaeche */
-    .fam{list-style:none}
-    .fam li{display:grid;grid-template-columns:7rem 1fr;gap:1rem;padding:.55rem 0;border-top:1px solid var(--pline-soft);font-size:.9rem;align-items:baseline}
-    .fam li:first-child{border-top:none;padding-top:0}
-    .fam b{font-family:var(--serif);font-style:italic;font-weight:500;color:var(--ink-text);font-size:1.02rem}
-    .fam span{color:var(--ink-muted)}
+    .fmt-row{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1.6rem,4vw,3rem);
+      margin-top:clamp(2rem,4vw,3rem);padding-top:clamp(1.4rem,3vw,2rem);border-top:1px solid var(--pline)}
+    .fmt-s h3{font-family:var(--serif);font-weight:500;font-size:1.35rem;margin-bottom:.2rem}
+    .fmt-who{color:var(--red);font-size:.85rem;margin-bottom:.5rem}
+    .fmt-s p{color:var(--ink-muted);font-size:.95rem;max-width:26rem}
+    .fmt-s .tlink{margin-top:.4rem}
 
-    /* ============ WARUM LUKAS ============ */
-    h2.why-open{font-family:var(--serif);font-size:clamp(1.6rem,3.6vw,2.7rem);line-height:1.2;font-weight:400;max-width:52rem}
-    h2.why-open em{font-style:italic;color:var(--amber)}
-    .layers{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(1.2rem,2.5vw,2.4rem);margin-top:clamp(1.6rem,3vw,2.2rem)}
-    .layer{padding-top:1.1rem;border-top:1px solid var(--line)}
-    .layer h3{font-size:1.35rem;font-weight:500;margin:0 0 .45rem}
-    .layer p{color:var(--fg-dim);font-size:.93rem}
-    .origin{margin-top:clamp(1.6rem,3vw,2.2rem);border-top:1px solid var(--line);padding-top:1.3rem}
-    .origin-facts{display:grid;grid-template-columns:repeat(4,1fr);gap:.9rem clamp(1.2rem,2.5vw,2.4rem)}
-    .origin-facts span{font-size:.86rem;color:var(--fg-dim);line-height:1.45}
-    .origin-facts b{color:var(--fg);font-weight:600}
-    .why-close{margin-top:1.8rem;font-family:var(--serif);font-style:italic;font-size:clamp(1.25rem,2.4vw,1.7rem);color:var(--amber)}
+    /* ============ 04 WARUM LUKAS ============ */
+    .why-grid{display:grid;grid-template-columns:minmax(0,32fr) minmax(0,68fr);gap:clamp(2rem,5vw,4.5rem);align-items:center}
+    .why-fig{margin:0;border-radius:12px;overflow:hidden}
+    .why-fig img{width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;object-position:56% 12%}
+    .strengths{display:grid;gap:0;margin-top:.4rem}
+    .str{padding:1.2rem 0;border-top:1px solid var(--line)}
+    .str h3{font-family:var(--serif);font-weight:500;font-size:1.4rem;margin-bottom:.25rem}
+    .str p{color:var(--fg-dim);font-size:.97rem;max-width:34rem}
+    .why-facts{margin-top:1.6rem;padding-top:1.2rem;border-top:1px solid var(--line);
+      color:var(--muted);font-size:.85rem;line-height:1.8}
+    .why-close{margin-top:1.4rem;font-family:var(--serif);font-size:clamp(1.2rem,2.4vw,1.6rem);color:var(--fg)}
+    .why-close em{font-style:italic;color:var(--amber)}
 
-    /* ============ AHEAD X CASE ============ */
-    .case-steps{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(1.2rem,2.5vw,2.4rem);position:relative;padding-top:1.7rem}
-    .case-steps::before{content:"";position:absolute;left:0;right:0;top:5px;height:1px;background:var(--line)}
-    .case-steps li{position:relative}
-    .case-steps li::before{content:"";position:absolute;top:calc(-1.7rem + 1px);left:0;width:11px;height:11px;border-radius:50%;background:var(--red-bright);transform:translateY(-5px)}
-    .case-steps h3{font-size:1.2rem;font-weight:500;margin-bottom:.3rem}
-    .case-steps p{color:var(--fg-dim);font-size:.93rem}
-    .case-foot{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:1.4rem 2.5rem;margin-top:clamp(1.8rem,3.5vw,2.6rem);padding-top:1.5rem;border-top:1px solid var(--line-soft)}
-    .case-stats{display:flex;gap:2.2rem;flex-wrap:wrap}
-    .case-stats .cs .n{font-family:var(--serif);font-weight:500;font-size:2.1rem;color:var(--fg);line-height:1.1}
-    .case-stats .cs .l{color:var(--muted);font-size:.82rem;max-width:12rem}
-    .case-cta{display:flex;gap:1.4rem;align-items:center;flex-wrap:wrap}
-    .case-close{margin-top:clamp(1.6rem,3vw,2.4rem);font-family:var(--serif);font-style:italic;
-      color:var(--amber);font-size:clamp(1.25rem,2.6vw,1.8rem);line-height:1.25;max-width:34rem}
-    .case-src{margin-top:1.1rem;color:var(--muted);font-size:.78rem}
+    /* ============ 05 DER BEWEIS ============ */
+    .pf-path{display:flex;flex-wrap:wrap;align-items:baseline;gap:.5rem .9rem;
+      font-family:var(--serif);font-size:clamp(1.1rem,2.2vw,1.5rem);color:var(--fg)}
+    .pf-arrow{color:var(--amber)}
+    .pf-nums{display:grid;grid-template-columns:repeat(4,1fr);gap:1.4rem clamp(1rem,3vw,2.5rem);
+      margin-top:clamp(2rem,4vw,3rem);padding-top:clamp(1.4rem,3vw,2rem);border-top:1px solid var(--line-soft)}
+    .pf-num b{display:block;font-family:var(--serif);font-weight:500;line-height:1;
+      font-size:clamp(2rem,4.4vw,3.4rem);color:var(--fg)}
+    .pf-num span{display:block;color:var(--muted);font-size:.76rem;letter-spacing:.1em;
+      text-transform:uppercase;margin-top:.5rem}
+    .pf-src{margin-top:1rem;color:var(--muted);font-size:.78rem}
+    .pf-partners-t{margin-top:clamp(2.2rem,4vw,3rem);font-size:.72rem;font-weight:600;
+      letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:.9rem}
+    .logo-row{display:grid;grid-template-columns:repeat(6,1fr);gap:.55rem}
+    .logo-row .lg{background:var(--paper);border-radius:9px;height:58px;display:flex;align-items:center;justify-content:center;padding:.7rem .8rem}
+    .logo-row img{max-height:30px;width:auto;max-width:100%;object-fit:contain}
+    .pf-cta{margin-top:1.2rem}
 
-    /* ============ STIMMEN (paper) ============ */
-    .quote-hero{border-top:2px solid var(--ink-text);padding-top:clamp(1.6rem,3.5vw,2.4rem)}
-    .quote-hero blockquote p{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(1.7rem,4vw,2.8rem);line-height:1.18;max-width:56rem}
-    .quote-hero blockquote p::before{content:"„"}
-    .quote-hero blockquote p::after{content:"“"}
-    .quote-hero figcaption{margin-top:1.2rem;font-size:.95rem;color:var(--ink-muted)}
-    .quote-hero figcaption b{color:var(--ink-text);font-weight:600}
-    .quote-row{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(1.4rem,3vw,2.8rem);margin-top:clamp(1.6rem,3vw,2.2rem)}
-    .quote-row figure{border-top:1px solid var(--pline);padding-top:1.1rem}
-    .quote-row p{font-size:.97rem;color:var(--ink-text)}
+    .quotes{margin-top:clamp(3rem,7vw,6rem);padding-top:clamp(2rem,4vw,3rem);border-top:1px solid var(--line-soft)}
+    .quote-main blockquote p{font-family:var(--serif);font-style:italic;font-weight:400;
+      font-size:clamp(1.6rem,4vw,3rem);line-height:1.14;max-width:24ch;color:var(--fg)}
+    .quote-main blockquote p::before{content:"„"}
+    .quote-main blockquote p::after{content:"“"}
+    .quote-main figcaption{margin-top:1.2rem;font-size:.78rem;letter-spacing:.14em;
+      text-transform:uppercase;color:var(--muted)}
+    .quote-main figcaption b{color:var(--fg-dim);font-weight:600}
+    .quote-row{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1.5rem,4vw,3rem);margin-top:clamp(2.2rem,4vw,3rem)}
+    .quote-row figure{border-top:1px solid var(--line-soft);padding-top:1rem;max-width:26rem}
+    .quote-row p{color:var(--fg-dim);font-size:.97rem}
     .quote-row p::before{content:"„"}
     .quote-row p::after{content:"“"}
-    .quote-row figcaption{margin-top:.7rem;font-size:.84rem;color:var(--ink-muted)}
-    .quote-row b{color:var(--ink-text);font-weight:600}
+    .quote-row figcaption{margin-top:.7rem;font-size:.84rem;color:var(--muted)}
+    .quote-row b{color:var(--fg-dim);font-weight:600}
     .quote-src{margin-top:1.6rem;font-size:.9rem}
 
-    /* ============ BUCHUNG ============ */
+    /* ============ 06 BUCHUNG ============ */
     .book{position:relative;overflow:hidden}
-    .book-glow{position:absolute;inset:auto -15% -45% -15%;height:75%;background:radial-gradient(55% 100% at 50% 100%,rgba(184,53,44,.16),transparent 70%);pointer-events:none}
-    .book-inner{position:relative;text-align:center;max-width:44rem;margin:0 auto}
-    .book h2{font-size:clamp(2.1rem,4.8vw,3.3rem)}
-    .book .sub{color:var(--fg-dim);font-size:clamp(1.02rem,1.9vw,1.14rem);margin:1.2rem auto 0;max-width:36rem}
-    .book .hero-cta{justify-content:center}
-    .book-mail{margin-top:1.4rem;font-size:.95rem;color:var(--muted)}
+    .book-beam{position:absolute;left:38%;top:-15%;width:min(40vw,540px);height:130%;
+      transform:translateX(-50%) rotate(5deg);pointer-events:none;
+      background:linear-gradient(180deg,rgba(226,164,92,.14),rgba(226,164,92,.03) 50%,transparent 78%);filter:blur(30px)}
+    .book-inner{position:relative}
+    .book h2{font-family:var(--serif);font-weight:400;font-size:clamp(2rem,4.6vw,3.6rem);
+      line-height:1.06;letter-spacing:-.02em;max-width:18ch}
+    .book h2 em{font-style:italic;color:var(--amber)}
+    .book .sub{color:var(--fg-dim);font-size:clamp(1rem,1.6vw,1.1rem);margin:clamp(1.2rem,2.5vw,1.8rem) 0 0;max-width:34rem}
+    .book .hero-cta{margin-top:1.5rem}
+    .book-mail{margin-top:1.3rem;font-size:.95rem;color:var(--muted)}
     .book-mail a{color:var(--fg);text-decoration:underline;text-underline-offset:4px}
+    .aside{margin-top:1.4rem;font-family:var(--serif);font-style:italic;color:var(--muted);font-size:1rem}
 
     /* ============ FAQ ============ */
     .faq{max-width:46rem}
@@ -313,57 +298,12 @@
     .legal-grid a:hover{color:var(--fg)}
     .legal-foot{margin-top:1.3rem;padding-top:1rem;border-top:1px solid var(--line-soft)}
 
-    /* ============ SIGNATURE: DER RAUM OEFFNET SICH ============
-       Phase 1 Verdichtung: Schrift waechst, Abstaende schrumpfen, Farbe kippt ins Digitale.
-       Phase 2 Stille. Phase 3 Vorhang: das Bild oeffnet sich aus der Mitte.
-       Ohne Bewegung traegt allein Groesse, Farbe und Abstand die Aussage. */
-    .screens{padding:clamp(4rem,9vw,7.5rem) 0 clamp(3rem,6vw,5rem);overflow:hidden;position:relative}
-    .screens::before{content:"";position:absolute;top:0;left:0;right:0;height:1px;
-      background:linear-gradient(90deg,transparent,rgba(143,228,232,.35) 30%,transparent 75%)}
-    .scr-stack{max-width:60rem}
-    .scr{font-family:var(--serif);font-weight:500;text-transform:uppercase;letter-spacing:-.03em;line-height:.96}
-    .scr-1{font-size:clamp(1.35rem,3.4vw,2.5rem);color:#4b443d;margin:0 0 1.7rem}
-    .scr-2{font-size:clamp(1.7rem,4.4vw,3.3rem);color:#665e56;margin:0 0 1rem clamp(0rem,2.5vw,3.5rem)}
-    .scr-3{font-size:clamp(2.1rem,5.4vw,4.1rem);color:#8b8278;margin:0 0 .5rem}
-    .scr-4{font-size:clamp(2.5rem,6.4vw,4.9rem);color:var(--electric);margin:0 0 .12rem clamp(0rem,4vw,6rem)}
-    .scr-5{font-size:clamp(2.9rem,7.4vw,5.7rem);color:var(--cyan);margin:0}
-    .scr-pause{height:clamp(4rem,13vw,10rem)}
-    .scr-turn{font-family:var(--serif);font-style:italic;color:var(--amber);
-      font-size:clamp(1.6rem,4.4vw,3rem);line-height:1.16;max-width:30rem}
-    /* Der Vorhang */
-    .screens-fig{margin:clamp(2.4rem,5vw,4rem) 0 0;border-radius:14px;overflow:hidden;position:relative;
-      clip-path:inset(0 50% 0 50%);transition:clip-path 1.2s cubic-bezier(.16,.84,.28,1) .25s}
-    .screens.lit .screens-fig{clip-path:inset(0 0 0 0)}
-    .screens-fig img{width:100%;height:auto;aspect-ratio:21/9;object-fit:cover;object-position:50% 42%}
-    .screens-fig::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(20,17,16,.55))}
-    .scr-close{margin-top:clamp(2rem,4vw,3rem);font-family:var(--serif);font-weight:500;text-transform:uppercase;
-      font-size:clamp(1.6rem,4.2vw,3.2rem);line-height:1.02;letter-spacing:-.025em;max-width:24ch}
-    .scr-close em{font-style:normal;color:var(--amber);display:block;margin-top:.15em}
-    .scr-lukas{margin-top:1.3rem;color:var(--fg-dim);font-size:clamp(1rem,1.9vw,1.15rem);max-width:32rem}
-    @media (prefers-reduced-motion:no-preference){
-      .js .screens .scr,.js .screens .scr-turn{opacity:0;transform:translateY(30px)}
-      .js .screens.lit .scr,.js .screens.lit .scr-turn{animation:scrIn .55s cubic-bezier(.2,.75,.2,1) forwards}
-      .js .screens.lit .scr-1{animation-delay:0s}
-      .js .screens.lit .scr-2{animation-delay:.34s}
-      .js .screens.lit .scr-3{animation-delay:.60s}
-      .js .screens.lit .scr-4{animation-delay:.78s}
-      .js .screens.lit .scr-5{animation-delay:.88s}
-      .js .screens.lit .scr-turn{animation-delay:1.85s;animation-duration:.9s}
-      @keyframes scrIn{to{opacity:1;transform:none}}
-    }
-    @media (prefers-reduced-motion:reduce){.screens-fig{clip-path:none;transition:none}}
-    @media (max-width:560px){
-      .scr-1{margin-bottom:1rem}.scr-2{margin-bottom:.7rem;margin-left:0}
-      .scr-3{margin-bottom:.4rem}.scr-4{margin-left:0}
-      .scr-pause{height:3.2rem}
-      .screens-fig img{aspect-ratio:4/5}
-    }
+    .sticky-cta{display:none}
+    .js .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
+    .js .reveal.in{opacity:1;transform:none}
+    @media (prefers-reduced-motion:reduce){.js .reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
 
-    /* ============ BUEHNENARCHITEKTUR: Randbeschriftung ============ */
-    .stage-label{position:absolute;top:clamp(1.4rem,4vw,2.6rem);right:clamp(1.25rem,4vw,2.5rem);
-      font-size:.62rem;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:rgba(143,228,232,.5);
-      display:flex;align-items:center;gap:.6rem}
-    .stage-label::before{content:"";width:1.4rem;height:1px;background:rgba(143,228,232,.4)}
+    /* ============ RESPONSIVE ============ */
     @media (max-width:1080px){
       .nav-toggle{display:inline-flex;align-items:center;justify-content:center}
       .nav-links{position:absolute;top:68px;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:rgba(20,17,16,.98);backdrop-filter:blur(14px);border-bottom:1px solid var(--line);padding:.4rem 1.5rem 1.2rem;display:none}
@@ -372,172 +312,37 @@
       .nav-links .btn{margin-top:.8rem;justify-content:center;min-height:44px}
       .langs{padding:.6rem 0;border-bottom:1px solid var(--line-soft)}
     }
-    @media (max-width:820px){.stage-label{display:none}}
-
-    /* ============ WARUM LUKAS: filmische Kaskade ============ */
-    .roles{margin-top:clamp(2rem,5vw,3.5rem)}
-    .role{padding:clamp(.9rem,2vw,1.4rem) 0;display:grid;grid-template-columns:minmax(0,auto) minmax(0,26rem);
-      gap:.4rem clamp(1.5rem,4vw,3rem);align-items:baseline}
-    .role h3{font-family:var(--serif);font-weight:500;text-transform:uppercase;letter-spacing:-.03em;line-height:.9}
-    .role p{color:var(--fg-dim);font-size:.97rem}
-    .role-1 h3{font-size:clamp(2.1rem,6.4vw,4.6rem);color:var(--fg)}
-    .role-2 h3{font-size:clamp(1.9rem,5.4vw,3.9rem);color:var(--amber)}
-    .role-3 h3{font-size:clamp(1.7rem,4.6vw,3.3rem);color:var(--muted)}
-    .role-4 h3{font-size:clamp(2.3rem,7vw,5.2rem);color:var(--fg)}
-    .role-5 h3{font-size:clamp(2rem,5.8vw,4.2rem);color:var(--cyan)}
-    .role-2{margin-left:clamp(0rem,6vw,9rem)}
-    .role-3{margin-left:clamp(0rem,13vw,19rem)}
-    .role-4{margin-left:clamp(0rem,3vw,4rem)}
-    .role-5{margin-left:clamp(0rem,9vw,13rem)}
-    @media (max-width:820px){
-      .role{grid-template-columns:1fr;margin-left:0 !important;padding:.9rem 0;
-        border-top:1px solid var(--line-soft)}
-      .role p{margin-top:.2rem}
+    @media (max-width:1020px){
+      .why-grid{grid-template-columns:minmax(0,38fr) minmax(0,62fr)}
+      .pf-nums{grid-template-columns:repeat(2,1fr)}
+      .logo-row{grid-template-columns:repeat(3,1fr)}
     }
-
-    /* ============ AHEAD X: EXPANSION ============ */
-    .expand{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);
-      gap:clamp(2rem,5vw,4rem);align-items:center;margin-top:clamp(1.6rem,4vw,2.6rem)}
-    .ex-steps{list-style:none;counter-reset:ex}
-    .ex-steps li{counter-increment:ex;padding:1rem 0;border-top:1px solid var(--line-soft);
-      display:grid;grid-template-columns:2.6rem 1fr;gap:.9rem;align-items:baseline}
-    .ex-steps li::before{content:counter(ex,decimal-leading-zero);font-family:var(--serif);font-style:italic;
-      color:var(--cyan);font-size:.85rem}
-    .ex-steps h3{font-family:var(--serif);font-size:clamp(1.15rem,2.4vw,1.5rem);font-weight:500;margin-bottom:.15rem}
-    .ex-steps p{color:var(--fg-dim);font-size:.93rem}
-    .ex-vis{width:100%}
-    .ex-vis svg{width:100%;height:auto;display:block;overflow:visible}
-    .ex-dot{fill:var(--cyan);opacity:0}
-    .ex-dot-1{fill:var(--amber)}
-    .ex-line{stroke:rgba(143,228,232,.42);stroke-width:1;fill:none;stroke-dasharray:220;stroke-dashoffset:220;opacity:0}
-    .ex-ring{fill:none;stroke:rgba(226,164,92,.5);stroke-width:1;opacity:0}
-    .expand.lit .ex-dot{animation:dotIn .5s ease forwards}
-    .expand.lit .ex-ring{animation:ringIn 1.1s ease .45s forwards}
-    .expand.lit .ex-line{animation:lineIn 1.1s ease 1.5s forwards}
-    @keyframes dotIn{to{opacity:1}}
-    @keyframes ringIn{from{opacity:0;transform:scale(.4)}to{opacity:1;transform:scale(1)}}
-    @keyframes lineIn{to{opacity:1;stroke-dashoffset:0}}
-    @media (prefers-reduced-motion:reduce){
-      .ex-dot,.ex-ring{opacity:1;animation:none}
-      .ex-line{opacity:1;stroke-dashoffset:0;animation:none}
-    }
-    /* Zahlen als Beweise, nicht als Statistikboxen */
-    .proofs{display:grid;grid-template-columns:repeat(12,1fr);gap:.6rem 1rem;
-      margin-top:clamp(2.2rem,5vw,3.6rem);padding-top:clamp(1.6rem,3vw,2.2rem);border-top:1px solid var(--line-soft)}
-    .pf{display:flex;flex-direction:column}
-    .pf b{font-family:var(--serif);font-weight:500;line-height:.9;color:var(--fg)}
-    .pf span{color:var(--muted);font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;margin-top:.4rem}
-    .pf-1{grid-column:span 3}.pf-1 b{font-size:clamp(2.6rem,6vw,4.6rem)}
-    .pf-2{grid-column:span 3}.pf-2 b{font-size:clamp(2.6rem,6vw,4.6rem)}
-    .pf-3{grid-column:span 6}.pf-3 b{font-size:clamp(3rem,7.4vw,5.8rem);color:var(--amber)}
-    .pf-4{grid-column:span 12}.pf-4 b{font-size:clamp(1.6rem,3.4vw,2.6rem);color:var(--cyan)}
     @media (max-width:820px){
-      .expand{grid-template-columns:1fr}
-      .proofs{grid-template-columns:repeat(6,1fr)}
-      .pf-1,.pf-2{grid-column:span 3}.pf-3,.pf-4{grid-column:span 6}
-    }
-    .expand-close{margin-top:clamp(2rem,4vw,3rem);font-family:var(--serif);font-weight:500;text-transform:uppercase;
-      font-size:clamp(1.5rem,3.8vw,2.9rem);line-height:1.04;letter-spacing:-.025em;max-width:22ch}
-    .expand-close em{font-style:normal;color:var(--amber)}
-
-    /* ============ STIMMEN: ganzflaechiges Zitat ============ */
-    .quote-hero{border-top:none;padding:clamp(2rem,6vw,5rem) 0 0;min-height:clamp(0px,62vh,640px);
-      display:flex;flex-direction:column;justify-content:center}
-    .quote-hero blockquote p{font-family:var(--serif);font-style:italic;font-weight:400;
-      font-size:clamp(1.9rem,5.6vw,4.4rem);line-height:1.08;letter-spacing:-.02em;max-width:22ch}
-    .quote-hero figcaption{margin-top:clamp(1.4rem,3vw,2.4rem);font-size:.78rem;letter-spacing:.18em;
-      text-transform:uppercase;color:var(--ink-muted)}
-    .quote-hero figcaption b{color:var(--ink-text);font-weight:600}
-    .quote-row{display:block;margin-top:clamp(2rem,5vw,3.5rem)}
-    .quote-row figure{border-top:1px solid var(--pline);padding-top:1rem;max-width:30rem}
-    .quote-row figure:nth-child(2){margin-left:auto;margin-right:0;text-align:right}
-    .quote-row figure:nth-child(3){margin-left:18%;max-width:26rem}
-    .quote-row figure + figure{margin-top:clamp(1.4rem,3vw,2.4rem)}
-    @media (max-width:820px){.quote-row figure:nth-child(2){text-align:left;margin-left:0}
-      .quote-row figure:nth-child(3){margin-left:0}}
-
-    /* ============ FINALE ============ */
-    .book{position:relative;overflow:hidden;text-align:left}
-    .book-beam{position:absolute;left:50%;top:-10%;width:min(46vw,620px);height:130%;
-      transform:translateX(-50%) rotate(4deg);pointer-events:none;
-      background:linear-gradient(180deg,rgba(226,164,92,.16),rgba(226,164,92,.04) 45%,transparent 75%);
-      filter:blur(28px)}
-    .book-inner{position:relative;max-width:var(--maxw);text-align:left}
-    .book h2{font-family:var(--serif);font-weight:500;text-transform:uppercase;
-      font-size:clamp(2.2rem,7vw,5.6rem);line-height:.96;letter-spacing:-.03em;max-width:16ch}
-    .book h2 em{font-style:normal;color:var(--amber)}
-    .book .sub{color:var(--fg-dim);font-size:clamp(1rem,1.8vw,1.14rem);margin:clamp(1.4rem,3vw,2rem) 0 0;max-width:34rem}
-    .book .hero-cta{justify-content:flex-start;margin-top:1.6rem}
-    .book-mail{margin-top:1.4rem;font-size:.95rem;color:var(--muted)}
-    .book-mail a{color:var(--fg);text-decoration:underline;text-underline-offset:4px}
-    .aside{margin-top:clamp(1.6rem,3vw,2.2rem);font-family:var(--serif);font-style:italic;
-      color:var(--muted);font-size:1rem}
-
-    .sticky-cta{display:none}
-    .js .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
-    .js .reveal.in{opacity:1;transform:none}
-    @media (prefers-reduced-motion:reduce){.js .reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
-
-    /* ============ RESPONSIVE ============ */
-    @media (max-width:820px){
-      .hero-stage{left:0;top:0;bottom:auto;height:46svh;
-        -webkit-mask-image:linear-gradient(180deg,#000 0%,#000 45%,transparent 100%);
-                mask-image:linear-gradient(180deg,#000 0%,#000 45%,transparent 100%)}
-      .hero-stage img{object-position:50% 14%}
-      .hero{align-items:flex-end;min-height:92svh}
-      .hero-inner{padding-top:25svh;padding-bottom:1.6rem}
-      .hero-micro{margin-bottom:.8rem;font-size:.62rem;letter-spacing:.2em}
-      .hero .sub{margin-top:.9rem;font-size:.98rem}
-      .hero-cta{margin-top:1rem}
+      .hero-grid{grid-template-columns:1fr;min-height:0}
+      .hero-fig{order:-1;min-height:0}
+      .hero-fig img{position:relative;aspect-ratio:5/4;height:auto;object-position:52% 16%}
+      .hero-fig::after{background:linear-gradient(180deg,transparent 45%,rgba(20,17,16,.85))}
+      .hero-copy{padding:clamp(1.8rem,4vh,2.6rem) 1.5rem clamp(2.4rem,5vh,3.2rem)}
       .hero-cta .btn{flex:1 1 100%;justify-content:center}
       .hero-spot{display:none}
-    }
-    @media (max-width:1020px){
-      .hero-inner{grid-template-columns:1fr;gap:2.2rem}
-      .hero{min-height:auto}
-      .hero-fig{min-height:0;height:auto}
-      .hero-fig figure{position:relative;inset:auto}
-      .hero-fig img{aspect-ratio:4/3;height:auto;object-position:50% 12%}
-      .proof-grid{grid-template-columns:1fr;gap:2rem}
-      .logo-row{grid-template-columns:repeat(3,1fr)}
-      .act{grid-template-columns:3.4rem minmax(0,1fr)}
-      .act p{grid-column:2}
-      .fmt-feature{grid-template-columns:1fr;gap:1.6rem}
-      .fmt-feature img{aspect-ratio:3/2;object-position:62% 38%}
-      .results{grid-template-columns:1fr 1fr}
-      .layers,.origin-facts{grid-template-columns:1fr 1fr}
-      .case-steps{grid-template-columns:1fr 1fr}
-      .quote-row{grid-template-columns:1fr;gap:1.3rem}
-    }
-    @media (max-width:820px){
-      .fmt-duo{grid-template-columns:1fr;grid-template-rows:none;gap:2.2rem}
-      .fmt-duo article{grid-row:auto;display:block}
-      .fmt-duo article > * + *{margin-top:1.1rem}
-      .stage-wide img{aspect-ratio:16/10}
+      .scene,.scene-2,.fmt-row,.quote-row,.why-grid{grid-template-columns:1fr}
+      .scene-2 .scene-fig{order:0}
+      .why-fig{max-width:22rem}
+      .hal-fig img{aspect-ratio:4/3}
       .sticky-cta{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:80;justify-content:center;padding:.65rem 1rem calc(.65rem + env(safe-area-inset-bottom));background:rgba(20,17,16,.94);backdrop-filter:blur(12px);border-top:1px solid var(--line-soft);transform:translateY(110%);transition:transform .35s ease}
       .sticky-cta.show{transform:none}
       .sticky-cta .btn{width:100%;max-width:420px}
       footer{padding-bottom:6.5rem}
+      .legal-grid{grid-template-columns:1fr;gap:1.1rem}
     }
     @media (max-width:560px){
-      h1{font-size:clamp(2.6rem,12.5vw,3.4rem)}
       h2 br{display:none}
-      .hero-trust{gap:.7rem;flex-direction:column;margin-top:1.5rem}
-      .results{grid-template-columns:1fr;gap:0}
-      .result{padding:1.1rem 0 0}
-      .layers{grid-template-columns:1fr;gap:0}
-      .layer{padding:1.1rem 0 .3rem}
-      .case-steps{grid-template-columns:1fr;gap:0}
-      .case-steps li{padding:1.1rem 0 .3rem}
-      .origin-facts{grid-template-columns:1fr;gap:.7rem}
-      .logo-row{grid-template-columns:repeat(2,1fr)}
-      .legal-grid{grid-template-columns:1fr;gap:1.1rem}
-      .case-stats{gap:1.4rem}
-      .case-foot{align-items:flex-start}
       .fmt-meta div{grid-template-columns:1fr;gap:.15rem}
-      .fam li{grid-template-columns:5.5rem 1fr;gap:.7rem}
+      .logo-row{grid-template-columns:repeat(2,1fr)}
+      .pf-path{font-size:1.05rem}
     }
     @media (prefers-reduced-motion:reduce){.sticky-cta{transition:none}}
+
   </style>
 </head>
 <body>
@@ -549,13 +354,12 @@
       <a class="brand" href="#top">Lukas Wagner<i>.</i></a>
       <button class="nav-toggle" aria-label="Menü öffnen" aria-expanded="false" aria-controls="menu">☰</button>
       <nav class="nav-links" id="menu" aria-label="Navigation">
-        <a href="#erlebnis">Erlebnis</a>
-        <a href="#formate">Formate</a>
+        <a href="#keynote">Keynote</a>
         <a href="#warum">Warum Lukas</a>
         <a href="#aheadx">ahead x</a>
         <a href="#stimmen">Stimmen</a>
         <span class="langs" role="group" aria-label="Sprache / Language"><a href="/" hreflang="de" lang="de" aria-current="page">DE</a><span aria-hidden="true">·</span><a href="/en/" hreflang="en" lang="en">EN</a><span aria-hidden="true">·</span><a href="/th/" hreflang="th" lang="th">TH</a></span>
-        <a class="btn btn-primary" data-cta="keynote" href="mailto:kontakt@lukaswagner.at?subject=Keynote-Anfrage%20Lukas%20Wagner&amp;body=Datum%3A%0AOrt%3A%0AZielgruppe%3A%0AAnlass%3A%0A">Lukas auf die Bühne holen</a>
+        <a class="btn btn-primary" data-cta="keynote" href="mailto:kontakt@lukaswagner.at?subject=Keynote-Anfrage%20Lukas%20Wagner&amp;body=Datum%3A%0AOrt%3A%0AZielgruppe%3A%0AAnlass%3A%0A">KI-Keynote anfragen</a>
       </nav>
     </div>
   </header>
@@ -563,290 +367,184 @@
   <main id="main">
     <span id="top"></span>
 
-    <!-- SHOWSTOPPER 1: Buehnenopening. Das Foto ist die Buehne, nicht die Illustration. -->
+    <!-- 01 HERO. Das Theaterfoto traegt die Flaeche, die Schrift bleibt ruhig. -->
     <section class="hero" aria-label="Intro">
-      <div class="hero-stage" aria-hidden="true">
-        <img src="/assets/lukas-stage.jpg"
-             srcset="/assets/lukas-stage-800.jpg 533w, /assets/lukas-stage.jpg 1066w"
-             sizes="100vw" width="1066" height="1600" fetchpriority="high" alt="" />
-      </div>
-      <div class="hero-veil" aria-hidden="true"></div>
-      <div class="hero-spot" aria-hidden="true"></div>
-      <div class="hero-inner">
-        <p class="hero-micro">Lukas Wagner · KI-Keynote-Speaker · Gründer von ahead x</p>
-        <h1>
-            <span class="hl">Die Zukunft ist kein</span>
-            <span class="hl">weiterer Bildschirm.</span>
-          <span class="hero-break" aria-hidden="true"></span>
-            <span class="hl-warm">Sie passiert</span>
-            <span class="hl-warm"><em>im Raum.</em></span>
-        </h1>
-        <p class="sub">Lukas Wagner bringt Künstliche Intelligenz aus dem Feed auf die Bühne. Damit Unternehmen, Städte und Regionen gemeinsam verstehen, was als Nächstes kommt.</p>
-        <div class="hero-cta">
-          <a class="btn btn-primary" data-cta="keynote" href="mailto:kontakt@lukaswagner.at?subject=Keynote-Anfrage%20Lukas%20Wagner&amp;body=Datum%3A%0AOrt%3A%0AZielgruppe%3A%0AAnlass%3A%0A">Lukas auf die Bühne holen</a>
-          <a class="btn btn-ghost" data-cta="speaker-reel" href="https://www.youtube.com/@lukaswagnerai" target="_blank" rel="noopener">Sehen, was im Raum passiert&nbsp;↗</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="proof band" aria-label="Reichweite und Partner">
-      <div class="wrap proof-grid">
-        <div class="proof-num reveal">
-          <div class="n">1.700+</div>
-          <p class="l">Teilnahmen bei ahead x Live-Formaten in 8 Städten. Gegründet, kuratiert und moderiert von Lukas Wagner.</p>
-        </div>
-        <div class="proof-partners reveal">
-          <p class="t">Medien- &amp; Netzwerkpartner von ahead x</p>
-          <div class="logo-row">
-            <span class="lg"><img src="/assets/logos/dcv.png" alt="Digital Campus Vorarlberg" loading="lazy" width="120" height="32" /></span>
-            <span class="lg"><img src="/assets/logos/vn.png" alt="Vorarlberger Nachrichten" loading="lazy" width="120" height="32" /></span>
-            <span class="lg"><img src="/assets/logos/vol.png" alt="VOL.at" loading="lazy" width="120" height="32" /></span>
-            <span class="lg"><img src="/assets/logos/neue.png" alt="NEUE am Sonntag" loading="lazy" width="120" height="32" /></span>
-            <span class="lg"><img src="/assets/logos/tt.png" alt="Tiroler Tageszeitung" loading="lazy" width="120" height="32" /></span>
-            <span class="lg"><img src="/assets/logos/kleine-zeitung.svg" alt="Kleine Zeitung" loading="lazy" width="120" height="32" /></span>
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <p class="hero-micro">Lukas Wagner · KI-Keynote-Speaker</p>
+          <p class="hero-pre">Die Zukunft ist kein weiterer Bildschirm.</p>
+          <h1><span class="hl">Die Zukunft passiert</span> <em>im Raum.</em></h1>
+          <p class="sub">Live-Keynotes, die künstliche Intelligenz verständlich, überraschend und gemeinsam erlebbar machen. Für Unternehmen, Konferenzen, Städte und Regionen.</p>
+          <div class="hero-cta">
+            <a class="btn btn-primary" data-cta="keynote" href="mailto:kontakt@lukaswagner.at?subject=Keynote-Anfrage%20Lukas%20Wagner&amp;body=Datum%3A%0AOrt%3A%0AZielgruppe%3A%0AAnlass%3A%0A">KI-Keynote anfragen</a>
+            <a class="btn btn-ghost" data-cta="speaker-reel" href="https://www.youtube.com/@lukaswagnerai" target="_blank" rel="noopener">Auftritte ansehen&nbsp;↗</a>
           </div>
         </div>
-      </div>
-    </section>
-
-    <!-- SHOWSTOPPER 2: Verdichtung, Stille, dann oeffnet sich der Raum wie ein Vorhang. -->
-    <section id="raum" class="screens" aria-label="Warum echte Räume wichtiger werden">
-      <span class="stage-label" aria-hidden="true">Signal · Überlastung</span>
-      <div class="wrap">
-        <div class="scr-stack">
-          <p class="scr scr-1">Mehr Werkzeuge.</p>
-          <p class="scr scr-2">Mehr Inhalte.</p>
-          <p class="scr scr-3">Mehr Feeds.</p>
-          <p class="scr scr-4">Mehr Antworten.</p>
-          <p class="scr scr-5">Mehr Bildschirme.</p>
-          <div class="scr-pause" aria-hidden="true"></div>
-          <p class="scr-turn">Und immer weniger Raum, um gemeinsam zu denken.</p>
-        </div>
-        <figure class="screens-fig">
-          <img src="/assets/aheadx-audience.jpg"
-               srcset="/assets/aheadx-audience-900.jpg 900w, /assets/aheadx-audience.jpg 1500w"
-               sizes="(max-width:1020px) 92vw, 1120px"
-               width="1500" height="1000" loading="lazy"
-               alt="Voller Saal bei einem ahead x Format, Menschen hören gemeinsam zu" />
+        <figure class="hero-fig">
+          <img src="/assets/lukas-stage.jpg"
+               srcset="/assets/lukas-stage-800.jpg 533w, /assets/lukas-stage.jpg 1066w"
+               sizes="(max-width:820px) 100vw, 56vw"
+               width="1066" height="1600" fetchpriority="high" alt="Lukas Wagner steht lächelnd im Theatersaal zwischen roten Sitzreihen unter warmem Bühnenlicht" />
+          <span class="hero-spot" aria-hidden="true"></span>
         </figure>
-        <p class="scr-close reveal">Die Zukunft braucht keinen weiteren Feed. <em>Sie braucht einen Raum.</em></p>
-        <p class="scr-lukas reveal">Lukas Wagner bringt Künstliche Intelligenz in genau diesen Raum.</p>
       </div>
     </section>
 
-    <section id="erlebnis" aria-label="Was im Raum passiert">
-      <span class="stage-label" aria-hidden="true">Room 01 · Attention</span>
+    <!-- 02 DIE HALTUNG. Verdichtung, Stille, dann oeffnet sich der Raum. -->
+    <section id="haltung" class="haltung" aria-label="Die Haltung">
       <div class="wrap">
-        <div class="sec-head reveal">
-          <p class="kicker">Was im Raum passiert</p>
-          <h2>Keine Vorlesung über KI. <br /> Ein Moment mit ihr.</h2>
-          <p class="lead-in">KI liefert Antworten. Ein Raum schafft Verständnis. Eine Keynote von Lukas Wagner ist in fünf Akten gebaut, wie ein guter Abend im Theater.</p>
+        <p class="kicker">Die Haltung</p>
+        <div class="hal-stack">
+          <p class="hal-line hal-1">Mehr Werkzeuge.</p>
+          <p class="hal-line hal-2">Mehr Inhalte.</p>
+          <p class="hal-line hal-3">Mehr Antworten.</p>
+          <div class="hal-pause" aria-hidden="true"></div>
+          <p class="hal-turn">Aber immer weniger Raum, um gemeinsam zu verstehen.</p>
         </div>
-        <ol class="acts">
-          <li class="act reveal"><span class="no">Akt 01</span><h3>Ankommen</h3><p>Menschen kommen mit Fragen, Halbwissen und Skepsis. Genau richtig.</p></li>
-          <li class="act reveal"><span class="no">Akt 02</span><h3>Verstehen</h3><p>Was ist relevant, was bleibt Hype. Klare Sprache statt Fachjargon.</p></li>
-          <li class="act reveal"><span class="no">Akt 03</span><h3>Erleben</h3><p>Das Publikum gibt Input, die KI liefert live. Staunen, Lachen, Diskussion.</p></li>
-          <li class="act reveal"><span class="no">Akt 04</span><h3>Einordnen</h3><p>Chancen und Grenzen, ohne Alarmismus und ohne Verklärung.</p></li>
-          <li class="act reveal"><span class="no">Akt 05</span><h3>Handeln</h3><p>Aus dem Moment wird Richtung: konkrete nächste Schritte.</p></li>
-        </ol>
+      </div>
+      <figure class="hal-fig">
+        <img src="/assets/aheadx-audience.jpg"
+             srcset="/assets/aheadx-audience-900.jpg 900w, /assets/aheadx-audience.jpg 1500w"
+             sizes="100vw" width="1500" height="1000" loading="lazy" alt="Voller Raum bei einem ahead x Format, Menschen hören gemeinsam zu" />
+        <figcaption>ahead x live, Fragerunde im vollen Raum</figcaption>
+      </figure>
+      <div class="wrap">
+        <p class="hal-close reveal">Genau deshalb bringt Lukas Wagner künstliche Intelligenz aus dem Bildschirm in den Raum.</p>
       </div>
     </section>
 
-    <section id="wirkung" class="on-paper" style="padding-bottom:clamp(1.4rem,2.5vw,2rem)" aria-label="Was bleibt">
+    <!-- 03 DIE KEYNOTE. Drei Szenen statt fuenf Akten plus separatem Ergebnisblock. -->
+    <section id="keynote" class="on-paper" aria-label="Die Keynote">
       <div class="wrap">
         <div class="sec-head reveal">
-          <p class="kicker">Was bleibt</p>
-          <h2>Menschen kommen mit Fragen. <br /> Sie gehen mit einer Richtung.</h2>
+          <p class="kicker">Die Keynote</p>
+          <h2>Verstehen. Erleben. Handeln.</h2>
         </div>
-        <div class="results">
-          <div class="result reveal"><h3>Eine gemeinsame Sprache für KI</h3><p>Team und Führung reden danach über dasselbe, nicht über zehn verschiedene Buzzwords.</p></div>
-          <div class="result reveal"><h3>Realistische Orientierung</h3><p>Was KI heute wirklich kann, was nicht, und was das für die eigene Arbeit heißt.</p></div>
-          <div class="result reveal"><h3>Konkrete nächste Schritte</h3><p>Ideen, die sich am nächsten Arbeitstag ausprobieren lassen. Ohne neue Einkaufsliste.</p></div>
-        </div>
-        <p class="results-note reveal">Keine Transformation über Nacht. Aber ein gemeinsamer Startpunkt, der trägt.</p>
-      </div>
-    </section>
-
-    <section id="formate" class="on-paper" style="padding-top:clamp(1.4rem,2.5vw,2rem)" aria-label="Formate">
-      <div class="wrap">
-        <div class="sec-head reveal">
-          <p class="kicker">Formate</p>
-          <h2>Ein Erlebnis. Drei Bühnen.</h2>
-        </div>
-
-        <article class="fmt-feature reveal">
-          <figure>
-            <img src="/assets/speaker-reel-thumb.jpg"
-                 srcset="/assets/speaker-reel-thumb-900.jpg 900w, /assets/speaker-reel-thumb.jpg 1500w"
-                 sizes="(max-width:1020px) 92vw, 48vw"
-                 width="1500" height="1000" loading="lazy"
-                 alt="Lukas Wagner lächelt vor der Leinwand, während er eine Live-Demo zeigt" />
-          </figure>
-          <div>
-            <p class="fmt-label">Format 01 · Hauptbühne</p>
-            <h3>Die KI-Keynote</h3>
-            <dl class="fmt-meta">
-              <div><dt>Für wen</dt><dd>Konferenzen, Firmenevents, Stadt- und Zukunftsveranstaltungen, Medienformate</dd></div>
-              <div><dt>Situation</dt><dd>Alle reden über KI, aber im Saal sitzt vom Vorstand bis zum Lehrling jede Wissensstufe</dd></div>
-              <div><dt>Was passiert</dt><dd>Einordnung, Live-Demos mit Publikumsinput, Dramaturgie statt Folienschlacht</dd></div>
-            </dl>
-            <a class="btn btn-primary" data-cta="keynote" href="mailto:kontakt@lukaswagner.at?subject=Keynote-Anfrage%20Lukas%20Wagner&amp;body=Datum%3A%0AOrt%3A%0AZielgruppe%3A%0AAnlass%3A%0A">Lukas auf die Bühne holen</a>
-          </div>
-        </article>
-
-        <div class="fmt-duo">
-          <article class="reveal">
-            <div>
-              <p class="fmt-label">Format 02 · Hands-on</p>
-              <h3>Der Workshop</h3>
-              <p>Für Teams, KMU und Organisationen, die nach dem Staunen ins Ausprobieren kommen wollen. KI-Werkzeuge am eigenen Arbeitsalltag getestet, begleitet und eingeordnet.</p>
+        <div class="scenes">
+          <article class="scene scene-1 reveal">
+            <div class="scene-copy">
+              <span class="scene-no">01</span>
+              <h3>Verstehen</h3>
+              <p>Was ist relevant, und was nur Hype? KI wird eingeordnet, in klarer Sprache statt Fachjargon.</p>
+              <p class="scene-res"><span class="res-label">Was bleibt</span> Eine gemeinsame Sprache für KI.</p>
             </div>
-            <figure>
-              <img src="/assets/aheadx-demo.jpg"
-                   srcset="/assets/aheadx-demo-800.jpg 533w, /assets/aheadx-demo.jpg 866w"
-                   sizes="(max-width:820px) 92vw, 44vw"
-                   width="866" height="1300" loading="lazy"
-                   alt="Teilnehmerin arbeitet bei einem ahead x Workshop konzentriert an ihrem Laptop" />
-              <figcaption>Hands-on bei einem ahead x Workshop</figcaption>
+          </article>
+          <article class="scene scene-2 reveal">
+            <div class="scene-copy">
+              <span class="scene-no">02</span>
+              <h3>Erleben</h3>
+              <p>Live-Demos mit Fragen und Input aus dem Publikum. Was passiert, sieht der Saal in Echtzeit.</p>
+              <p class="scene-res"><span class="res-label">Was bleibt</span> Eine realistische Vorstellung von Möglichkeiten und Grenzen.</p>
+            </div>
+            <figure class="scene-fig">
+              <img src="/assets/speaker-reel-thumb.jpg" srcset="/assets/speaker-reel-thumb-900.jpg 900w, /assets/speaker-reel-thumb.jpg 1500w" sizes="(max-width:820px) 92vw, 44vw"
+                   width="1500" height="1000" loading="lazy" alt="Lukas Wagner lächelt vor der Leinwand, während er eine Live-Demo zeigt" />
+              <figcaption>Live-Demo vor Publikum</figcaption>
             </figure>
-            <div class="fmt-foot">
-              <a class="tlink" data-cta="workshop" href="mailto:kontakt@lukaswagner.at?subject=Workshop-Anfrage%20Lukas%20Wagner&amp;body=Datum%3A%0AOrt%3A%0AZielgruppe%3A%0AAnlass%3A%0A">Workshop anfragen →</a>
-            </div>
           </article>
-          <article class="reveal">
-            <div>
-              <p class="fmt-label">Format 03 · ahead x</p>
-              <h3>Das Regionalformat</h3>
-              <p>Für Städte, Regionen und Partner, die KI öffentlich erlebbar machen wollen. Kuratiert mit lokalen Partnern aus Medien, Wirtschaft und Bildung.</p>
+          <article class="scene scene-3 reveal">
+            <div class="scene-copy">
+              <span class="scene-no">03</span>
+              <h3>Handeln</h3>
+              <p>Aus dem gemeinsamen Moment entstehen konkrete nächste Schritte, passend zur Organisation.</p>
+              <p class="scene-res"><span class="res-label">Was bleibt</span> Ideen, die am nächsten Arbeitstag ausprobiert werden können.</p>
             </div>
-            <ul class="fam">
-              <li><b>city</b><span>öffentliches Stadt-Event, regional und niederschwellig</span></li>
-              <li><b>labs</b><span>Workshop-Format für Unternehmen und Einsteiger:innen</span></li>
-              <li><b>mastermind</b><span>Format für Entscheider:innen, in Vorbereitung</span></li>
-              <li><b>future</b><span>Flaggschiff aus Award Show und Future Day</span></li>
-            </ul>
-            <div class="fmt-foot">
-              <a class="tlink" data-cta="aheadx" href="mailto:kontakt@lukaswagner.at?subject=Regionalformat%20%2F%20ahead%20x%20anfragen&amp;body=Stadt%2FRegion%3A%0AZeitraum%3A%0AZielgruppe%3A%0AAnlass%3A%0A">Regionalformat anfragen →</a>
-            </div>
+            <figure class="scene-fig">
+              <img src="/assets/aheadx-demo.jpg" srcset="/assets/aheadx-demo-800.jpg 533w, /assets/aheadx-demo.jpg 866w" sizes="(max-width:820px) 92vw, 44vw"
+                   width="866" height="1300" loading="lazy" alt="Teilnehmerin arbeitet bei einem ahead x Workshop konzentriert an ihrem Laptop" />
+              <figcaption>Hands-on nach der Keynote</figcaption>
+            </figure>
           </article>
+        </div>
+
+        <article class="fmt-main reveal">
+          <p class="kicker">Formate</p>
+          <h3>Die KI-Keynote</h3>
+          <dl class="fmt-meta">
+              <div><dt>Geeignet für</dt><dd>Konferenzen, Firmenevents, Führungstage sowie Stadt- und Zukunftsveranstaltungen.</dd></div>
+              <div><dt>Das passiert</dt><dd>Einordnung, Live-Demos, Publikumsbeteiligung und konkreter Transfer.</dd></div>
+              <div><dt>Das bleibt</dt><dd>Orientierung, Gesprächsstoff und nächste Schritte.</dd></div>
+          </dl>
+          <a class="btn btn-primary" data-cta="keynote" href="mailto:kontakt@lukaswagner.at?subject=Keynote-Anfrage%20Lukas%20Wagner&amp;body=Datum%3A%0AOrt%3A%0AZielgruppe%3A%0AAnlass%3A%0A">KI-Keynote anfragen</a>
+        </article>
+        <div class="fmt-row">
+          <article class="fmt-s reveal"><h3>Workshop</h3><p class="fmt-who">Für Teams, KMU und Organisationen.</p><p>KI-Werkzeuge am eigenen Arbeitsalltag getestet, begleitet und eingeordnet.</p><a class="tlink" data-cta="workshop" href="mailto:kontakt@lukaswagner.at?subject=Workshop-Anfrage%20Lukas%20Wagner&amp;body=Datum%3A%0AOrt%3A%0AZielgruppe%3A%0AAnlass%3A%0A">Workshop anfragen →</a></article>
+          <article class="fmt-s reveal"><h3>Regionalformat</h3><p class="fmt-who">Für Städte, Regionen und Partner.</p><p>Ein kuratiertes Live-Event mit lokalen Partnern aus Medien, Wirtschaft und Bildung.</p><a class="tlink" data-cta="aheadx" href="mailto:kontakt@lukaswagner.at?subject=Regionalformat%20%2F%20ahead%20x%20anfragen&amp;body=Stadt%2FRegion%3A%0AZeitraum%3A%0AZielgruppe%3A%0AAnlass%3A%0A">Regionalformat anfragen →</a></article>
         </div>
       </div>
     </section>
 
+    <!-- 04 WARUM LUKAS. Drei Staerken statt fuenf Rollen. -->
     <section id="warum" aria-label="Warum Lukas">
-      <span class="stage-label" aria-hidden="true">Human response</span>
-      <div class="wrap">
-        <div class="sec-head reveal" style="max-width:none">
-          <p class="kicker">Warum Lukas</p>
-          <h2 class="why-open">Bevor <em>Künstliche Intelligenz</em> sein Thema wurde, war <em>menschliche Aufmerksamkeit</em> längst sein Handwerk.</h2>
-        </div>
-        <div class="roles">
-          <article class="role role-1 reveal"><h3>Der Poet</h3><p>Lernte, was Stille mit einem Raum macht.</p></article>
-          <article class="role role-2 reveal"><h3>Der Macher</h3><p>Organisierte über 100 Abende, bevor er eine Plattform baute.</p></article>
-          <article class="role role-3 reveal"><h3>Der Coach</h3><p>Weiß, warum ein Vortrag wirkt, bevor die erste Folie erscheint.</p></article>
-          <article class="role role-4 reveal"><h3>Der Gründer</h3><p>Machte aus einem KI-Abend ein Format für ganze Regionen.</p></article>
-          <article class="role role-5 reveal"><h3>Der Speaker</h3><p>Macht Technologie verständlich, ohne Menschen klein wirken zu lassen.</p></article>
-        </div>
-        <div class="origin reveal">
-          <div class="origin-facts">
-            <!-- OFFEN: biografische Angaben stammen aus dem Briefing von LW, extern noch nicht belegt. -->
-            <span><b>Slam-Poet, Autor, Songwriter</b>: die erste Bühne</span>
-            <span><b>100+</b> Literatur- &amp; Kulturveranstaltungen organisiert</span>
-            <span><b>2017</b> Förderpreis für Kunst und Kultur</span>
-            <span><b>TEDxSalzburg</b> Speaker-Coach</span>
+      <div class="wrap why-grid">
+        <figure class="why-fig reveal">
+          <img src="/assets/lukas-stage.jpg"
+               srcset="/assets/lukas-stage-800.jpg 533w, /assets/lukas-stage.jpg 1066w"
+               sizes="(max-width:820px) 92vw, 32vw"
+               width="1066" height="1600" loading="lazy" alt="Porträt von Lukas Wagner im Theatersaal" />
+        </figure>
+        <div class="why-copy">
+          <div class="sec-head reveal">
+            <p class="kicker">Warum Lukas</p>
+            <h2>Bühne. Sprache. Format.</h2>
           </div>
-          <p class="why-close">Technologie verändert sich. <em>Die Kunst, Menschen zu erreichen, nicht.</em></p>
+          <div class="strengths">
+            <div class="str reveal"><h3>Bühne</h3><p>Jahre auf Bühnen, auf denen Aufmerksamkeit unmittelbar gewonnen werden muss.</p></div>
+            <div class="str reveal"><h3>Sprache</h3><p>Komplexe Gedanken so verdichten, dass Menschen sie verstehen und erinnern.</p></div>
+            <div class="str reveal"><h3>Format</h3><p>Nicht nur Vorträge halten, sondern ganze Erlebnisse und Veranstaltungsreihen entwickeln.</p></div>
+          </div>
+          <!-- OFFEN: biografische Angaben stammen aus dem Briefing von LW, extern noch nicht belegt. -->
+          <p class="why-facts reveal">Slam-Poet · 100+ Kulturveranstaltungen · Förderpreis 2017 · TEDxSalzburg Speaker-Coach · Gründer von ahead x</p>
+          <p class="why-close reveal">KI ist sein Thema. <em>Aufmerksamkeit ist sein Handwerk.</em></p>
         </div>
       </div>
     </section>
 
-    <!-- SHOWSTOPPER 3: Expansion. Ein Lichtpunkt wird zu acht, dann zu einem Netz.
-         Bewusst abstrakt, keine Landkarte, keine erfundenen Staedte. -->
-    <section id="aheadx" class="band" aria-label="Case Study">
-      <span class="stage-label" aria-hidden="true">Live signal · Expansion</span>
+    <!-- 05 DER BEWEIS. ahead x, Zahlen, Partner und Stimmen in einem Kapitel. -->
+    <section id="aheadx" class="band" aria-label="Der Beweis">
       <div class="wrap">
         <div class="sec-head reveal">
-          <p class="kicker">Case Study</p>
-          <h2>ahead x: Räume, in denen eine Region gemeinsam versteht.</h2>
-          <p class="lead-in">Lukas spricht nicht nur darüber, wie man Menschen für KI erreicht. Er baut die Räume dafür.</p>
+          <p class="kicker">Der Beweis</p>
+          <h2>Aus einem Raum wurden acht Städte.</h2>
+          <p class="lead-in">Mit ahead x baut Lukas Wagner die Räume, über die er auf der Bühne spricht.</p>
         </div>
-        <div class="expand">
-          <ol class="ex-steps reveal">
-            <li><div><h3>Ein Raum</h3><p>Ein Abend, ein voller Saal, ein Thema.</p></div></li>
-            <li><div><h3>Eine Stadt</h3><p>Lokale Partner aus Medien, Wirtschaft und Bildung steigen ein.</p></div></li>
-            <li><div><h3>Acht Städte</h3><p>Dasselbe Prinzip, andere Region. Die Verbindung bleibt lokal.</p></div></li>
-            <li><div><h3>Eine Plattform</h3><p>Aus einzelnen Abenden wird eine Bewegung.</p></div></li>
-          </ol>
-          <div class="ex-vis" aria-hidden="true">
-            <svg viewBox="0 0 420 300" role="presentation" focusable="false">
-              <g class="ex-lines">
-                <path class="ex-line" style="animation-delay:1.5s" d="M210 150 L96 74" />
-                <path class="ex-line" style="animation-delay:1.6s" d="M210 150 L330 66" />
-                <path class="ex-line" style="animation-delay:1.7s" d="M210 150 L62 186" />
-                <path class="ex-line" style="animation-delay:1.8s" d="M210 150 L368 168" />
-                <path class="ex-line" style="animation-delay:1.9s" d="M210 150 L138 246" />
-                <path class="ex-line" style="animation-delay:2.0s" d="M210 150 L288 258" />
-                <path class="ex-line" style="animation-delay:2.1s" d="M210 150 L258 44" />
-                <path class="ex-line" style="animation-delay:2.2s" d="M96 74 L62 186" />
-                <path class="ex-line" style="animation-delay:2.3s" d="M330 66 L368 168" />
-              </g>
-              <circle class="ex-ring" cx="210" cy="150" r="26" />
-              <circle class="ex-ring" style="animation-delay:.7s" cx="210" cy="150" r="44" />
-              <circle class="ex-dot ex-dot-1" cx="210" cy="150" r="7" style="animation-delay:.05s" />
-              <circle class="ex-dot" cx="96"  cy="74"  r="4" style="animation-delay:1.05s" />
-              <circle class="ex-dot" cx="330" cy="66"  r="4" style="animation-delay:1.12s" />
-              <circle class="ex-dot" cx="62"  cy="186" r="4" style="animation-delay:1.19s" />
-              <circle class="ex-dot" cx="368" cy="168" r="4" style="animation-delay:1.26s" />
-              <circle class="ex-dot" cx="138" cy="246" r="4" style="animation-delay:1.33s" />
-              <circle class="ex-dot" cx="288" cy="258" r="4" style="animation-delay:1.40s" />
-              <circle class="ex-dot" cx="258" cy="44"  r="4" style="animation-delay:1.47s" />
-            </svg>
-          </div>
-        </div>
+        <p class="pf-path reveal"><span class="pf-step">Ein Abend</span><span class="pf-arrow" aria-hidden="true">→</span><span class="pf-step">eine Stadt</span><span class="pf-arrow" aria-hidden="true">→</span><span class="pf-step">acht Städte</span><span class="pf-arrow" aria-hidden="true">→</span><span class="pf-step">eine Plattform</span></p>
         <!-- Zahlen belegt auf aheadx.at, Stand 30.04.2026. -->
-        <div class="proofs reveal">
-          <div class="pf pf-1"><b>9</b><span>Editionen</span></div>
-          <div class="pf pf-2"><b>8</b><span>Städte</span></div>
-          <div class="pf pf-3"><b>1.700+</b><span>Teilnahmen</span></div>
-          <div class="pf pf-4"><b>92 %</b><span>geben 4 oder 5 von 5 Punkten</span></div>
+        <div class="pf-nums reveal">
+          <div class="pf-num"><b>9</b><span>Editionen</span></div>
+          <div class="pf-num"><b>8</b><span>Städte</span></div>
+          <div class="pf-num"><b>1.700+</b><span>Teilnahmen</span></div>
+          <div class="pf-num"><b>92 %</b><span>geben 4 oder 5 von 5</span></div>
         </div>
-        <p class="expand-close reveal">KI ist global. <em>Verständnis beginnt lokal.</em></p>
-        <div class="case-cta reveal" style="margin-top:clamp(1.8rem,3.5vw,2.6rem)">
-          <a class="btn btn-ghost" data-cta="aheadx" href="https://aheadx.at" target="_blank" rel="noopener">ahead x entdecken&nbsp;↗</a>
-          <a class="tlink" data-cta="aheadx" href="mailto:kontakt@lukaswagner.at?subject=Regionalformat%20%2F%20ahead%20x%20anfragen&amp;body=Stadt%2FRegion%3A%0AZeitraum%3A%0AZielgruppe%3A%0AAnlass%3A%0A">Partner werden →</a>
-        </div>
-        <p class="case-src reveal">Zahlen: ahead x, Stand April 2026</p>
-      </div>
-    </section>
+        <p class="pf-src reveal">Zahlen: ahead x, Stand April 2026</p>
 
-    <section id="stimmen" class="on-paper" aria-label="Stimmen">
-      <div class="wrap">
-        <div class="sec-head reveal" style="margin-bottom:1.2rem">
-          <h2 class="kicker">Stimmen</h2>
+        <p class="pf-partners-t reveal">Medien- &amp; Netzwerkpartner von ahead x</p>
+        <div class="logo-row reveal">
+          <span class="lg"><img src="/assets/logos/dcv.png" alt="Digital Campus Vorarlberg" loading="lazy" width="120" height="32" /></span>
+          <span class="lg"><img src="/assets/logos/vn.png" alt="Vorarlberger Nachrichten" loading="lazy" width="120" height="32" /></span>
+          <span class="lg"><img src="/assets/logos/vol.png" alt="VOL.at" loading="lazy" width="120" height="32" /></span>
+          <span class="lg"><img src="/assets/logos/neue.png" alt="NEUE am Sonntag" loading="lazy" width="120" height="32" /></span>
+          <span class="lg"><img src="/assets/logos/tt.png" alt="Tiroler Tageszeitung" loading="lazy" width="120" height="32" /></span>
+          <span class="lg"><img src="/assets/logos/kleine-zeitung.svg" alt="Kleine Zeitung" loading="lazy" width="120" height="32" /></span>
         </div>
+        <p class="pf-cta reveal"><a class="tlink" data-cta="aheadx" href="https://aheadx.at" target="_blank" rel="noopener">ahead x ansehen&nbsp;↗</a></p>
+      </div>
+
+      <div id="stimmen" class="wrap quotes">
         <!-- OFFEN: Freigabe von Wortlaut und Rolle der zitierten Personen. -->
-        <figure class="quote-hero reveal">
+        <figure class="quote-main reveal">
           <blockquote><p>Alle im Raum können nicht anders, als an seinen Lippen zu hängen.</p></blockquote>
           <figcaption><b>Romy Sigl</b> · CEO CoworkingSalzburg</figcaption>
         </figure>
         <div class="quote-row">
-          <figure class="reveal">
-            <p>Seine Fähigkeit, komplexe KI-Konzepte verständlich und anschaulich zu vermitteln, macht ihn zu einem herausragenden Sprecher.</p>
-            <figcaption><b>Stefan König</b> · Finanzstratege</figcaption>
-          </figure>
-          <figure class="reveal">
-            <p>Lukas übersetzt die Komplexität des Themas meisterhaft, ohne dabei an Tiefe zu verlieren.</p>
-            <figcaption><b>Oliver Carl Drewo</b> · Webdesign &amp; SEO</figcaption>
-          </figure>
-          <figure class="reveal">
-            <p>Willst du deinen Talk auf den Punkt bringen? Frag Lukas.</p>
-            <figcaption><b>Andreas Gruber</b> · Speaker, TEDxSalzburg</figcaption>
-          </figure>
+          <figure class="reveal"><p>Seine Fähigkeit, komplexe KI-Konzepte verständlich und anschaulich zu vermitteln, macht ihn zu einem herausragenden Sprecher.</p><figcaption><b>Stefan König</b> · Finanzstratege</figcaption></figure>
+          <figure class="reveal"><p>Lukas übersetzt die Komplexität des Themas meisterhaft, ohne dabei an Tiefe zu verlieren.</p><figcaption><b>Oliver Carl Drewo</b> · Webdesign &amp; SEO</figcaption></figure>
         </div>
-        <p class="quote-src reveal"><a class="tlink" href="https://www.linkedin.com/in/lukaswagnerai/details/recommendations/" target="_blank" rel="noopener">Alle Empfehlungen auf LinkedIn lesen →</a></p>
+        <p class="quote-src reveal"><a class="tlink" href="https://www.linkedin.com/in/lukaswagnerai/details/recommendations/" target="_blank" rel="noopener">Alle Empfehlungen auf LinkedIn →</a></p>
       </div>
     </section>
 
+    <!-- 06 BUCHUNG -->
     <section id="kontakt" class="book" aria-label="Anfrage">
       <div class="book-beam" aria-hidden="true"></div>
       <div class="wrap book-inner">
@@ -855,23 +553,22 @@
         <p class="sub reveal">Datum. Ort. Zielgruppe. Anlass. Mehr braucht es für den ersten Schritt nicht.</p>
         <div class="hero-cta reveal">
           <a class="btn btn-primary" data-cta="keynote" href="mailto:kontakt@lukaswagner.at?subject=Keynote-Anfrage%20Lukas%20Wagner&amp;body=Datum%3A%0AOrt%3A%0AZielgruppe%3A%0AAnlass%3A%0A">Lukas auf die Bühne holen</a>
-          <a class="btn btn-ghost" data-cta="speaker-reel" href="https://www.youtube.com/@lukaswagnerai" target="_blank" rel="noopener">Sehen, was im Raum passiert&nbsp;↗</a>
+          <a class="btn btn-ghost" data-cta="speaker-reel" href="https://www.youtube.com/@lukaswagnerai" target="_blank" rel="noopener">Auftritte ansehen&nbsp;↗</a>
         </div>
         <p class="book-mail reveal">Direkt: <a href="mailto:kontakt@lukaswagner.at">kontakt@lukaswagner.at</a> · auch für Presse &amp; Interviews</p>
-        <p class="aside reveal">Keine 87 Folien. Versprochen. Und keine Roboterbilder, ebenfalls versprochen.</p>
+        <p class="aside reveal">Keine 87 Folien. Versprochen.</p>
       </div>
     </section>
 
-    <section id="faq" class="band" style="padding-top:clamp(2.4rem,4.5vw,3.4rem);padding-bottom:clamp(2.4rem,4.5vw,3.4rem)" aria-label="FAQ">
+    <section id="faq" class="band faq-sec" aria-label="FAQ">
       <div class="wrap">
         <div class="sec-head reveal">
           <p class="kicker">FAQ</p>
           <h2>Kurz beantwortet.</h2>
         </div>
         <div class="faq reveal">
-          <details><summary>Für welche Veranstaltungen kann man Lukas Wagner buchen?</summary><p>Für Konferenzen, Firmenevents, Stadt- und Regionalveranstaltungen, Verbände und Bildungseinrichtungen, als Keynote, Workshop oder Moderation rund um Künstliche Intelligenz.</p></details>
+          <details><summary>Für welche Veranstaltungen kann man Lukas Wagner buchen?</summary><p>Für Konferenzen, Firmenevents, Stadt- und Regionalveranstaltungen, Verbände und Bildungseinrichtungen, als Keynote, Workshop oder Moderation rund um künstliche Intelligenz.</p></details>
           <details><summary>Ist die Keynote auch für Einsteiger:innen geeignet?</summary><p>Ja. KI wird ohne Fachjargon verständlich gemacht. Tiefe und Inhalt richten sich nach der Zielgruppe.</p></details>
-          <details><summary>Bietet Lukas Wagner auch KI-Workshops an?</summary><p>Ja: Hands-on-Workshops und Impulstage für Teams, KMU, Organisationen und öffentliche Einrichtungen.</p></details>
           <details><summary>Wie läuft eine Anfrage ab?</summary><p>Kurze E-Mail mit Datum, Ort, Zielgruppe und Anlass, dann folgt eine ehrliche Einschätzung, welches Format passt.</p></details>
         </div>
       </div>
@@ -883,70 +580,62 @@
       <div class="foot-top">
         <span class="brand">Lukas Wagner<i>.</i></span>
         <nav class="foot-links" aria-label="Footer">
-          <a href="#erlebnis">Erlebnis</a><a href="#formate">Formate</a><a href="#warum">Warum Lukas</a><a href="#aheadx">ahead x</a><a href="#kontakt">Anfrage</a><a href="https://www.youtube.com/@lukaswagnerai" target="_blank" rel="noopener">YouTube</a><a href="https://aheadx.at" target="_blank" rel="noopener">aheadx.at</a>
+          <a href="#keynote">Keynote</a><a href="#warum">Warum Lukas</a><a href="#aheadx">ahead x</a><a href="#kontakt">Anfrage</a><a href="https://www.youtube.com/@lukaswagnerai" target="_blank" rel="noopener">YouTube</a><a href="https://aheadx.at" target="_blank" rel="noopener">aheadx.at</a>
         </nav>
       </div>
       <div class="legal">
-        <!-- OFFEN: Urheber-Credit fuer das Theaterfoto im Hero fehlt noch. -->
+        <!-- OFFEN: Urheber-Credit fuer das Theaterfoto fehlt noch. -->
         <div class="legal-grid">
           <div><b>Anbieter</b>SHINK BIG LLC<br />7901 4th St N, Ste 300<br />St. Petersburg, FL 33702, USA</div>
           <div><b>Rechtsform &amp; Register</b>Florida Limited Liability Company<br />Reg.-Nr. L24000079118, Bundesstaat Florida<br />Vertreten durch Lukas M. Wagner</div>
           <div><b>Kontakt</b><a href="mailto:kontakt@lukaswagner.at">kontakt@lukaswagner.at</a><br /><a href="/datenschutz.html">Datenschutzerklärung</a></div>
         </div>
-        <p class="legal-foot">Unternehmensgegenstand: Keynotes, Workshops und Live-Formate zum Thema Künstliche Intelligenz. © <span id="year">2026</span> SHINK BIG LLC · Eventfotos © Nussbaumer Photography</p>
+        <p class="legal-foot">Unternehmensgegenstand: Keynotes, Workshops und Live-Formate zum Thema künstliche Intelligenz. © <span id="year">2026</span> SHINK BIG LLC · Eventfotos © Nussbaumer Photography</p>
       </div>
     </div>
   </footer>
 
-  <a class="sticky-cta" data-cta="keynote" href="mailto:kontakt@lukaswagner.at?subject=Keynote-Anfrage%20Lukas%20Wagner&amp;body=Datum%3A%0AOrt%3A%0AZielgruppe%3A%0AAnlass%3A%0A"><span class="btn btn-primary">Lukas auf die Bühne holen</span></a>
+  <a class="sticky-cta" data-cta="keynote" href="mailto:kontakt@lukaswagner.at?subject=Keynote-Anfrage%20Lukas%20Wagner&amp;body=Datum%3A%0AOrt%3A%0AZielgruppe%3A%0AAnlass%3A%0A"><span class="btn btn-primary">KI-Keynote anfragen</span></a>
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
     var t=document.querySelector('.nav-toggle'),m=document.getElementById('menu');
     if(t){t.addEventListener('click',function(){var o=m.classList.toggle('open');t.setAttribute('aria-expanded',o?'true':'false');t.setAttribute('aria-label',o?'Menü schließen':'Menü öffnen');});
       m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){m.classList.remove('open');t.setAttribute('aria-expanded','false');});});}
+    var reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    /* Sticky-CTA erscheint erst, wenn der Hero aus dem Blick ist. */
     var sticky=document.querySelector('.sticky-cta'),hero=document.querySelector('.hero');
     if(sticky&&hero&&'IntersectionObserver' in window){
       new IntersectionObserver(function(es){es.forEach(function(e){sticky.classList.toggle('show',!e.isIntersecting);});},{rootMargin:'-80px 0px 0px 0px'}).observe(hero);
     }
-    /* Signature-Sequenz startet einmalig, wenn der Abschnitt sichtbar wird. Kein Scroll-Hijacking. */
-    [].forEach.call(document.querySelectorAll('.expand'),function(ex){
-      if('IntersectionObserver' in window){
-        new IntersectionObserver(function(es,o){es.forEach(function(e){if(e.isIntersecting){ex.classList.add('lit');o.disconnect();}});},{threshold:.25}).observe(ex);
-      }
-      setTimeout(function(){ex.classList.add('lit');},6000);
-    });
-    var scr=document.querySelector('.screens');
-    if(scr){
-      var lite=function(){ if(!scr.classList.contains('lit')&&scr.getBoundingClientRect().top<window.innerHeight*.85){
-        scr.classList.add('lit'); window.removeEventListener('scroll',lite); } };
-      if('IntersectionObserver' in window){
-        new IntersectionObserver(function(es,o){es.forEach(function(e){if(e.isIntersecting){scr.classList.add('lit');o.disconnect();window.removeEventListener('scroll',lite);}});},{threshold:.2}).observe(scr);
-      }
-      /* Rueckfallebene 1: Scroll, greift auch wenn der Observer nie feuert. */
-      window.addEventListener('scroll',lite,{passive:true}); lite();
-      /* Rueckfallebene 2: Nach 6s wird der Abschnitt in jedem Fall sichtbar.
-         Lieber die Sequenz verpassen als einen leeren Abschnitt zeigen. */
-      setTimeout(function(){ scr.classList.add('lit'); },6000);
-    }
-    var reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    /* Der Scheinwerfer reagiert auf Anwesenheit. Nur transform, deshalb kein Repaint. */
-    var spot=document.querySelector('.hero-spot'),heroEl=document.querySelector('.hero');
-    if(spot&&heroEl&&!reduced&&window.matchMedia('(pointer:fine)').matches){
+    /* Zurueckhaltender Scheinwerfer, nur bei Maus und nur per transform. */
+    var spot=document.querySelector('.hero-spot'),hfig=document.querySelector('.hero-fig');
+    if(spot&&hfig&&!reduced&&window.matchMedia('(pointer:fine)').matches){
       var pend=null;
-      heroEl.addEventListener('pointermove',function(e){
+      hfig.addEventListener('pointermove',function(e){
         if(pend)return;
         pend=requestAnimationFrame(function(){
-          spot.style.transform='translate3d('+e.clientX+'px,'+(e.clientY-heroEl.getBoundingClientRect().top)+'px,0)';
+          var r=hfig.getBoundingClientRect();
+          spot.style.transform='translate3d('+(e.clientX-r.left)+'px,'+(e.clientY-r.top)+'px,0)';
           pend=null;});
       },{passive:true});
+    }
+    /* Die Haltungs-Sequenz laeuft einmal. Drei Wege, damit nie ein leerer Abschnitt entsteht. */
+    var hal=document.querySelector('.haltung');
+    if(hal){
+      var lite=function(){ if(!hal.classList.contains('lit')&&hal.getBoundingClientRect().top<window.innerHeight*.8){
+        hal.classList.add('lit'); window.removeEventListener('scroll',lite); } };
+      if('IntersectionObserver' in window){
+        new IntersectionObserver(function(es,o){es.forEach(function(e){if(e.isIntersecting){hal.classList.add('lit');o.disconnect();}});},{threshold:.2}).observe(hal);
+      }
+      window.addEventListener('scroll',lite,{passive:true}); lite();
+      setTimeout(function(){hal.classList.add('lit');},6000);
     }
     if(!reduced && 'IntersectionObserver' in window){
       var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});
       document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
     } else { document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in');}); }
-    setTimeout(function(){ if(!document.querySelector('.reveal.in')){ document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in');}); }
-      if(scr&&!scr.classList.contains('lit')&&scr.getBoundingClientRect().top<window.innerHeight){ scr.classList.add('lit'); } },2000);
+    setTimeout(function(){ if(!document.querySelector('.reveal.in')){ document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in');}); } },2000);
   </script>
 </body>
 </html>

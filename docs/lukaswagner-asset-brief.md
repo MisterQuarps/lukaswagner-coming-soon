@@ -52,27 +52,34 @@ Die DSGVO gilt dagegen ueber das Marktortprinzip, weil sich das Angebot an Mensc
 | 5 | **Anwaltliche Durchsicht der Datenschutzerklaerung**, insbesondere die Frage eines EU-Vertreters nach Art. 27 DSGVO fuer Verantwortliche ausserhalb der EU. Fuer eine reine Broschuerenseite greift moeglicherweise die Ausnahme, das sollte jemand mit Zulassung beurteilen. | `datenschutz.html` | Lukas Wagner |
 | 6 | **Steuerliche Einordnung** der Konstellation US-LLC plus Events in acht oesterreichischen Staedten (Betriebsstaette, Ort der Geschaeftsleitung). Kein Website-Thema, aber vermutlich das gewichtigere. | extern | Steuerberater |
 
-## 0b. Inszenierung: drei Showstopper
+## 0b. Regie: sechs Kapitel, drei Bildaufgaben
 
-Die Seite hat bewusst genau drei visuelle Hoehepunkte. Alles andere bleibt ruhig.
+Die Seite erzaehlt eine Geschichte in sechs Kapiteln:
+Hero, Haltung, Keynote, Warum Lukas, Beweis, Buchung. Dazu FAQ und Footer.
+Konkurrierende Erzaehlmodelle wurden entfernt: fuenf Akte, separater Ergebnisblock,
+fuenf Rollen, ahead-x-Formatfamilie und technische Randlabels gibt es nicht mehr.
 
-1. **Hero als Buehnenopening.** Kein Split-Layout. Das Theaterfoto ist ein vertikaler
-   Lichtkorridor rechts, die Typografie besitzt die linke Buehnenhaelfte. Ein Scheinwerfer-Layer
-   folgt bei feiner Zeigereingabe traege dem Cursor, ausschliesslich per `transform`,
-   deshalb ohne Repaint. Auf Touch und bei Reduced Motion steht er fest.
-2. **Der Raum oeffnet sich** (`#raum`). Fuenf Zeilen werden groesser, enger, heller und kippen
-   farblich ins Digitale. Dann Stille. Dann die Wende in Amber. Dann oeffnet sich das
-   Publikumsbild per `clip-path` aus der Mitte wie ein Vorhang.
-3. **Expansion** (`#aheadx`). Ein Lichtpunkt wird zu acht, dann zu einem Netz.
-   Bewusst abstrakt als SVG-Konstellation, **keine Landkarte**, keine erfundenen Staedte.
+**Bildaufgaben.** Jedes Foto hat genau eine Aufgabe:
 
-**Duales Lichtsystem.** Analog Heat (Amber, Buehnenrot, Papierweiss) steht fuer alles
-Menschliche. Digital Light (`--electric`, `--cyan`) erscheint ausschliesslich dort, wo es
-um Ueberlastung, Signal und Expansion geht. Nie fuer Menschen, nie als Deko.
+| Bild | Aufgabe | Ort |
+|---|---|---|
+| `lukas-stage.jpg` | Herkunft und Haltung, Person erkennbar | Hero (weiter Ausschnitt), `#warum` (enger Portraetausschnitt) |
+| `aheadx-audience.jpg` | Wirkung im Raum | Haltung, oeffnet sich wie ein Vorhang |
+| `speaker-reel-thumb.jpg` | Speaker-Kompetenz | Szene 02 Erleben |
+| `aheadx-demo.jpg` | Naehe und Anwendung | Szene 03 Handeln |
 
-**Randbeschriftung.** `SIGNAL · UEBERLASTUNG`, `ROOM 01 · ATTENTION`, `HUMAN RESPONSE`,
-`LIVE SIGNAL · EXPANSION` sitzen als Buehnenbeschriftung am rechten Rand.
-Ab 820 px ausgeblendet.
+Szene 01 traegt bewusst **kein** Foto. Es gibt nur vier echte Bilder, und Weissraum ist
+staerker als eine Wiederholung. Das Theaterfoto erscheint zweimal, im Hero weit und in
+`#warum` als enger Portraetausschnitt. Sobald ein echtes nahes Portraet vorliegt
+(Prioritaet 3), gehoert es dorthin.
+
+**Farbe.** Amber ist die emotionale Farbe, Buehnenrot die CTA-Farbe.
+Cyan erscheint an **genau einer** Stelle: der dritten Zeile der Haltungs-Sequenz.
+Danach wird die Seite wieder warm.
+
+**Typografie.** Keine Versalien mehr in grossen Ueberschriften. Versalsatz nur noch fuer
+Kicker, Hero-Microline, Zahlenlabels und kleine Metadaten. Kursiv markiert die
+menschlichen Wendepunkte.
 
 ## 1b. Sprachversionen
 
