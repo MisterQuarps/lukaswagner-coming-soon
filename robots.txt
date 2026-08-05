@@ -1,4 +1,4 @@
-# Coming-Soon-Phase: noch nicht indexieren lassen.
-# Wenn die echte Seite live geht, diese Datei anpassen/entfernen.
 User-agent: *
-Disallow: /
+Allow: /
+
+Sitemap: https://lukaswagner.at/sitemap.xml

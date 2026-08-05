@@ -8,19 +8,27 @@ An jeder späteren Einfügestelle liegt zusätzlich ein kurzer HTML-Kommentar.
 
 ---
 
-## 1. Launch-Blocker
+## 1. Status Livegang
 
-Diese Punkte müssen erledigt sein, bevor `noindex, nofollow` und `Disallow: /` entfernt werden.
+Die Seite ist seit 05.08.2026 live und indexierbar. `noindex, nofollow` und `Disallow: /` sind entfernt.
 
-| # | Blocker | Wo | Verantwortlich |
+Betreiberin ist **SHINK BIG LLC** (Florida, Reg.-Nr. L24000079118), Lukas Wagner hat keinen festen
+Wohnsitz und haelt sich hoechstens vier Monate im Jahr in Oesterreich auf. Die oesterreichischen
+Offenlegungspflichten nach ECG und MedienG knuepfen an Niederlassung beziehungsweise Sitz oder
+Wohnsitz an und greifen in dieser Konstellation sehr wahrscheinlich nicht. Im Footer steht deshalb
+eine freiwillige Anbieterkennzeichnung, nicht ein Impressum nach oesterreichischem Recht.
+Die DSGVO gilt dagegen ueber das Marktortprinzip, weil sich das Angebot an Menschen im EWR richtet.
+
+### Noch offen
+
+| # | Punkt | Wo | Verantwortlich |
 |---|---|---|---|
-| 1 | **Impressum** vollständig ergänzen (Name, Anschrift, ggf. UID/Firmenbuch). In Österreich Pflicht. | `index.html`, Footer `.legal` | Lukas Wagner |
-| 2 | **Urheber-Credit für das Theaterfoto** im Hero. Aktuell ist nur „Eventfotos © Nussbaumer Photography" genannt, das Theaterfoto ist davon nicht abgedeckt. | Footer `.legal` | Lukas Wagner |
-| 3 | **Claim „500+ Auftritte auf Bühnen"** bestätigen oder entfernen. Einzige Zahl der Seite ohne öffentlichen Beleg. | Hero `.hero-trust` | Lukas Wagner |
-| 4 | **Biografische Angaben** bestätigen (100+ Veranstaltungen, Förderpreis 2017, TEDxSalzburg Speaker-Coach). | `#warum`, `.origin-facts` | Lukas Wagner |
-| 5 | **Testimonials freigeben**: Wortlaut, Rollenbezeichnung und Einverständnis der vier zitierten Personen. | `#stimmen` | Lukas Wagner |
-
----
+| 1 | **Urheber-Credit fuer das Theaterfoto** im Hero. Der bestehende Credit deckt nur die Eventfotos ab. | Footer `.legal-foot` | Lukas Wagner |
+| 2 | **Claim "500+ Auftritte auf Buehnen"** bestaetigen oder entfernen. Einzige Zahl der Seite ohne oeffentlichen Beleg. | Hero `.hero-trust` | Lukas Wagner |
+| 3 | **Biografische Angaben** bestaetigen (100+ Veranstaltungen, Foerderpreis 2017, TEDxSalzburg). | `#warum` | Lukas Wagner |
+| 4 | **Testimonials**: Wortlaut und Einverstaendnis der vier Personen. Die Zitate waren bereits vor diesem Livegang oeffentlich, das Thema ist damit nicht neu, aber weiter offen. | `#stimmen` | Lukas Wagner |
+| 5 | **Anwaltliche Durchsicht der Datenschutzerklaerung**, insbesondere die Frage eines EU-Vertreters nach Art. 27 DSGVO fuer Verantwortliche ausserhalb der EU. Fuer eine reine Broschuerenseite greift moeglicherweise die Ausnahme, das sollte jemand mit Zulassung beurteilen. | `datenschutz.html` | Lukas Wagner |
+| 6 | **Steuerliche Einordnung** der Konstellation US-LLC plus Events in acht oesterreichischen Staedten (Betriebsstaette, Ort der Geschaeftsleitung). Kein Website-Thema, aber vermutlich das gewichtigere. | extern | Steuerberater |
 
 ## 2. Fehlende Medien nach Priorität
 
@@ -144,9 +152,10 @@ Entweder belegen oder streichen.
 7. Nutzungsrecht der Partnerlogos für lukaswagner.at klären, MeinBezirk fehlt als Logo
 8. Speaker-Reel produzieren (Priorität 1)
 9. Live-Foto vor Publikum beschaffen (Priorität 2)
-10. Nach Livegang: `noindex, nofollow` in `index.html` und `de/index.html` entfernen, `Disallow: /` in `robots.txt` entfernen
-11. Optional: Google Fonts selbst hosten, spart einen Fremd-Roundtrip und vermeidet die DSGVO-Diskussion
+10. ~~Livegang: `noindex` und `Disallow: /` entfernen~~ erledigt am 05.08.2026
+11. ~~Google Fonts selbst hosten~~ erledigt, Latin-Subsets liegen unter `assets/fonts/`
 12. Optional: EN-Version unter `/en/`
+13. Nach dem Livegang: Google Search Console einrichten und `sitemap.xml` einreichen
 
 ---
 

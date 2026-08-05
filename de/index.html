@@ -7,13 +7,6 @@
   <title>Lukas Wagner | KI-Keynote-Speaker für Unternehmen, Städte &amp; Regionen</title>
   <meta name="description" content="KI-Keynote-Speaker Lukas Wagner macht Künstliche Intelligenz verständlich und live erlebbar: Keynotes, Workshops und ahead x Live-Formate für Unternehmen, Städte und Regionen." />
 
-  <!-- ====================================================================
-       DRAFT: noindex/nofollow bleibt im Entwurf. Vor Livegang entfernen
-       und in robots.txt "Disallow: /" entfernen (sobald Impressum final).
-       Offene Launch-Blocker siehe docs/lukaswagner-asset-brief.md
-       ==================================================================== -->
-  <meta name="robots" content="noindex, nofollow" />
-
   <link rel="canonical" href="https://lukaswagner.at/" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Lukas Wagner | KI-Keynote-Speaker" />
@@ -289,6 +282,11 @@
     .foot-links a{display:inline-flex;align-items:center;min-height:44px}
     .foot-links a:hover{color:var(--fg)}
     .legal{color:var(--muted);font-size:.8rem;line-height:1.7;padding-top:1.2rem;margin-top:1.2rem;border-top:1px solid var(--line-soft)}
+    .legal-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.3rem clamp(1.5rem,4vw,3rem)}
+    .legal-grid b{display:block;color:var(--fg-dim);font-weight:600;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:.35rem}
+    .legal-grid a{text-decoration:underline;text-underline-offset:3px}
+    .legal-grid a:hover{color:var(--fg)}
+    .legal-foot{margin-top:1.3rem;padding-top:1rem;border-top:1px solid var(--line-soft)}
 
     .sticky-cta{display:none}
     .js .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
@@ -340,6 +338,7 @@
       .case-steps li{padding:1.1rem 0 .3rem}
       .origin-facts{grid-template-columns:1fr;gap:.7rem}
       .logo-row{grid-template-columns:repeat(2,1fr)}
+      .legal-grid{grid-template-columns:1fr;gap:1.1rem}
       .case-stats{gap:1.4rem}
       .case-foot{align-items:flex-start}
       .fmt-meta div{grid-template-columns:1fr;gap:.15rem}
@@ -674,9 +673,13 @@
         </nav>
       </div>
       <div class="legal">
-        <!-- LAUNCH-BLOCKER 1: Impressum (in Oesterreich Pflicht): vollstaendiger Name, Anschrift, ggf. UID/Firmenbuch.
-             LAUNCH-BLOCKER 2: Urheber-Credit fuer das Theaterfoto im Hero fehlt noch. -->
-        Impressum &amp; Kontakt: kontakt@lukaswagner.at · © <span id="year">2026</span> Lukas Wagner · Eventfotos © Nussbaumer Photography
+        <!-- OFFEN: Urheber-Credit fuer das Theaterfoto im Hero fehlt noch. -->
+        <div class="legal-grid">
+          <div><b>Anbieter</b>SHINK BIG LLC<br />7901 4th St N, Ste 300<br />St. Petersburg, FL 33702, USA</div>
+          <div><b>Rechtsform &amp; Register</b>Florida Limited Liability Company<br />Reg.-Nr. L24000079118, Bundesstaat Florida<br />Vertreten durch Lukas M. Wagner</div>
+          <div><b>Kontakt</b><a href="mailto:kontakt@lukaswagner.at">kontakt@lukaswagner.at</a><br /><a href="/datenschutz.html">Datenschutzerklärung</a></div>
+        </div>
+        <p class="legal-foot">Unternehmensgegenstand: Keynotes, Workshops und Live-Formate zum Thema Künstliche Intelligenz. © <span id="year">2026</span> SHINK BIG LLC · Eventfotos © Nussbaumer Photography</p>
       </div>
     </div>
   </footer>

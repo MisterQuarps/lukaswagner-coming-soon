@@ -3,21 +3,39 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Seite nicht gefunden — Lukas Wagner</title>
+  <title>Seite nicht gefunden | Lukas Wagner</title>
   <meta name="robots" content="noindex" />
+  <meta name="theme-color" content="#141110" />
+  <link rel="icon" href="data:image/svg+xml,&lt;svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'&gt;&lt;rect width='100' height='100' rx='22' fill='%23141110'/&gt;&lt;text x='50' y='68' font-size='52' font-family='Georgia' font-weight='bold' text-anchor='middle' fill='%23e2a45c'&gt;LW&lt;/text&gt;&lt;/svg&gt;" />
   <style>
+    @font-face{font-family:'Fraunces';font-style:normal;font-weight:400 600;font-display:swap;
+      src:url('/assets/fonts/fraunces-normal-latin.woff2') format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+    @font-face{font-family:'Fraunces';font-style:italic;font-weight:400 600;font-display:swap;
+      src:url('/assets/fonts/fraunces-italic-latin.woff2') format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+    @font-face{font-family:'Inter';font-style:normal;font-weight:400 600;font-display:swap;
+      src:url('/assets/fonts/inter-normal-latin.woff2') format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+    :root{ --ink:#141110; --fg:#f3ede4; --fg-dim:#cfc6b8; --amber:#e2a45c; --red:#b8352c;
+      --serif:"Fraunces","Georgia",serif; --sans:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; }
     *{box-sizing:border-box;margin:0;padding:0}
-    body{font-family:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:#0a0c11;color:#f5f6f8;min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:2rem}
-    .code{font-family:"Space Grotesk",system-ui,sans-serif;font-size:clamp(4rem,16vw,8rem);font-weight:700;line-height:1;background:linear-gradient(120deg,#8aa0ff,#5be0c0);-webkit-background-clip:text;background-clip:text;color:transparent}
-    p{color:#c9cfda;margin:1rem 0 2rem;font-size:1.1rem}
-    a{display:inline-flex;align-items:center;gap:.5rem;font-weight:600;border-radius:999px;padding:.75rem 1.5rem;background:linear-gradient(120deg,#8aa0ff,#5be0c0);color:#08231e;text-decoration:none;transition:transform .2s}
-    a:hover{transform:translateY(-2px)}
+    body{font-family:var(--sans);background:var(--ink);color:var(--fg);min-height:100vh;display:flex;align-items:center;justify-content:center;padding:2rem;position:relative;overflow:hidden;-webkit-font-smoothing:antialiased}
+    .glow{position:absolute;inset:auto -10% -40% -10%;height:70%;background:radial-gradient(55% 100% at 50% 100%,rgba(226,164,92,.14),transparent 70%);pointer-events:none}
+    main{position:relative;max-width:34rem;text-align:center}
+    .kicker{font-size:.74rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--amber);margin-bottom:1.3rem}
+    h1{font-family:var(--serif);font-weight:500;font-size:clamp(2.1rem,6.5vw,3.4rem);line-height:1.06;letter-spacing:-.01em}
+    h1 em{font-style:italic;color:var(--amber);font-weight:400}
+    p.sub{color:var(--fg-dim);font-size:1.04rem;margin:1.1rem 0 2rem}
+    a{display:inline-flex;align-items:center;justify-content:center;min-height:44px;gap:.5rem;font-weight:600;font-size:.95rem;border-radius:8px;padding:.85rem 1.5rem;background:var(--red);color:#fff;text-decoration:none;transition:transform .18s ease,background .18s ease}
+    a:hover{background:#a12d24;transform:translateY(-2px)}
+    :focus-visible{outline:2px solid var(--amber);outline-offset:3px;border-radius:3px}
+    @media (prefers-reduced-motion:reduce){a{transition:none}a:hover{transform:none}}
   </style>
 </head>
 <body>
+  <div class="glow" aria-hidden="true"></div>
   <main>
-    <div class="code">404</div>
-    <p>Diese Seite gibt es (noch) nicht.</p>
+    <p class="kicker">Fehler 404</p>
+    <h1>Diese Seite steht <em>nicht auf dem Programm</em>.</h1>
+    <p class="sub">Der Link führt ins Leere. Zurück zur Startseite, dort geht es weiter.</p>
     <a href="/">Zur Startseite</a>
   </main>
 </body>
