@@ -15,7 +15,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="de_AT" />
   <meta property="og:title" content="Lukas Wagner | KI-Keynote-Speaker" />
-  <meta property="og:description" content="Künstliche Intelligenz verstehen. Live erleben. Ins Handeln kommen." />
+  <meta property="og:description" content="Je digitaler die Welt wird, desto mehr zählt der Raum, in dem Menschen zusammenkommen." />
   <meta property="og:url" content="https://lukaswagner.at/" />
   <meta property="og:image" content="https://lukaswagner.at/assets/og-image.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
@@ -240,7 +240,9 @@
     .case-stats .cs .n{font-family:var(--serif);font-weight:500;font-size:2.1rem;color:var(--fg);line-height:1.1}
     .case-stats .cs .l{color:var(--muted);font-size:.82rem;max-width:12rem}
     .case-cta{display:flex;gap:1.4rem;align-items:center;flex-wrap:wrap}
-    .case-src{margin-top:1rem;color:var(--muted);font-size:.78rem}
+    .case-close{margin-top:clamp(1.6rem,3vw,2.4rem);font-family:var(--serif);font-style:italic;
+      color:var(--amber);font-size:clamp(1.25rem,2.6vw,1.8rem);line-height:1.25;max-width:34rem}
+    .case-src{margin-top:1.1rem;color:var(--muted);font-size:.78rem}
 
     /* ============ STIMMEN (paper) ============ */
     .quote-hero{border-top:2px solid var(--ink-text);padding-top:clamp(1.6rem,3.5vw,2.4rem)}
@@ -289,6 +291,46 @@
     .legal-grid a{text-decoration:underline;text-underline-offset:3px}
     .legal-grid a:hover{color:var(--fg)}
     .legal-foot{margin-top:1.3rem;padding-top:1rem;border-top:1px solid var(--line-soft)}
+
+    /* ============ SIGNATURE-MOMENT: ANOTHER SCREEN ============
+       Die Zeilen werden heller, enger und schneller. Dann Stille, dann die Wende.
+       Ohne Reduced Motion traegt allein Helligkeit und Abstand die Aussage. */
+    .screens{padding:clamp(3.5rem,8vw,7rem) 0 clamp(3rem,6vw,5rem);overflow:hidden}
+    .screens-stack{max-width:44rem}
+    .scr{font-family:var(--serif);font-weight:400;line-height:1.08;
+      font-size:clamp(1.55rem,4.4vw,3rem);letter-spacing:-.01em}
+    .scr-1{color:#544d46;margin-bottom:1.5rem}
+    .scr-2{color:#6b6259;margin-bottom:1.15rem}
+    .scr-3{color:#867d73;margin-bottom:.85rem}
+    .scr-4{color:#a2998d;margin-bottom:.6rem}
+    .scr-5{color:var(--fg);margin-bottom:0}
+    .scr-pause{height:clamp(3rem,9vw,7rem)}
+    .scr-turn{font-family:var(--serif);font-style:italic;color:var(--amber);
+      font-size:clamp(1.6rem,4.4vw,3rem);line-height:1.18;max-width:32rem}
+    .screens-fig{margin:clamp(2.4rem,5vw,4rem) 0 0;border-radius:14px;overflow:hidden;position:relative}
+    .screens-fig img{width:100%;height:auto;aspect-ratio:21/9;object-fit:cover;object-position:50% 42%}
+    .screens-fig::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(20,17,16,.55))}
+    .scr-close{margin-top:clamp(2rem,4vw,3rem);font-family:var(--serif);font-weight:400;
+      font-size:clamp(1.5rem,3.6vw,2.5rem);line-height:1.2;max-width:36rem}
+    .scr-close em{font-style:italic;color:var(--amber)}
+    .scr-lukas{margin-top:1.1rem;color:var(--fg-dim);font-size:clamp(1rem,1.9vw,1.15rem);max-width:32rem}
+    @media (prefers-reduced-motion:no-preference){
+      .js .screens .scr,.js .screens .scr-turn{opacity:0;transform:translateY(26px)}
+      .js .screens.lit .scr,.js .screens.lit .scr-turn{animation:scrIn .5s cubic-bezier(.2,.7,.2,1) forwards}
+      /* Abstaende zwischen den Einsaetzen werden kuerzer: der Takt zieht an */
+      .js .screens.lit .scr-1{animation-delay:0s}
+      .js .screens.lit .scr-2{animation-delay:.30s}
+      .js .screens.lit .scr-3{animation-delay:.54s}
+      .js .screens.lit .scr-4{animation-delay:.72s}
+      .js .screens.lit .scr-5{animation-delay:.84s}
+      /* Stille, dann die Wende */
+      .js .screens.lit .scr-turn{animation-delay:1.6s;animation-duration:.8s}
+      @keyframes scrIn{to{opacity:1;transform:none}}
+    }
+    @media (max-width:560px){
+      .scr-1{margin-bottom:1rem}.scr-2{margin-bottom:.8rem}.scr-3{margin-bottom:.6rem}.scr-4{margin-bottom:.45rem}
+      .screens-fig img{aspect-ratio:16/10}
+    }
 
     .sticky-cta{display:none}
     .js .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
@@ -377,14 +419,13 @@
       <div class="hero-glow" aria-hidden="true"></div>
       <div class="hero-inner">
         <div class="hero-copy">
-          <p class="kicker">KI-Keynote-Speaker · Gründer von ahead x</p>
-          <p class="hero-lead">Künstliche Intelligenz</p>
+          <p class="kicker">KI-Keynote-Speaker · Gründer von ahead x · Formatentwickler</p>
           <h1>
-            <span class="hl">verstehen<span class="stop">.</span></span>
-            <span class="hl"><em>erleben</em><span class="stop">.</span></span>
-            <span class="hl">handeln<span class="stop">.</span></span>
+            <span class="hl">Zukunft</span>
+            <span class="hl">entsteht</span>
+            <span class="hl"><em>im Raum</em><span class="stop">.</span></span>
           </h1>
-          <p class="sub">Keynotes und Live-Formate, die aus einem abstrakten Thema einen gemeinsamen Moment machen. Für Unternehmen, Städte und Regionen.</p>
+          <p class="sub">Lukas Wagner holt Künstliche Intelligenz aus dem Bildschirm auf die Bühne. Damit Unternehmen, Städte und Regionen gemeinsam verstehen, was als Nächstes kommt.</p>
           <div class="hero-cta">
             <a class="btn btn-primary" data-cta="keynote" href="mailto:kontakt@lukaswagner.at?subject=Keynote-Anfrage%20Lukas%20Wagner&amp;body=Datum%3A%0AOrt%3A%0AZielgruppe%3A%0AAnlass%3A%0A">Keynote anfragen</a>
             <a class="btn btn-ghost" data-cta="speaker-reel" href="https://www.youtube.com/@lukaswagnerai" target="_blank" rel="noopener">Auftritte auf YouTube ansehen&nbsp;↗</a>
@@ -429,12 +470,36 @@
       </div>
     </section>
 
+    <!-- SIGNATURE: Another screen. Die Zeilen ziehen an, dann Stille, dann die Wende. -->
+    <section class="screens" aria-label="Warum echte Räume wichtiger werden">
+      <div class="wrap">
+        <div class="screens-stack">
+          <p class="scr scr-1">Mehr Werkzeuge.</p>
+          <p class="scr scr-2">Mehr Inhalte.</p>
+          <p class="scr scr-3">Mehr Feeds.</p>
+          <p class="scr scr-4">Mehr Antworten.</p>
+          <p class="scr scr-5">Mehr Bildschirme.</p>
+          <div class="scr-pause" aria-hidden="true"></div>
+          <p class="scr-turn">Und immer weniger Raum, um gemeinsam zu denken.</p>
+        </div>
+        <figure class="screens-fig reveal">
+          <img src="/assets/aheadx-audience.jpg"
+               srcset="/assets/aheadx-audience-900.jpg 900w, /assets/aheadx-audience.jpg 1500w"
+               sizes="(max-width:1020px) 92vw, 1120px"
+               width="1500" height="1000" loading="lazy"
+               alt="Voller Saal bei einem ahead x Format, Menschen hören gemeinsam zu" />
+        </figure>
+        <p class="scr-close reveal">Die Zukunft braucht keinen weiteren Feed. <em>Sie braucht einen Raum.</em></p>
+        <p class="scr-lukas reveal">Lukas Wagner bringt Künstliche Intelligenz in genau diesen Raum.</p>
+      </div>
+    </section>
+
     <section id="erlebnis" aria-label="Was im Raum passiert">
       <div class="wrap">
         <div class="sec-head reveal">
           <p class="kicker">Was im Raum passiert</p>
           <h2>Keine Vorlesung über KI. <br /> Ein Moment mit ihr.</h2>
-          <p class="lead-in">Eine Keynote von Lukas Wagner ist in fünf Akten gebaut, wie ein guter Abend im Theater.</p>
+          <p class="lead-in">KI liefert Antworten. Ein Raum schafft Verständnis. Eine Keynote von Lukas Wagner ist in fünf Akten gebaut, wie ein guter Abend im Theater.</p>
         </div>
         <ol class="acts">
           <li class="act reveal"><span class="no">Akt 01</span><h3>Ankommen</h3><p>Menschen kommen mit Fragen, Halbwissen und Skepsis. Genau richtig.</p></li>
@@ -443,16 +508,6 @@
           <li class="act reveal"><span class="no">Akt 04</span><h3>Einordnen</h3><p>Chancen und Grenzen, ohne Alarmismus und ohne Verklärung.</p></li>
           <li class="act reveal"><span class="no">Akt 05</span><h3>Handeln</h3><p>Aus dem Moment wird Richtung: konkrete nächste Schritte.</p></li>
         </ol>
-        <div class="stage-wide reveal">
-          <figure>
-            <img src="/assets/aheadx-audience.jpg"
-                 srcset="/assets/aheadx-audience-900.jpg 900w, /assets/aheadx-audience.jpg 1500w"
-                 sizes="(max-width:1020px) 92vw, 1120px"
-                 width="1500" height="1000" loading="lazy"
-                 alt="Publikum verfolgt gespannt eine Fragerunde bei einem ahead x Workshop, Lukas Wagner steht an der Leinwand" />
-            <figcaption>ahead x live: Aus Publikumsfragen werden Demos</figcaption>
-          </figure>
-        </div>
       </div>
     </section>
 
@@ -541,13 +596,13 @@
       <div class="wrap">
         <div class="sec-head reveal" style="max-width:none">
           <p class="kicker">Warum Lukas</p>
-          <h2 class="why-open">Bevor Lukas Wagner <em>künstliche Intelligenz</em> auf die Bühne brachte, brachte er <em>Sprache, Literatur und neue Ideen</em> dorthin.</h2>
+          <h2 class="why-open">Bevor <em>Künstliche Intelligenz</em> sein Thema wurde, war <em>menschliche Aufmerksamkeit</em> längst sein Handwerk.</h2>
         </div>
         <div class="layers">
-          <div class="layer reveal"><h3>Der Speaker</h3><p>Von der Slam-Bühne zur Konferenzbühne. Hält Aufmerksamkeit, ohne laut zu werden.</p></div>
-          <div class="layer reveal"><h3>Der Übersetzer</h3><p>Komplexe Themen, verdichtet in Sätze, die hängen bleiben.</p></div>
-          <div class="layer reveal"><h3>Der Formatentwickler</h3><p>Denkt in Erlebnissen und Dramaturgie, nicht in Folien.</p></div>
-          <div class="layer reveal"><h3>Der Gründer</h3><p>Hat mit ahead x selbst gebaut, worüber andere nur sprechen.</p></div>
+          <div class="layer reveal"><h3>Der Speaker</h3><p>Jahre auf Bühnen, auf denen es nur funktioniert, wenn der Raum mitgeht.</p></div>
+          <div class="layer reveal"><h3>Der Übersetzer</h3><p>Komplexe Themen, verdichtet in Sätze, die im Raum hängen bleiben.</p></div>
+          <div class="layer reveal"><h3>Der Formatentwickler</h3><p>Baut Abende, nicht Folien. Dramaturgie, Beteiligung, Atmosphäre.</p></div>
+          <div class="layer reveal"><h3>Der Gründer</h3><p>Mit ahead x lokale Räume gebaut, in denen Menschen KI gemeinsam verstehen.</p></div>
         </div>
         <div class="origin reveal">
           <div class="origin-facts">
@@ -557,7 +612,7 @@
             <span><b>2017</b> Förderpreis für Kunst und Kultur</span>
             <span><b>TEDxSalzburg</b> Speaker-Coach</span>
           </div>
-          <p class="why-close">Technologie verändert sich. Die Kunst, Menschen zu erreichen, bleibt.</p>
+          <p class="why-close">Technologie verändert sich. Das Bedürfnis, gemeinsam zu verstehen, nicht.</p>
         </div>
       </div>
     </section>
@@ -566,14 +621,14 @@
       <div class="wrap">
         <div class="sec-head reveal">
           <p class="kicker">Case Study</p>
-          <h2>ahead x: das eigene Format als Beweis.</h2>
-          <p class="lead-in">Lukas spricht nicht nur darüber, wie man Menschen für KI erreicht. Er hat das Format dafür selbst gebaut.</p>
+          <h2>ahead x: Räume, in denen eine Region gemeinsam versteht.</h2>
+          <p class="lead-in">Lukas spricht nicht nur darüber, wie man Menschen für KI erreicht. Er baut die Räume dafür.</p>
         </div>
         <ol class="case-steps">
-          <li class="reveal"><h3>Das Problem</h3><p>KI-Wissen bleibt in der Expert:innenblase. Regionen und Betriebe schauen zu.</p></li>
-          <li class="reveal"><h3>Die Idee</h3><p>Befähigung als Live-Erlebnis vor Ort statt als Webinar.</p></li>
-          <li class="reveal"><h3>Das Format</h3><p>Kuratierte Events mit Partnern aus Medien, Wirtschaft und Bildung.</p></li>
-          <li class="reveal"><h3>Heute</h3><p>Eine wachsende Plattform mit Publikum von 16 bis 80.</p></li>
+          <li class="reveal"><h3>Ein Raum</h3><p>Ein Abend, ein voller Saal, ein Thema. Der Anfang.</p></li>
+          <li class="reveal"><h3>Eine Stadt</h3><p>Lokale Partner aus Medien, Wirtschaft und Bildung machen daraus ein Stadtformat.</p></li>
+          <li class="reveal"><h3>Acht Städte</h3><p>Dasselbe Prinzip, andere Region. Das Format reist, die Verbindung bleibt lokal.</p></li>
+          <li class="reveal"><h3>Eine Plattform</h3><p>Aus einzelnen Abenden wird eine wachsende Plattform mit Publikum von 16 bis 80.</p></li>
         </ol>
         <!-- Zahlen belegt auf aheadx.at, Stand 30.04.2026. -->
         <div class="case-foot reveal">
@@ -587,6 +642,7 @@
             <a class="tlink" data-cta="aheadx" href="mailto:kontakt@lukaswagner.at?subject=Regionalformat%20%2F%20ahead%20x%20anfragen&amp;body=Stadt%2FRegion%3A%0AZeitraum%3A%0AZielgruppe%3A%0AAnlass%3A%0A">Partner werden →</a>
           </div>
         </div>
+        <p class="case-close reveal">KI ist global. Verständnis beginnt lokal.</p>
         <p class="case-src reveal">Zahlen: ahead x, Stand April 2026</p>
       </div>
     </section>
@@ -623,7 +679,7 @@
       <div class="book-glow" aria-hidden="true"></div>
       <div class="wrap book-inner">
         <p class="kicker reveal" style="justify-content:center">Anfrage</p>
-        <h2 class="reveal">Eine Bühne, ein Abend, <br /> ein Thema: KI.</h2>
+        <h2 class="reveal">Bringt die Zukunft <br /> in euren Raum.</h2>
         <p class="sub reveal">Schickt mir Datum, Ort, Zielgruppe und Anlass. Ihr bekommt eine ehrliche Einschätzung, welches Format passt. Und welches nicht.</p>
         <div class="hero-cta reveal">
           <a class="btn btn-primary" data-cta="keynote" href="mailto:kontakt@lukaswagner.at?subject=Keynote-Anfrage%20Lukas%20Wagner&amp;body=Datum%3A%0AOrt%3A%0AZielgruppe%3A%0AAnlass%3A%0A">Keynote anfragen</a>
@@ -680,12 +736,27 @@
     if(sticky&&hero&&'IntersectionObserver' in window){
       new IntersectionObserver(function(es){es.forEach(function(e){sticky.classList.toggle('show',!e.isIntersecting);});},{rootMargin:'-80px 0px 0px 0px'}).observe(hero);
     }
+    /* Signature-Sequenz startet einmalig, wenn der Abschnitt sichtbar wird. Kein Scroll-Hijacking. */
+    var scr=document.querySelector('.screens');
+    if(scr){
+      var lite=function(){ if(!scr.classList.contains('lit')&&scr.getBoundingClientRect().top<window.innerHeight*.85){
+        scr.classList.add('lit'); window.removeEventListener('scroll',lite); } };
+      if('IntersectionObserver' in window){
+        new IntersectionObserver(function(es,o){es.forEach(function(e){if(e.isIntersecting){scr.classList.add('lit');o.disconnect();window.removeEventListener('scroll',lite);}});},{threshold:.2}).observe(scr);
+      }
+      /* Rueckfallebene 1: Scroll, greift auch wenn der Observer nie feuert. */
+      window.addEventListener('scroll',lite,{passive:true}); lite();
+      /* Rueckfallebene 2: Nach 6s wird der Abschnitt in jedem Fall sichtbar.
+         Lieber die Sequenz verpassen als einen leeren Abschnitt zeigen. */
+      setTimeout(function(){ scr.classList.add('lit'); },6000);
+    }
     var reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     if(!reduced && 'IntersectionObserver' in window){
       var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});
       document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
     } else { document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in');}); }
-    setTimeout(function(){ if(!document.querySelector('.reveal.in')){ document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in');}); } },2000);
+    setTimeout(function(){ if(!document.querySelector('.reveal.in')){ document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in');}); }
+      if(scr&&!scr.classList.contains('lit')&&scr.getBoundingClientRect().top<window.innerHeight){ scr.classList.add('lit'); } },2000);
   </script>
 </body>
 </html>

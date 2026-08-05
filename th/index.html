@@ -15,7 +15,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="th_TH" />
   <meta property="og:title" content="Lukas Wagner | วิทยากรคีย์โน้ต AI" />
-  <meta property="og:description" content="เข้าใจปัญญาประดิษฐ์ สัมผัสมันจริง แล้วลงมือทำ" />
+  <meta property="og:description" content="ยิ่งโลกเป็นดิจิทัลมากเท่าไร พื้นที่จริงที่ผู้คนมาพบกันยิ่งมีค่ามากขึ้นเท่านั้น" />
   <meta property="og:url" content="https://lukaswagner.at/th/" />
   <meta property="og:image" content="https://lukaswagner.at/assets/og-image.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
@@ -43,9 +43,9 @@
 
   <style>
     @font-face{font-family:'Noto Sans Thai';font-style:normal;font-weight:400 600;font-display:swap;
-      src:url('/assets/fonts/noto-sans-thai-thai.woff2') format('woff2');unicode-range:U+02D7, U+0303, U+0331, U+0E01-0E5B, U+200C-200D, U+25CC}
+      src:url('/assets/fonts/noto-sans-thai-thai.woff2') format('woff2');unicode-range:U+0E01-0E5B, U+200C-200D, U+25CC}
     @font-face{font-family:'Noto Serif Thai';font-style:normal;font-weight:400 600;font-display:swap;
-      src:url('/assets/fonts/noto-serif-thai-thai.woff2') format('woff2');unicode-range:U+02D7, U+0303, U+0331, U+0E01-0E5B, U+200C-200D, U+25CC}
+      src:url('/assets/fonts/noto-serif-thai-thai.woff2') format('woff2');unicode-range:U+0E01-0E5B, U+200C-200D, U+25CC}
     @font-face{font-family:'Fraunces';font-style:italic;font-weight:400 600;font-display:swap;
       src:url('/assets/fonts/fraunces-italic-latin.woff2') format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
     @font-face{font-family:'Fraunces';font-style:italic;font-weight:400 600;font-display:swap;
@@ -244,7 +244,9 @@
     .case-stats .cs .n{font-family:var(--serif);font-weight:500;font-size:2.1rem;color:var(--fg);line-height:1.1}
     .case-stats .cs .l{color:var(--muted);font-size:.82rem;max-width:12rem}
     .case-cta{display:flex;gap:1.4rem;align-items:center;flex-wrap:wrap}
-    .case-src{margin-top:1rem;color:var(--muted);font-size:.78rem}
+    .case-close{margin-top:clamp(1.6rem,3vw,2.4rem);font-family:var(--serif);font-style:italic;
+      color:var(--amber);font-size:clamp(1.25rem,2.6vw,1.8rem);line-height:1.25;max-width:34rem}
+    .case-src{margin-top:1.1rem;color:var(--muted);font-size:.78rem}
 
     /* ============ STIMMEN (paper) ============ */
     .quote-hero{border-top:2px solid var(--ink-text);padding-top:clamp(1.6rem,3.5vw,2.4rem)}
@@ -293,6 +295,46 @@
     .legal-grid a{text-decoration:underline;text-underline-offset:3px}
     .legal-grid a:hover{color:var(--fg)}
     .legal-foot{margin-top:1.3rem;padding-top:1rem;border-top:1px solid var(--line-soft)}
+
+    /* ============ SIGNATURE-MOMENT: ANOTHER SCREEN ============
+       Die Zeilen werden heller, enger und schneller. Dann Stille, dann die Wende.
+       Ohne Reduced Motion traegt allein Helligkeit und Abstand die Aussage. */
+    .screens{padding:clamp(3.5rem,8vw,7rem) 0 clamp(3rem,6vw,5rem);overflow:hidden}
+    .screens-stack{max-width:44rem}
+    .scr{font-family:var(--serif);font-weight:400;line-height:1.08;
+      font-size:clamp(1.55rem,4.4vw,3rem);letter-spacing:-.01em}
+    .scr-1{color:#544d46;margin-bottom:1.5rem}
+    .scr-2{color:#6b6259;margin-bottom:1.15rem}
+    .scr-3{color:#867d73;margin-bottom:.85rem}
+    .scr-4{color:#a2998d;margin-bottom:.6rem}
+    .scr-5{color:var(--fg);margin-bottom:0}
+    .scr-pause{height:clamp(3rem,9vw,7rem)}
+    .scr-turn{font-family:var(--serif);font-style:italic;color:var(--amber);
+      font-size:clamp(1.6rem,4.4vw,3rem);line-height:1.18;max-width:32rem}
+    .screens-fig{margin:clamp(2.4rem,5vw,4rem) 0 0;border-radius:14px;overflow:hidden;position:relative}
+    .screens-fig img{width:100%;height:auto;aspect-ratio:21/9;object-fit:cover;object-position:50% 42%}
+    .screens-fig::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(20,17,16,.55))}
+    .scr-close{margin-top:clamp(2rem,4vw,3rem);font-family:var(--serif);font-weight:400;
+      font-size:clamp(1.5rem,3.6vw,2.5rem);line-height:1.2;max-width:36rem}
+    .scr-close em{font-style:italic;color:var(--amber)}
+    .scr-lukas{margin-top:1.1rem;color:var(--fg-dim);font-size:clamp(1rem,1.9vw,1.15rem);max-width:32rem}
+    @media (prefers-reduced-motion:no-preference){
+      .js .screens .scr,.js .screens .scr-turn{opacity:0;transform:translateY(26px)}
+      .js .screens.lit .scr,.js .screens.lit .scr-turn{animation:scrIn .5s cubic-bezier(.2,.7,.2,1) forwards}
+      /* Abstaende zwischen den Einsaetzen werden kuerzer: der Takt zieht an */
+      .js .screens.lit .scr-1{animation-delay:0s}
+      .js .screens.lit .scr-2{animation-delay:.30s}
+      .js .screens.lit .scr-3{animation-delay:.54s}
+      .js .screens.lit .scr-4{animation-delay:.72s}
+      .js .screens.lit .scr-5{animation-delay:.84s}
+      /* Stille, dann die Wende */
+      .js .screens.lit .scr-turn{animation-delay:1.6s;animation-duration:.8s}
+      @keyframes scrIn{to{opacity:1;transform:none}}
+    }
+    @media (max-width:560px){
+      .scr-1{margin-bottom:1rem}.scr-2{margin-bottom:.8rem}.scr-3{margin-bottom:.6rem}.scr-4{margin-bottom:.45rem}
+      .screens-fig img{aspect-ratio:16/10}
+    }
 
     .sticky-cta{display:none}
     .js .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
@@ -356,8 +398,10 @@
     :root{--serif:"Fraunces","Noto Serif Thai",Georgia,serif;--sans:"Inter","Noto Sans Thai",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
     h1{line-height:1.16}
     h2,.act h3,.layer h3,.case-steps h3,.quote-hero blockquote p{line-height:1.35}
-    .kicker{letter-spacing:.12em}
+    .kicker,.proof-partners .t,.origin .t{letter-spacing:normal}
     .fam li{grid-template-columns:8rem 1fr}
+    .scr{line-height:1.5}
+    .scr-turn,.scr-close{line-height:1.55}
 
   </style>
 </head>
@@ -388,14 +432,13 @@
       <div class="hero-glow" aria-hidden="true"></div>
       <div class="hero-inner">
         <div class="hero-copy">
-          <p class="kicker">วิทยากรคีย์โน้ต AI · ผู้ก่อตั้ง ahead x</p>
-          <p class="hero-lead">ปัญญาประดิษฐ์</p>
+          <p class="kicker">วิทยากรคีย์โน้ต AI · ผู้ก่อตั้ง ahead x · นักออกแบบรูปแบบงาน</p>
           <h1>
-            <span class="hl">เข้าใจ<span class="stop">.</span></span>
-            <span class="hl"><em>สัมผัส</em><span class="stop">.</span></span>
-            <span class="hl">ลงมือ<span class="stop">.</span></span>
+            <span class="hl">อนาคต</span>
+            <span class="hl">เกิดขึ้น</span>
+            <span class="hl"><em>ในพื้นที่จริง</em></span>
           </h1>
-          <p class="sub">คีย์โน้ตและงานสดที่เปลี่ยนหัวข้อนามธรรมให้กลายเป็นช่วงเวลาร่วมกัน สำหรับองค์กร เมือง และภูมิภาค</p>
+          <p class="sub">Lukas Wagner นำปัญญาประดิษฐ์ออกจากหน้าจอขึ้นสู่เวที เพื่อให้องค์กร เมือง และภูมิภาคเข้าใจร่วมกันว่าอะไรกำลังจะมาถึง</p>
           <div class="hero-cta">
             <a class="btn btn-primary" data-cta="keynote" href="mailto:kontakt@lukaswagner.at?subject=Keynote%20enquiry%20Lukas%20Wagner&amp;body=Date%3A%0ALocation%3A%0AAudience%3A%0AOccasion%3A%0A">ขอข้อมูลคีย์โน้ต</a>
             <a class="btn btn-ghost" data-cta="speaker-reel" href="https://www.youtube.com/@lukaswagnerai" target="_blank" rel="noopener">ดูการบรรยายบน YouTube&nbsp;↗</a>
@@ -440,12 +483,36 @@
       </div>
     </section>
 
+    <!-- SIGNATURE: Another screen. Die Zeilen ziehen an, dann Stille, dann die Wende. -->
+    <section class="screens" aria-label="ทำไมพื้นที่จริงจึงสำคัญขึ้น">
+      <div class="wrap">
+        <div class="screens-stack">
+          <p class="scr scr-1">เครื่องมือมากขึ้น</p>
+          <p class="scr scr-2">เนื้อหามากขึ้น</p>
+          <p class="scr scr-3">ฟีดมากขึ้น</p>
+          <p class="scr scr-4">คำตอบมากขึ้น</p>
+          <p class="scr scr-5">หน้าจอมากขึ้น</p>
+          <div class="scr-pause" aria-hidden="true"></div>
+          <p class="scr-turn">แต่พื้นที่สำหรับคิดร่วมกันกลับน้อยลง</p>
+        </div>
+        <figure class="screens-fig reveal">
+          <img src="/assets/aheadx-audience.jpg"
+               srcset="/assets/aheadx-audience-900.jpg 900w, /assets/aheadx-audience.jpg 1500w"
+               sizes="(max-width:1020px) 92vw, 1120px"
+               width="1500" height="1000" loading="lazy"
+               alt="ห้องที่เต็มไปด้วยผู้คนในงานของ ahead x กำลังรับฟังร่วมกัน" />
+        </figure>
+        <p class="scr-close reveal">อนาคตไม่ได้ต้องการฟีดเพิ่มอีกหนึ่งอัน <em>แต่ต้องการพื้นที่จริง</em></p>
+        <p class="scr-lukas reveal">Lukas Wagner นำปัญญาประดิษฐ์เข้าสู่พื้นที่นั้น</p>
+      </div>
+    </section>
+
     <section id="erlebnis" aria-label="สิ่งที่เกิดขึ้นในห้อง">
       <div class="wrap">
         <div class="sec-head reveal">
           <p class="kicker">สิ่งที่เกิดขึ้นในห้อง</p>
           <h2>ไม่ใช่การบรรยายเรื่อง AI <br /> แต่เป็นช่วงเวลาที่ได้อยู่กับมัน</h2>
-          <p class="lead-in">คีย์โน้ตของ Lukas Wagner ถูกออกแบบเป็นห้าองก์ เหมือนค่ำคืนดี ๆ ในโรงละคร</p>
+          <p class="lead-in">AI ให้คำตอบ แต่พื้นที่จริงสร้างความเข้าใจ คีย์โน้ตของ Lukas Wagner ถูกออกแบบเป็นห้าองก์ เหมือนค่ำคืนดี ๆ ในโรงละคร</p>
         </div>
         <ol class="acts">
           <li class="act reveal"><span class="no">องก์ที่ 01</span><h3>การมาถึง</h3><p>ผู้คนมาพร้อมคำถาม ความรู้ครึ่ง ๆ กลาง ๆ และความสงสัย ซึ่งถูกต้องแล้ว</p></li>
@@ -454,16 +521,6 @@
           <li class="act reveal"><span class="no">องก์ที่ 04</span><h3>การจัดวาง</h3><p>ทั้งโอกาสและข้อจำกัด ไม่ตื่นตระหนก และไม่เชิดชูเกินจริง</p></li>
           <li class="act reveal"><span class="no">องก์ที่ 05</span><h3>การลงมือ</h3><p>จากช่วงเวลานั้นกลายเป็นทิศทาง คือก้าวถัดไปที่ทำได้จริง</p></li>
         </ol>
-        <div class="stage-wide reveal">
-          <figure>
-            <img src="/assets/aheadx-audience.jpg"
-                 srcset="/assets/aheadx-audience-900.jpg 900w, /assets/aheadx-audience.jpg 1500w"
-                 sizes="(max-width:1020px) 92vw, 1120px"
-                 width="1500" height="1000" loading="lazy"
-                 alt="ผู้ฟังตั้งใจฟังช่วงถามตอบในเวิร์กช็อปของ ahead x โดยมี Lukas Wagner ยืนอยู่หน้าจอ" />
-            <figcaption>ahead x สด: คำถามจากผู้ฟังกลายเป็นการสาธิต</figcaption>
-          </figure>
-        </div>
       </div>
     </section>
 
@@ -552,13 +609,13 @@
       <div class="wrap">
         <div class="sec-head reveal" style="max-width:none">
           <p class="kicker">ทำไมต้อง Lukas</p>
-          <h2 class="why-open">ก่อนที่ Lukas Wagner จะนำ <em>ปัญญาประดิษฐ์</em> ขึ้นเวที เขานำ <em>ภาษา วรรณกรรม และความคิดใหม่</em> ขึ้นไปก่อนแล้ว</h2>
+          <h2 class="why-open">ก่อนที่ <em>ปัญญาประดิษฐ์</em> จะกลายเป็นหัวข้อของเขา <em>ความสนใจของผู้คน</em> คือทักษะที่เขาฝึกมาก่อนแล้ว</h2>
         </div>
         <div class="layers">
-          <div class="layer reveal"><h3>นักพูด</h3><p>จากเวที Poetry Slam สู่เวทีงานประชุม ตรึงความสนใจได้โดยไม่ต้องเสียงดัง</p></div>
-          <div class="layer reveal"><h3>นักแปลความ</h3><p>เรื่องซับซ้อน กลั่นออกมาเป็นประโยคที่จำได้</p></div>
-          <div class="layer reveal"><h3>นักออกแบบรูปแบบงาน</h3><p>คิดเป็นประสบการณ์และจังหวะการเล่า ไม่ใช่คิดเป็นสไลด์</p></div>
-          <div class="layer reveal"><h3>ผู้ก่อตั้ง</h3><p>สร้าง ahead x ขึ้นมาจริง ในสิ่งที่คนอื่นแค่พูดถึง</p></div>
+          <div class="layer reveal"><h3>นักพูด</h3><p>หลายปีบนเวทีที่จะสำเร็จได้ก็ต่อเมื่อคนทั้งห้องไปด้วยกัน</p></div>
+          <div class="layer reveal"><h3>นักแปลความ</h3><p>เรื่องซับซ้อน กลั่นเป็นประโยคที่ยังค้างอยู่ในห้องหลังจบงาน</p></div>
+          <div class="layer reveal"><h3>นักออกแบบรูปแบบงาน</h3><p>สร้างค่ำคืน ไม่ใช่สไลด์ ทั้งจังหวะการเล่า การมีส่วนร่วม และบรรยากาศ</p></div>
+          <div class="layer reveal"><h3>ผู้ก่อตั้ง</h3><p>สร้างพื้นที่ท้องถิ่นด้วย ahead x ที่ผู้คนได้เข้าใจ AI ร่วมกัน</p></div>
         </div>
         <div class="origin reveal">
           <div class="origin-facts">
@@ -568,7 +625,7 @@
             <span><b>ปี 2017</b> รางวัลสนับสนุนด้านศิลปะและวัฒนธรรม</span>
             <span>โค้ชนักพูดของ <b>TEDxSalzburg</b></span>
           </div>
-          <p class="why-close">เทคโนโลยีเปลี่ยนไป แต่ศิลปะของการเข้าถึงผู้คนยังคงอยู่</p>
+          <p class="why-close">เทคโนโลยีเปลี่ยนไป แต่ความต้องการที่จะเข้าใจร่วมกันไม่เคยเปลี่ยน</p>
         </div>
       </div>
     </section>
@@ -577,14 +634,14 @@
       <div class="wrap">
         <div class="sec-head reveal">
           <p class="kicker">กรณีศึกษา</p>
-          <h2>ahead x: รูปแบบงานที่สร้างเองคือข้อพิสูจน์</h2>
-          <p class="lead-in">Lukas ไม่ได้แค่พูดว่าจะเข้าถึงผู้คนด้วยเรื่อง AI อย่างไร เขาสร้างรูปแบบงานนั้นขึ้นมาเอง</p>
+          <h2>ahead x: พื้นที่ที่ทั้งภูมิภาคได้เข้าใจร่วมกัน</h2>
+          <p class="lead-in">Lukas ไม่ได้แค่พูดว่าจะเข้าถึงผู้คนด้วยเรื่อง AI อย่างไร เขาสร้างพื้นที่สำหรับสิ่งนั้นขึ้นมาเอง</p>
         </div>
         <ol class="case-steps">
-          <li class="reveal"><h3>ปัญหา</h3><p>ความรู้เรื่อง AI ยังอยู่ในวงผู้เชี่ยวชาญ ภูมิภาคและภาคธุรกิจได้แต่มองอยู่ข้างสนาม</p></li>
-          <li class="reveal"><h3>แนวคิด</h3><p>การเสริมศักยภาพในรูปแบบงานสดในพื้นที่จริง แทนการสัมมนาออนไลน์</p></li>
-          <li class="reveal"><h3>รูปแบบงาน</h3><p>งานที่คัดสรรร่วมกับพันธมิตรจากสื่อ ภาคธุรกิจ และการศึกษา</p></li>
-          <li class="reveal"><h3>วันนี้</h3><p>แพลตฟอร์มที่เติบโตขึ้น มีผู้ฟังตั้งแต่อายุ 16 ถึง 80 ปี</p></li>
+          <li class="reveal"><h3>หนึ่งพื้นที่</h3><p>หนึ่งค่ำคืน หนึ่งห้องที่เต็ม หนึ่งหัวข้อ นั่นคือจุดเริ่มต้น</p></li>
+          <li class="reveal"><h3>หนึ่งเมือง</h3><p>พันธมิตรท้องถิ่นจากสื่อ ภาคธุรกิจ และการศึกษา ทำให้กลายเป็นงานระดับเมือง</p></li>
+          <li class="reveal"><h3>แปดเมือง</h3><p>หลักการเดียวกัน คนละภูมิภาค รูปแบบงานเดินทางไป แต่ความเชื่อมโยงยังเป็นของท้องถิ่น</p></li>
+          <li class="reveal"><h3>หนึ่งแพลตฟอร์ม</h3><p>จากค่ำคืนเดี่ยว ๆ เติบโตเป็นแพลตฟอร์มที่มีผู้ฟังตั้งแต่อายุ 16 ถึง 80 ปี</p></li>
         </ol>
         <!-- Zahlen belegt auf aheadx.at, Stand 30.04.2026. -->
         <div class="case-foot reveal">
@@ -598,6 +655,7 @@
             <a class="tlink" data-cta="aheadx" href="mailto:kontakt@lukaswagner.at?subject=Regional%20format%20%2F%20ahead%20x%20enquiry&amp;body=City%2FRegion%3A%0ATimeframe%3A%0AAudience%3A%0AOccasion%3A%0A">ร่วมเป็นพันธมิตร →</a>
           </div>
         </div>
+        <p class="case-close reveal">AI เป็นเรื่องระดับโลก แต่ความเข้าใจเริ่มต้นที่ท้องถิ่น</p>
         <p class="case-src reveal">ตัวเลข: ahead x ข้อมูล ณ เดือนเมษายน 2026</p>
       </div>
     </section>
@@ -634,7 +692,7 @@
       <div class="book-glow" aria-hidden="true"></div>
       <div class="wrap book-inner">
         <p class="kicker reveal" style="justify-content:center">ติดต่อ</p>
-        <h2 class="reveal">หนึ่งเวที หนึ่งค่ำคืน <br /> หนึ่งหัวข้อ: AI</h2>
+        <h2 class="reveal">นำอนาคต <br /> เข้าสู่พื้นที่ของคุณ</h2>
         <p class="sub reveal">ส่งวันที่ สถานที่ กลุ่มผู้ฟัง และโอกาสของงานมา แล้วคุณจะได้คำแนะนำตรงไปตรงมาว่ารูปแบบไหนเหมาะ และรูปแบบไหนไม่เหมาะ</p>
         <div class="hero-cta reveal">
           <a class="btn btn-primary" data-cta="keynote" href="mailto:kontakt@lukaswagner.at?subject=Keynote%20enquiry%20Lukas%20Wagner&amp;body=Date%3A%0ALocation%3A%0AAudience%3A%0AOccasion%3A%0A">ขอข้อมูลคีย์โน้ต</a>
@@ -691,12 +749,27 @@
     if(sticky&&hero&&'IntersectionObserver' in window){
       new IntersectionObserver(function(es){es.forEach(function(e){sticky.classList.toggle('show',!e.isIntersecting);});},{rootMargin:'-80px 0px 0px 0px'}).observe(hero);
     }
+    /* Signature-Sequenz startet einmalig, wenn der Abschnitt sichtbar wird. Kein Scroll-Hijacking. */
+    var scr=document.querySelector('.screens');
+    if(scr){
+      var lite=function(){ if(!scr.classList.contains('lit')&&scr.getBoundingClientRect().top<window.innerHeight*.85){
+        scr.classList.add('lit'); window.removeEventListener('scroll',lite); } };
+      if('IntersectionObserver' in window){
+        new IntersectionObserver(function(es,o){es.forEach(function(e){if(e.isIntersecting){scr.classList.add('lit');o.disconnect();window.removeEventListener('scroll',lite);}});},{threshold:.2}).observe(scr);
+      }
+      /* Rueckfallebene 1: Scroll, greift auch wenn der Observer nie feuert. */
+      window.addEventListener('scroll',lite,{passive:true}); lite();
+      /* Rueckfallebene 2: Nach 6s wird der Abschnitt in jedem Fall sichtbar.
+         Lieber die Sequenz verpassen als einen leeren Abschnitt zeigen. */
+      setTimeout(function(){ scr.classList.add('lit'); },6000);
+    }
     var reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     if(!reduced && 'IntersectionObserver' in window){
       var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});
       document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
     } else { document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in');}); }
-    setTimeout(function(){ if(!document.querySelector('.reveal.in')){ document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in');}); } },2000);
+    setTimeout(function(){ if(!document.querySelector('.reveal.in')){ document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in');}); }
+      if(scr&&!scr.classList.contains('lit')&&scr.getBoundingClientRect().top<window.innerHeight){ scr.classList.add('lit'); } },2000);
   </script>
 </body>
 </html>

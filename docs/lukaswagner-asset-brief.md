@@ -1,4 +1,25 @@
-# lukaswagner.at · Asset-Brief, Claim-Verifikation und offene Punkte
+# lukaswagner.at · Markenthese, Asset-Brief, Claim-Verifikation und offene Punkte
+
+## 0. Zentrale Markenthese
+
+**Zukunft entsteht im Raum.** (EN: The future happens in the room.)
+
+Je digitaler die Welt wird, desto mehr zaehlt der Raum, in dem Menschen zusammenkommen.
+Das ist ausdruecklich **keine** technikfeindliche Haltung: Die Zukunft wird digital sein.
+Was sie bedeutsam macht, entsteht in echten Raeumen. KI skaliert Information,
+aber Vertrauen, Zugehoerigkeit, gemeinsame Aufmerksamkeit und der Mut zur Veraenderung
+entstehen dort, wo Menschen physisch zusammen sind.
+
+Die These traegt die Seite, wird aber nicht in jedem Abschnitt wiederholt.
+Sie ist verankert in: Hero, Signature-Abschnitt "Another screen", Erlebnis-Einleitung
+("KI liefert Antworten. Ein Raum schafft Verstaendnis."), ahead-x-Case
+("KI ist global. Verstaendnis beginnt lokal.") und Warum-Lukas
+("Technologie veraendert sich. Das Beduerfnis, gemeinsam zu verstehen, nicht.").
+
+Verboten sind Aussagen wie "digital ist schlecht", "zurueck ins Analoge" oder
+"KI zerstoert Beziehungen". Die kommerzielle Hauptleistung bleibt unveraendert:
+KI-Keynote-Speaker fuer Unternehmen, Staedte und Regionen.
+
 
 Stand: 04.08.2026 · gilt für `index.html` und den Spiegel `de/index.html`
 
@@ -41,10 +62,13 @@ Die DSGVO gilt dagegen ueber das Marktortprinzip, weil sich das Angebot an Mensc
 `/de/` bleibt als Spiegel der deutschen Seite bestehen und faengt alte Weiterleitungen aus der
 aheadx-Zeit ab. Er zeigt per canonical auf `/`.
 
-Alle drei Sprachseiten werden aus einer gemeinsamen Vorlage erzeugt
-(`scratchpad/build_langs.py`, Inhalte als Dictionary je Sprache), damit Struktur, CSS und
-Technik garantiert identisch bleiben. Wer Inhalte aendert, aendert sie in der Vorlage und
-generiert neu, nicht in den einzelnen Dateien.
+**Build:** Alle vier Seiten (`index.html`, `de/`, `en/`, `th/`) werden erzeugt mit
+
+    python3 build/build.py
+
+Inhalte liegen als Dictionary je Sprache in `build/build.py`, das Designsystem in
+`build/style.css`. Wer Inhalte oder Styles aendert, aendert sie dort und generiert neu.
+Die HTML-Dateien im Wurzelverzeichnis sind Build-Ergebnisse und werden nicht von Hand editiert.
 
 Thai nutzt zusaetzlich Noto Sans Thai und Noto Serif Thai als Fallback. Latein bleibt
 Fraunces und Inter, die Umschaltung passiert automatisch ueber `unicode-range`.
