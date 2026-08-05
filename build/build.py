@@ -31,7 +31,7 @@ L['de'] = dict(
     lang='de', dir_='', locale='de_AT',
     title='Lukas Wagner | KI-Keynote-Speaker für Unternehmen, Städte &amp; Regionen',
     desc='Live-Keynotes, die künstliche Intelligenz verständlich, überraschend und gemeinsam erlebbar machen. Für Unternehmen, Konferenzen, Städte und Regionen.',
-    og_title='Lukas Wagner | KI-Keynote-Speaker', og_desc='Die Zukunft passiert im Raum.',
+    og_title='Lukas Wagner | KI-Keynote-Speaker', og_desc='Die Zukunft passiert offline.',
     schema_desc='Österreichischer KI-Keynote-Speaker, Unternehmer und Gründer von ahead x. Macht künstliche Intelligenz verständlich und live erlebbar, für Unternehmen, Städte und Regionen.',
     job='KI-Keynote-Speaker',
     nav=[('keynote', 'Keynote'), ('warum', 'Warum Lukas'), ('aheadx', 'ahead x'), ('stimmen', 'Stimmen')],
@@ -43,7 +43,7 @@ L['de'] = dict(
 
     hero_micro='Lukas Wagner · KI-Keynote-Speaker',
     hero_pre='Die Zukunft ist kein weiterer Bildschirm.',
-    hero_h1=['Die Zukunft passiert', 'im Raum.'],
+    hero_h1=['Die Zukunft passiert', 'offline.'],
     hero_sub='Live-Keynotes, die künstliche Intelligenz verständlich, überraschend und gemeinsam erlebbar machen. Für Unternehmen, Konferenzen, Städte und Regionen.',
     hero_alt='Lukas Wagner steht lächelnd im Theatersaal zwischen roten Sitzreihen unter warmem Bühnenlicht',
 
@@ -112,7 +112,7 @@ L['en'] = dict(
     lang='en', dir_='en/', locale='en_US',
     title='Lukas Wagner | AI Keynote Speaker for Companies, Cities &amp; Regions',
     desc='Live keynotes that make artificial intelligence understandable, surprising and shared. For companies, conferences, cities and regions.',
-    og_title='Lukas Wagner | AI Keynote Speaker', og_desc='The future happens in the room.',
+    og_title='Lukas Wagner | AI Keynote Speaker', og_desc='The future happens offline.',
     schema_desc='Austrian AI keynote speaker, entrepreneur and founder of ahead x. Makes artificial intelligence understandable and tangible on stage, for companies, cities and regions.',
     job='AI Keynote Speaker',
     nav=[('keynote', 'Keynote'), ('warum', 'Why Lukas'), ('aheadx', 'ahead x'), ('stimmen', 'Voices')],
@@ -124,7 +124,7 @@ L['en'] = dict(
 
     hero_micro='Lukas Wagner · AI Keynote Speaker',
     hero_pre='The future is not another screen.',
-    hero_h1=['The future happens', 'in the room.'],
+    hero_h1=['The future happens', 'offline.'],
     hero_sub='Live keynotes that make artificial intelligence understandable, surprising and shared. For companies, conferences, cities and regions.',
     hero_alt='Lukas Wagner stands smiling in a theatre between rows of red seats under warm stage light',
 
@@ -193,7 +193,7 @@ L['th'] = dict(
     lang='th', dir_='th/', locale='th_TH',
     title='Lukas Wagner | วิทยากรคีย์โน้ต AI สำหรับองค์กร เมือง และภูมิภาค',
     desc='คีย์โน้ตสดที่ทำให้ปัญญาประดิษฐ์เข้าใจง่าย เหนือความคาดหมาย และสัมผัสได้ร่วมกัน สำหรับองค์กร งานประชุม เมือง และภูมิภาค',
-    og_title='Lukas Wagner | วิทยากรคีย์โน้ต AI', og_desc='อนาคตเกิดขึ้นในพื้นที่จริง',
+    og_title='Lukas Wagner | วิทยากรคีย์โน้ต AI', og_desc='อนาคตเกิดขึ้นออฟไลน์',
     schema_desc='วิทยากรคีย์โน้ตด้าน AI ชาวออสเตรีย ผู้ประกอบการ และผู้ก่อตั้ง ahead x ทำให้ปัญญาประดิษฐ์เข้าใจง่ายและสัมผัสได้จริงบนเวที สำหรับองค์กร เมือง และภูมิภาค',
     job='วิทยากรคีย์โน้ต AI',
     nav=[('keynote', 'คีย์โน้ต'), ('warum', 'ทำไมต้อง Lukas'), ('aheadx', 'ahead x'), ('stimmen', 'เสียงตอบรับ')],
@@ -205,7 +205,7 @@ L['th'] = dict(
 
     hero_micro='Lukas Wagner · วิทยากรคีย์โน้ต AI',
     hero_pre='อนาคตไม่ใช่หน้าจออีกอันหนึ่ง',
-    hero_h1=['อนาคตเกิดขึ้น', 'ในพื้นที่จริง'],
+    hero_h1=['อนาคตเกิดขึ้น', 'ออฟไลน์'],
     hero_sub='คีย์โน้ตสดที่ทำให้ปัญญาประดิษฐ์เข้าใจง่าย เหนือความคาดหมาย และสัมผัสได้ร่วมกัน สำหรับองค์กร งานประชุม เมือง และภูมิภาค',
     hero_alt='Lukas Wagner ยืนยิ้มอยู่ในโรงละคร ท่ามกลางแถวเก้าอี้สีแดงใต้แสงไฟเวทีอบอุ่น',
 
