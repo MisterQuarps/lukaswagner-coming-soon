@@ -42,15 +42,15 @@ L['de'] = dict(
     f_key=['Datum', 'Ort', 'Zielgruppe', 'Anlass'], f_reg=['Stadt%2FRegion', 'Zeitraum', 'Zielgruppe', 'Anlass'],
 
     hero_micro='Lukas Wagner · KI-Keynote-Speaker',
-    hero_pre='Die Zukunft ist kein weiterer Bildschirm.',
+    hero_pre='',
     hero_h1=['Die Zukunft passiert', 'offline.'],
     hero_sub='Live-Keynotes, die künstliche Intelligenz verständlich, überraschend und gemeinsam erlebbar machen. Für Unternehmen, Konferenzen, Städte und Regionen.',
     hero_alt='Lukas Wagner steht lächelnd im Theatersaal zwischen roten Sitzreihen unter warmem Bühnenlicht',
 
     hal_kicker='Die Haltung',
     hal_lines=['Mehr Werkzeuge.', 'Mehr Inhalte.', 'Mehr Antworten.'],
-    hal_turn='Aber immer weniger Raum, um gemeinsam zu verstehen.',
-    hal_close='Genau deshalb bringt Lukas Wagner künstliche Intelligenz aus dem Bildschirm in den Raum.',
+    hal_turn='Und immer schwerer zu erkennen, was davon echt ist.',
+    hal_close='Vertrauen entsteht dort, wo Menschen etwas direkt vor sich erleben. Für Unternehmen, Städte und Bildungseinrichtungen wird das zur strategischen Frage. Genau dorthin bringt Lukas Wagner künstliche Intelligenz.',
     hal_alt='Voller Raum bei einem ahead x Format, Menschen hören gemeinsam zu',
     hal_cap='ahead x live, Fragerunde im vollen Raum',
 
@@ -123,15 +123,15 @@ L['en'] = dict(
     f_key=['Date', 'Location', 'Audience', 'Occasion'], f_reg=['City%2FRegion', 'Timeframe', 'Audience', 'Occasion'],
 
     hero_micro='Lukas Wagner · AI Keynote Speaker',
-    hero_pre='The future is not another screen.',
+    hero_pre='',
     hero_h1=['The future happens', 'offline.'],
     hero_sub='Live keynotes that make artificial intelligence understandable, surprising and shared. For companies, conferences, cities and regions.',
     hero_alt='Lukas Wagner stands smiling in a theatre between rows of red seats under warm stage light',
 
     hal_kicker='The belief',
     hal_lines=['More tools.', 'More content.', 'More answers.'],
-    hal_turn='And less room to understand together.',
-    hal_close='That is why Lukas Wagner brings artificial intelligence out of the screen and into the room.',
+    hal_turn='And ever harder to tell what is real.',
+    hal_close='Trust grows where people experience something directly in front of them. For companies, cities and educational institutions that becomes a strategic question. This is exactly where Lukas Wagner brings artificial intelligence.',
     hal_alt='A full room at an ahead x format, people listening together',
     hal_cap='ahead x live, question round in a full room',
 
@@ -204,15 +204,15 @@ L['th'] = dict(
     f_key=['Date', 'Location', 'Audience', 'Occasion'], f_reg=['City%2FRegion', 'Timeframe', 'Audience', 'Occasion'],
 
     hero_micro='Lukas Wagner · วิทยากรคีย์โน้ต AI',
-    hero_pre='อนาคตไม่ใช่หน้าจออีกอันหนึ่ง',
+    hero_pre='',
     hero_h1=['อนาคตเกิดขึ้น', 'ออฟไลน์'],
     hero_sub='คีย์โน้ตสดที่ทำให้ปัญญาประดิษฐ์เข้าใจง่าย เหนือความคาดหมาย และสัมผัสได้ร่วมกัน สำหรับองค์กร งานประชุม เมือง และภูมิภาค',
     hero_alt='Lukas Wagner ยืนยิ้มอยู่ในโรงละคร ท่ามกลางแถวเก้าอี้สีแดงใต้แสงไฟเวทีอบอุ่น',
 
     hal_kicker='ความเชื่อ',
     hal_lines=['เครื่องมือมากขึ้น', 'เนื้อหามากขึ้น', 'คำตอบมากขึ้น'],
-    hal_turn='แต่พื้นที่สำหรับทำความเข้าใจร่วมกันกลับน้อยลง',
-    hal_close='ด้วยเหตุนี้ Lukas Wagner จึงนำปัญญาประดิษฐ์ออกจากหน้าจอเข้าสู่พื้นที่จริง',
+    hal_turn='และยิ่งยากขึ้นที่จะรู้ว่าอะไรจริง',
+    hal_close='ความเชื่อใจเกิดขึ้นตรงที่ผู้คนได้สัมผัสบางสิ่งด้วยตนเอง สำหรับองค์กร เมือง และสถาบันการศึกษา นี่กำลังกลายเป็นคำถามเชิงกลยุทธ์ และนั่นคือที่ที่ Lukas Wagner นำปัญญาประดิษฐ์เข้าไป',
     hal_alt='ห้องที่เต็มไปด้วยผู้คนในงานของ ahead x กำลังรับฟังร่วมกัน',
     hal_cap='ahead x สด ช่วงถามตอบในห้องที่เต็ม',
 
@@ -312,6 +312,7 @@ def build(k):
     footnav = "".join(f'<a href="#{i}">{t}</a>' for i, t in d['foot_nav'])
     hal = "\n".join(f'          <p class="hal-line hal-{i+1}">{t}</p>' for i, t in enumerate(d['hal_lines']))
     h1 = f'<span class="hl">{d["hero_h1"][0]}</span> <em>{d["hero_h1"][1]}</em>'
+    pre = f'<p class="hero-pre">{d["hero_pre"]}</p>' if d.get('hero_pre') else ''
 
     # Szene 01 traegt bewusst keine Fotografie: es gibt nur vier echte Bilder und
     # jedes hat bereits eine eigene Aufgabe. Wiederholung waere schwaecher als Weissraum.
@@ -425,7 +426,7 @@ def build(k):
       <div class="hero-grid">
         <div class="hero-copy">
           <p class="hero-micro">{d['hero_micro']}</p>
-          <p class="hero-pre">{d['hero_pre']}</p>
+          {pre}
           <h1>{h1}</h1>
           <p class="sub">{d['hero_sub']}</p>
           <div class="hero-cta">
