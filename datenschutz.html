@@ -6,6 +6,7 @@
   <title>Datenschutzerklärung | Lukas Wagner</title>
   <meta name="description" content="Datenschutzerklärung für lukaswagner.at: welche Daten beim Besuch der Seite verarbeitet werden und welche Rechte Besucher:innen haben." />
   <link rel="canonical" href="https://lukaswagner.at/datenschutz.html" />
+  <meta name="robots" content="noindex" />
   <meta name="theme-color" content="#141110" />
   <link rel="icon" href="data:image/svg+xml,&lt;svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'&gt;&lt;rect width='100' height='100' rx='22' fill='%23141110'/&gt;&lt;text x='50' y='68' font-size='52' font-family='Georgia' font-weight='bold' text-anchor='middle' fill='%23e2a45c'&gt;LW&lt;/text&gt;&lt;/svg&gt;" />
   <style>
@@ -24,6 +25,12 @@
     .wrap{width:100%;max-width:46rem;margin:0 auto;padding:clamp(2.5rem,6vw,4.5rem) clamp(1.25rem,4vw,2.5rem) 5rem}
     .back{display:inline-flex;align-items:center;min-height:44px;color:var(--red-bright);font-weight:600;font-size:.95rem;text-decoration:none}
     .back:hover{text-decoration:underline;text-underline-offset:4px}
+    .top{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1rem}
+    .langs{display:flex;align-items:center;gap:.35rem;font-size:.78rem;letter-spacing:.08em;color:var(--muted)}
+    .langs a{display:inline-flex;align-items:center;min-height:44px;padding:0 .15rem;text-decoration:none}
+    .langs a:hover{color:var(--fg)}
+    .langs a[aria-current="page"]{color:var(--fg);font-weight:600}
+    .langs span{opacity:.35}
     h1{font-family:var(--serif);font-weight:500;font-size:clamp(2rem,5vw,2.9rem);line-height:1.1;letter-spacing:-.01em;margin:1.2rem 0 .6rem}
     h2{font-family:var(--serif);font-weight:500;font-size:clamp(1.2rem,2.6vw,1.45rem);margin:2.2rem 0 .5rem}
     p,li{color:var(--fg-dim);font-size:.97rem}
@@ -39,7 +46,10 @@
 </head>
 <body>
   <main class="wrap">
-    <a class="back" href="/">← Zurück zur Startseite</a>
+    <div class="top">
+      <a class="back" href="/">← Zurück zur Startseite</a>
+      <span class="langs" role="group" aria-label="Sprache / Language"><a href="/datenschutz.html" hreflang="de" lang="de" aria-current="page">DE</a><span aria-hidden="true">·</span><a href="/en/privacy.html" hreflang="en" lang="en">EN</a><span aria-hidden="true">·</span><a href="/th/privacy.html" hreflang="th" lang="th">TH</a></span>
+    </div>
     <h1>Datenschutzerklärung</h1>
     <p class="stand">Stand: August 2026</p>
 

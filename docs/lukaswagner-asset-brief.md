@@ -30,6 +30,29 @@ Die DSGVO gilt dagegen ueber das Marktortprinzip, weil sich das Angebot an Mensc
 | 5 | **Anwaltliche Durchsicht der Datenschutzerklaerung**, insbesondere die Frage eines EU-Vertreters nach Art. 27 DSGVO fuer Verantwortliche ausserhalb der EU. Fuer eine reine Broschuerenseite greift moeglicherweise die Ausnahme, das sollte jemand mit Zulassung beurteilen. | `datenschutz.html` | Lukas Wagner |
 | 6 | **Steuerliche Einordnung** der Konstellation US-LLC plus Events in acht oesterreichischen Staedten (Betriebsstaette, Ort der Geschaeftsleitung). Kein Website-Thema, aber vermutlich das gewichtigere. | extern | Steuerberater |
 
+## 1b. Sprachversionen
+
+| Sprache | URL | Datenschutz |
+|---|---|---|
+| Deutsch (Standard) | `/` | `/datenschutz.html` |
+| Englisch | `/en/` | `/en/privacy.html` |
+| Thai | `/th/` | `/th/privacy.html` |
+
+`/de/` bleibt als Spiegel der deutschen Seite bestehen und faengt alte Weiterleitungen aus der
+aheadx-Zeit ab. Er zeigt per canonical auf `/`.
+
+Alle drei Sprachseiten werden aus einer gemeinsamen Vorlage erzeugt
+(`scratchpad/build_langs.py`, Inhalte als Dictionary je Sprache), damit Struktur, CSS und
+Technik garantiert identisch bleiben. Wer Inhalte aendert, aendert sie in der Vorlage und
+generiert neu, nicht in den einzelnen Dateien.
+
+Thai nutzt zusaetzlich Noto Sans Thai und Noto Serif Thai als Fallback. Latein bleibt
+Fraunces und Inter, die Umschaltung passiert automatisch ueber `unicode-range`.
+
+**Offen:** Die thailändische Uebersetzung stammt von Claude und sollte vor ernsthaftem
+Vertriebseinsatz von einer thailaendischen Muttersprachlerin gegengelesen werden.
+Die englischen Testimonials sind Uebersetzungen der deutschen Originalzitate.
+
 ## 2. Fehlende Medien nach Priorität
 
 Die Seite funktioniert ohne diese Assets vollständig. Kein Platzhalter, keine Lücke.

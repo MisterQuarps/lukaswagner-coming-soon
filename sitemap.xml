@@ -1,13 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://lukaswagner.at/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://lukaswagner.at/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lukaswagner.at/en/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://lukaswagner.at/th/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lukaswagner.at/"/>
+    <changefreq>monthly</changefreq><priority>1.0</priority>
   </url>
   <url>
-    <loc>https://lukaswagner.at/datenschutz.html</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.2</priority>
+    <loc>https://lukaswagner.at/en/</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://lukaswagner.at/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lukaswagner.at/en/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://lukaswagner.at/th/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lukaswagner.at/"/>
+    <changefreq>monthly</changefreq><priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://lukaswagner.at/th/</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://lukaswagner.at/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lukaswagner.at/en/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://lukaswagner.at/th/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lukaswagner.at/"/>
+    <changefreq>monthly</changefreq><priority>0.9</priority>
   </url>
 </urlset>
