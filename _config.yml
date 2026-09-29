@@ -1,0 +1,7 @@
+# Nicht ausliefern: Repo-Dokumentation gehoert nicht auf die Website.
+# Auf Hostinger liegt sie ohnehin nicht im Webroot – so bleiben beide
+# Auslieferungswege identisch.
+exclude:
+  - README.md
+  - _config.yml
+  - .claude
