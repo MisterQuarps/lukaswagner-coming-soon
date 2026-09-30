@@ -143,6 +143,7 @@
   var form = document.getElementById('request-form');
   var topicField = document.getElementById('f-topic');
   var errorBox = document.getElementById('form-error');
+  var okBox = document.getElementById('form-ok');
   var lastTrigger = null;
   var FOCUSABLE = 'a[href],button:not([disabled]),input:not([disabled]),textarea:not([disabled]),select:not([disabled]),[tabindex]:not([tabindex="-1"])';
 
@@ -192,14 +193,29 @@
     budget: 'Budgetrahmen', phone: 'Telefon', topic: 'Schwerpunkt'
   };
 
+  function mailtoBauen(fd) {
+    var lines = [];
+    Object.keys(LABELS).forEach(function (k) {
+      var v = (fd.get(k) || '').toString().trim();
+      if (k === 'date' && fd.get('date_open')) v = v ? v + ' (noch offen)' : 'noch offen';
+      if (k === 'place' && fd.get('place_open')) v = v ? v + ' (noch offen / online)' : 'noch offen / online';
+      if (v) lines.push(LABELS[k] + ': ' + v);
+    });
+    var subject = 'Anfrage KI-Keynote' + (fd.get('org') ? ' – ' + fd.get('org') : '');
+    var body = 'Anfrage über die Website\n\n' + lines.join('\n') + '\n';
+    return 'mailto:kontakt@lukaswagner.at?subject=' + encodeURIComponent(subject) +
+           '&body=' + encodeURIComponent(body);
+  }
+
   if (form) form.addEventListener('submit', function (e) {
     e.preventDefault();
     errorBox.hidden = true;
+    okBox.hidden = true;
+
     var missing = [];
     Array.prototype.forEach.call(form.querySelectorAll('[required]'), function (el) {
       var wrap = el.closest('.field');
       var ok = el.value.trim() !== '' && (el.type !== 'email' || /.+@.+\..+/.test(el.value));
-
       if (!ok && el.id === 'f-date' && form.querySelector('[name="date_open"]').checked) ok = true;
       if (wrap) wrap.classList.toggle('invalid', !ok);
       if (!ok) missing.push(el);
@@ -210,17 +226,54 @@
       missing[0].focus();
       return;
     }
+
     var fd = new FormData(form);
-    var lines = [];
-    Object.keys(LABELS).forEach(function (k) {
-      var v = (fd.get(k) || '').toString().trim();
-      if (k === 'date' && fd.get('date_open')) v = v ? v + ' (noch offen)' : 'noch offen';
-      if (k === 'place' && fd.get('place_open')) v = v ? v + ' (noch offen / online)' : 'noch offen / online';
-      if (v) lines.push(LABELS[k] + ': ' + v);
-    });
-    var subject = 'Anfrage KI-Keynote' + (fd.get('org') ? ' – ' + fd.get('org') : '');
-    var body = 'Anfrage über die Website\n\n' + lines.join('\n') + '\n';
-    location.href = 'mailto:kontakt@lukaswagner.at?subject=' + encodeURIComponent(subject) +
-                    '&body=' + encodeURIComponent(body);
+    var btn = form.querySelector('.drawer-submit');
+    var beschriftung = btn.innerHTML;
+    btn.setAttribute('aria-busy', 'true');
+    btn.textContent = 'Wird gesendet …';
+
+    function zurueck() {
+      btn.removeAttribute('aria-busy');
+      btn.innerHTML = beschriftung;
+    }
+
+    function fallback(grund) {
+      zurueck();
+      okBox.innerHTML = 'Ihre Anfrage wird in Ihrem E-Mail-Programm geöffnet. ' +
+        'Falls sich nichts tut, schreiben Sie bitte direkt an ' +
+        '<a href="mailto:kontakt@lukaswagner.at">kontakt@lukaswagner.at</a>.';
+      okBox.hidden = false;
+      location.href = mailtoBauen(fd);
+      if (window.console && grund) console.info('Formular: Fallback auf mailto (' + grund + ')');
+    }
+
+    fetch(form.getAttribute('action'), { method: 'POST', body: fd })
+      .then(function (r) {
+        var typ = r.headers.get('content-type') || '';
+        if (typ.indexOf('application/json') === -1) {
+
+          return fallback('keine JSON-Antwort'), null;
+        }
+        return r.json().then(function (d) { return { status: r.status, daten: d }; });
+      })
+      .then(function (res) {
+        if (!res) return;
+        zurueck();
+        if (res.daten && res.daten.ok) {
+          form.reset();
+          Array.prototype.forEach.call(form.querySelectorAll('.field.invalid'),
+            function (f) { f.classList.remove('invalid'); });
+          okBox.textContent = 'Danke, Ihre Anfrage ist angekommen. ' +
+            'Sie bekommen in der Regel innerhalb von zwei Werktagen eine Rückmeldung.';
+          okBox.hidden = false;
+          okBox.focus && okBox.focus();
+        } else {
+          errorBox.textContent = (res.daten && res.daten.fehler) ||
+            'Der Versand hat nicht geklappt.';
+          errorBox.hidden = false;
+        }
+      })
+      .catch(function () { fallback('Netzwerkfehler'); });
   });
 })();

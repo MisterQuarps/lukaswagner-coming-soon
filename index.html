@@ -344,7 +344,7 @@
     <button class="drawer-close" type="button" data-request-close aria-label="Anfrage schließen">×</button>
   </div>
 
-  <form class="drawer-form" id="request-form" novalidate>
+  <form class="drawer-form" id="request-form" action="/kontakt.php" method="post" novalidate>
     <p class="drawer-intro">Je konkreter der Rahmen, desto genauer die Rückmeldung. Felder mit * werden benötigt.</p>
 
     <p class="field"><label for="f-name">Ihr Name *</label><input id="f-name" name="name" type="text" autocomplete="name" required></p>
@@ -368,9 +368,12 @@
 
     <input type="hidden" name="topic" id="f-topic">
 
+    <p class="hp" aria-hidden="true"><label for="f-website">Website</label><input id="f-website" name="website" type="text" tabindex="-1" autocomplete="off"></p>
+
     <p class="form-error" id="form-error" role="alert" hidden></p>
+    <p class="form-ok" id="form-ok" role="status" hidden></p>
     <button class="btn light drawer-submit" type="submit">Anfrage senden <span class="arr" aria-hidden="true">→</span></button>
-    <p class="drawer-note">Die Anfrage wird in Ihrem E-Mail-Programm als fertige Nachricht an kontakt@lukaswagner.at geöffnet – so bleibt sie nachvollziehbar bei Ihnen. Es werden keine Daten an diese Website übertragen.</p>
+    <p class="drawer-note">Die Anfrage geht direkt an kontakt@lukaswagner.at. Sollte der Versand nicht möglich sein, öffnet sich stattdessen eine fertige Nachricht in Ihrem E-Mail-Programm.</p>
   </form>
 </aside>
 
